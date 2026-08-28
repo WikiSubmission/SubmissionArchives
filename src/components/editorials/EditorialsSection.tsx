@@ -27,8 +27,8 @@ export default function EditorialsSection({ editorials, limit = 4 }: EditorialsS
                 <div className="flex flex-1 items-center gap-4">
                     <h2
                         id="archive-editorials"
-                        className="whitespace-nowrap text-[22px] font-semibold tracking-[-0.01em] text-ed-fg"
-                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                        className="whitespace-nowrap text-[20px] font-semibold tracking-[-0.015em] text-ed-fg"
+                        style={{ fontFamily: 'var(--font-source-serif-4), var(--font-source-serif), Georgia, serif' }}
                     >
                         Archive Editorials
                     </h2>
@@ -49,7 +49,7 @@ export default function EditorialsSection({ editorials, limit = 4 }: EditorialsS
             </div>
 
             <p
-                className="mb-7 max-w-[70ch] text-[15px] leading-[1.6] text-ed-fg-muted"
+                className="mb-7 max-w-[70ch] text-[15px] leading-[1.62] text-ed-fg-muted"
                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
             >
                 Long-form readings of the preserved record: how the archive was assembled, what the sources say, and

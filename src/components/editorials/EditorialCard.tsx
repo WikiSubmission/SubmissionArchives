@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +8,10 @@ import { ArrowUpRight, Maximize2, Pin, X } from 'lucide-react';
 
 import type { EditorialSummary } from '@/lib/editorialTypes';
 import { formatEditorialDate } from '@/lib/editorialTypes';
+
+import '@/app/editorials/editorials.css';
+
+const emptySubscribe = () => () => {};
 
 interface EditorialCardProps {
     editorial: EditorialSummary;
@@ -26,11 +30,7 @@ interface EditorialCardProps {
  */
 export default function EditorialCard({ editorial, index, headingLevel = 3, isPinned = false }: EditorialCardProps) {
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
 
     // Lock background scroll and listen for Escape key when lightbox is open
     useEffect(() => {
@@ -89,7 +89,7 @@ export default function EditorialCard({ editorial, index, headingLevel = 3, isPi
                                     priority={isPinned || index <= 2}
                                     unoptimized={visual.src.endsWith('.svg')}
                                     sizes="(max-width: 640px) 100vw, 232px"
-                                    className="object-cover transition-transform duration-300 group-hover/thumb:scale-[1.03]"
+                                    className="editorial-thumbnail-image object-cover transition-transform duration-300 group-hover/thumb:scale-[1.03]"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 transition-opacity duration-200 group-hover/thumb:opacity-100 flex items-end justify-between p-3">
                                     <span className="font-sans text-[9.5px] font-semibold uppercase tracking-[0.12em] text-white">
@@ -128,8 +128,8 @@ export default function EditorialCard({ editorial, index, headingLevel = 3, isPi
                         <div className="flex items-start justify-between gap-4">
                             <Link href={`/editorials/${editorial.slug}`} className="group/link block">
                                 <Heading
-                                    className="text-[22px] sm:text-[23px] font-semibold leading-[1.22] tracking-[-0.018em] text-ed-fg transition-colors group-hover/link:text-ed-accent"
-                                    style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                                    className="text-[20px] sm:text-[22px] font-semibold leading-[1.25] tracking-[-0.015em] text-ed-fg transition-colors group-hover/link:text-ed-accent"
+                                    style={{ fontFamily: 'var(--font-source-serif-4), var(--font-source-serif), Georgia, serif' }}
                                 >
                                     {editorial.title}
                                 </Heading>
@@ -146,7 +146,7 @@ export default function EditorialCard({ editorial, index, headingLevel = 3, isPi
                         {editorial.subtitle ? (
                             <Link href={`/editorials/${editorial.slug}`} className="block">
                                 <p
-                                    className="mt-2.5 max-w-[68ch] text-[15px] leading-[1.62] text-ed-fg-muted transition-colors hover:text-ed-fg-secondary"
+                                    className="mt-2 max-w-[68ch] text-[15px] leading-[1.62] text-ed-fg-muted transition-colors hover:text-ed-fg-secondary"
                                     style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                                 >
                                     {editorial.subtitle}
@@ -213,15 +213,15 @@ export default function EditorialCard({ editorial, index, headingLevel = 3, isPi
                                   <Image
                                       src={visual.src}
                                       alt={visual.alt}
-                                      width={visual.width || 1200}
-                                      height={visual.height || 900}
+                                      width={visual.width || 800}
+                                      height={visual.height || 600}
                                       unoptimized={visual.src.endsWith('.svg')}
-                                      className="max-h-[80vh] w-auto max-w-[92vw] object-contain mx-auto"
+                                      className="editorial-thumbnail-image max-h-[80vh] w-auto max-w-[92vw] object-contain mx-auto"
                                       priority
                                   />
                               </div>
                               <figcaption className="editorial-lightbox-caption">
-                                  <em>Monograph Cover Artwork</em> — {editorial.title}
+                                  <em>Monograph Artwork</em> — {editorial.title}
                               </figcaption>
                           </figure>
                       </div>,

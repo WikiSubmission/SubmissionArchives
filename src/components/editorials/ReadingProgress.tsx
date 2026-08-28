@@ -50,7 +50,7 @@ export default function ReadingProgress() {
                 0.00
             </span>
             <span className="relative mt-1 block h-16 w-px bg-ed-rule">
-                <span className="absolute inset-0 block origin-top bg-ed-accent" ref={barRef} style={{ transform: 'scaleY(0)' }} />
+                <span className="absolute inset-0 block origin-top bg-ed-fg" ref={barRef} style={{ transform: 'scaleY(0)' }} />
             </span>
         </div>
     );

@@ -4,6 +4,8 @@ import { Layers } from 'lucide-react';
 import EditorialCard from '@/components/editorials/EditorialCard';
 import { getEditorials } from '@/lib/editorials';
 
+import './editorials.css';
+
 export const metadata: Metadata = {
     title: 'Archive Research Editorials',
     description:
@@ -37,13 +39,13 @@ export default function EditorialsIndexPage() {
                             Archive Research Editorials
                         </div>
                         <h1
-                            className="mb-3 text-[clamp(32px,4.2vw,46px)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg"
-                            style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                            className="mb-3 text-[clamp(28px,3.8vw,38px)] font-semibold leading-[1.15] tracking-[-0.02em] text-ed-fg"
+                            style={{ fontFamily: 'var(--font-source-serif-4), var(--font-source-serif), Georgia, serif' }}
                         >
                             Archive Editorials
                         </h1>
                         <p
-                            className="text-[16.5px] leading-[1.6] text-ed-fg-secondary"
+                            className="text-[16px] leading-[1.62] text-ed-fg-secondary"
                             style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                         >
                             Long-form research notes, preservation methodologies, and technical accounts of how the historical
@@ -82,8 +84,8 @@ export default function EditorialsIndexPage() {
                 {/* Section Header */}
                 <div className="mb-6 flex items-center gap-4 border-b border-ed-rule pb-3">
                     <h2
-                        className="whitespace-nowrap text-[20px] font-semibold tracking-[-0.01em] text-ed-fg"
-                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                        className="whitespace-nowrap text-[18px] font-semibold tracking-[-0.01em] text-ed-fg"
+                        style={{ fontFamily: 'var(--font-source-serif-4), var(--font-source-serif), Georgia, serif' }}
                     >
                         Published Editorials &amp; Monographs
                     </h2>

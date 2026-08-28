@@ -1792,3 +1792,29 @@ mark.pdf-search-highlight {
 .header-nav-link:hover {
   color: #9E9690 !important;
 }
+
+/* ==========================================================================
+   Archive Editorial Thumbnail Light Mode Inversion
+   Transforms dark obsidian blueprint & schematic cover artwork into
+   warm, high-contrast archival parchment plates in light mode.
+   ========================================================================== */
+
+:root:not(.dark) .editorial-thumbnail-image,
+:root:not([data-theme="dark"]) .editorial-thumbnail-image,
+[data-theme="light"] .editorial-thumbnail-image,
+html:not(.dark) .editorial-thumbnail-image,
+:root:not(.dark) .editorial-figure-frame img[src$=".svg"],
+:root:not([data-theme="dark"]) .editorial-figure-frame img[src$=".svg"],
+[data-theme="light"] .editorial-figure-frame img[src$=".svg"],
+html:not(.dark) .editorial-figure-frame img[src$=".svg"] {
+  filter: invert(0.92) hue-rotate(180deg) contrast(1.05) brightness(0.98);
+  transition: filter 250ms ease;
+}
+
+.dark .editorial-thumbnail-image,
+[data-theme="dark"] .editorial-thumbnail-image,
+.dark .editorial-figure-frame img[src$=".svg"],
+[data-theme="dark"] .editorial-figure-frame img[src$=".svg"] {
+  filter: none;
+  transition: filter 250ms ease;
+}

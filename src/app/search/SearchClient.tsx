@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useWindowVirtualizer } from '@tanstack/react-virtual';
@@ -197,10 +197,11 @@ function SearchContent() {
         estimateSize: () => 240,
         overscan: 6,
         scrollMargin: listOffsetTop,
+        useFlushSync: false,
     });
     const virtualizerRef = useRef(virtualizer);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         resultsRef.current = results;
         queryRef.current = query;
         expandedRef.current = expandedMatches;

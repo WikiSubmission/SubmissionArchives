@@ -2,6 +2,10 @@
 /.next/
 /out/
 /build
+target/
+target_old/
+studio/src-tauri/target/
+studio/src-tauri/target_old/
 .DS_Store
 *.tsbuildinfo
 
@@ -86,6 +90,11 @@ public/content/**/*.flv
 
 # Appendix/newsletter PDFs are local content, not caught by the blanket *.pdf rule above
 !public/content/**/*.pdf
+
+# Primary-source PDFs cited by editorials. These are the documents the footnotes
+# point at, so they must travel with the article rather than being ignored as
+# generic media. Video in the same tree stays ignored by the rules above.
+!data/editorial-sources/**/*.pdf
 
 # Data & Reprocessing (Root level artifacts)
 /data/disorganized_sermons/
