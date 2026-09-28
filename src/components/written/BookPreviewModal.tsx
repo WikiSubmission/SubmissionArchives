@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, BookOpen, FileText, Layers, User, X } from 'lucide-react';
@@ -21,6 +21,7 @@ export default function BookPreviewModal({
     onClose,
     onSelectBook,
 }: Props) {
+    const dialogRef = useRef<HTMLDivElement>(null);
     const currentIndex = book ? allBooks.findIndex((b) => b.id === book.id) : -1;
     const prevBook = currentIndex > 0 ? allBooks[currentIndex - 1] : null;
     const nextBook =
@@ -37,11 +38,15 @@ export default function BookPreviewModal({
 
     useEffect(() => {
         if (!book) return;
+        const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+        const previousOverflow = document.body.style.overflow;
         document.body.style.overflow = 'hidden';
         window.addEventListener('keydown', handleKeyDown);
+        dialogRef.current?.querySelector<HTMLElement>('button, a[href]')?.focus();
         return () => {
-            document.body.style.overflow = '';
+            document.body.style.overflow = previousOverflow;
             window.removeEventListener('keydown', handleKeyDown);
+            previousFocus?.focus();
         };
     }, [book, handleKeyDown]);
 
@@ -55,13 +60,29 @@ export default function BookPreviewModal({
             role="dialog"
             aria-modal="true"
             aria-labelledby="book-modal-title"
+            ref={dialogRef}
+            onKeyDown={(event) => {
+                if (event.key !== 'Tab') return;
+                const focusable = Array.from(
+                    dialogRef.current?.querySelectorAll<HTMLElement>('button:not([disabled]), a[href]') ?? [],
+                );
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
+                }
+            }}
             className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6"
         >
-            <button
-                type="button"
-                aria-label="Close preview"
+            <div
+                aria-hidden="true"
                 onClick={onClose}
-                className="absolute inset-0 h-full w-full cursor-default bg-black/70 backdrop-blur-sm"
+                className="absolute inset-0 bg-black/70 backdrop-blur-sm"
             />
 
             <div className="relative flex max-h-[92vh] w-full max-w-[1000px] flex-col overflow-hidden rounded-[10px] border border-ed-rule bg-ed-bg shadow-2xl">

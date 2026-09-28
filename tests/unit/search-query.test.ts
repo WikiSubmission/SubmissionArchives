@@ -22,6 +22,14 @@ test('ranks an exact phrase above broader matches', () => {
     assert.ok(exact.score > broad.score);
 });
 
+test('keeps quoted excerpts aligned with source text after apostrophes are normalized', () => {
+    const source = `${'can’t '.repeat(100)}The citation says God’s message was preserved.`;
+    const result = findQueryMatch(source, '"Gods message"');
+
+    assert.equal(result.matched, true);
+    assert.match(result.snippet, /God’s message/);
+});
+
 test('requires every meaningful term and respects proximity windows', () => {
     const nearby = findQueryMatch('The mathematical code confirms the Quran miracle.', 'mathematical miracle', {
         proximityWindow: 8,

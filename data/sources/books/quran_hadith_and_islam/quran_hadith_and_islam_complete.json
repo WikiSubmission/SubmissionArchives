@@ -4,11 +4,8 @@
     "slug": "quran_hadith_and_islam",
     "source_pdf": "quran-hadith-islam.pdf",
     "pdf_page_count": 92,
-    "transcription_method": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
-    "arabic_policy": "Verified Quranic Arabic transcribed and normalized directly from high-resolution page renders",
-    "mean_ocr_confidence": 98.5,
-    "low_confidence_pages": 0,
-    "unverified_arabic_segments": 0,
+    "transcription_method": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
+    "arabic_policy": "Arabic text is transcribed from page images and has not been independently verified against a canonical source",
     "blank_pages": 0,
     "arabic_segments": 74,
     "last_updated": "2026-08-21T12:36:02.926Z"

@@ -862,15 +862,19 @@ function loadBookTranscriptions() {
         throw new Error(`Canonical book transcription is missing: ${path.relative(ROOT, completePath)}`);
       }
       const data = readJson(completePath);
+      const qualityCandidates = {
+        meanOcrConfidence: entry.mean_ocr_confidence,
+        lowConfidencePages: entry.low_confidence_pages,
+        unverifiedArabicSegments: entry.unverified_arabic_segments,
+      };
+      const quality = Object.fromEntries(
+        Object.entries(qualityCandidates).filter(([, value]) => value !== undefined && value !== null),
+      );
       transcriptionBySourceFile.set(canonicalBookSourceKey(entry.source_pdf), {
         data,
         source: path.relative(ROOT, completePath).replace(/\\/g, '/'),
         method: data.metadata?.transcription_method,
-        quality: {
-          meanOcrConfidence: entry.mean_ocr_confidence,
-          lowConfidencePages: entry.low_confidence_pages,
-          unverifiedArabicSegments: entry.unverified_arabic_segments,
-        },
+        quality: Object.keys(quality).length ? quality : undefined,
       });
     }
   }
@@ -908,7 +912,7 @@ function buildBooksIndex() {
         transcriptStatus: segments.length > 0 ? 'available' : 'missing',
         transcriptionSource: transcriptionRecord?.source,
         transcriptionMethod: transcriptionRecord?.method,
-        transcriptionQuality: transcriptionRecord?.quality,
+        ...(transcriptionRecord?.quality ? { transcriptionQuality: transcriptionRecord.quality } : {}),
         editionYear: transcriptionRecord?.editionYear,
       };
     });

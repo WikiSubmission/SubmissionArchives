@@ -406,11 +406,8 @@ async function finalizeBook(bookManifest, pageResultsMap) {
       title,
       source_pdf,
       pdf_page_count: sortedPageNumbers.length,
-      transcription_method: 'Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization',
-      arabic_policy: 'Verified Quranic Arabic transcribed and normalized directly from high-resolution page renders',
-      mean_ocr_confidence: 98.5,
-      low_confidence_pages: 0,
-      unverified_arabic_segments: 0,
+      transcription_method: 'AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread',
+      arabic_policy: 'Arabic text is transcribed from page images and has not been independently verified against a canonical source',
     },
     pages: pagesArray,
   };
@@ -425,9 +422,9 @@ async function finalizeBook(bookManifest, pageResultsMap) {
     if (entry) {
       entry.blank_pages = blankPagesCount;
       entry.arabic_segments = arabicSegmentsCount;
-      entry.unverified_arabic_segments = 0;
-      entry.low_confidence_pages = 0;
-      entry.mean_ocr_confidence = 98.5;
+      delete entry.unverified_arabic_segments;
+      delete entry.low_confidence_pages;
+      delete entry.mean_ocr_confidence;
       safeWriteFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n');
       console.log(`Updated corpus_manifest.json for ${slug}`);
     }
@@ -459,7 +456,7 @@ async function main() {
         try {
           const existing = JSON.parse(fs.readFileSync(completeFile, 'utf8'));
           const textPagesCount = existing.pages?.filter((p) => p.transcription_text && p.transcription_text.trim().length > 0).length || 0;
-          if (existing.metadata?.mean_ocr_confidence === 98.5 && existing.pages?.length >= book.pages && textPagesCount >= Math.ceil(book.pages * 0.70)) {
+          if (existing.pages?.length >= book.pages && textPagesCount >= Math.ceil(book.pages * 0.70)) {
             console.log(`\n✓ [Already Finalized] ${book.title} (${book.slug}) — Skipping (${textPagesCount}/${book.pages} text pages).`);
             continue;
           }

@@ -1,7 +1,7 @@
 {
   "computer-speaks": {
     "description": "This work presents a series of mathematical analyses of the Quran, which the author argues provide physical, verifiable evidence of a divine code based on the number 19. He asserts that this numerical pattern confirms the Quran as a perfectly preserved message from God and serves as a proof of its authenticity. The text is organized into a series of \"physical facts,\" each detailing specific counts of alphabet letters, words, and chapter structures that align with multiples of 19. He presents these findings to demonstrate that the Quranic initials—mysterious letters prefixed to certain chapters—are not merely ornamental but are integral to a complex, divinely orchestrated system. The author further discusses the historical implications of these findings, including his calculations regarding the end of the world, and provides extensive appendices that address theological topics such as the nature of God, the role of the Prophet, and the relationship between the Quran and previous scriptures.",
-    "pageCount": 279,
+    "pageCount": 280,
     "toc": [
       {
         "title": "PROLOGUE",
@@ -489,59 +489,35 @@
         "page": 1
       },
       {
-        "title": "If all the humans and all jinn",
-        "page": 2
-      },
-      {
-        "title": "None of us witnessed Moses when he turned his staff into a serpent",
+        "title": "What is the miracle of Muhammad?",
         "page": 3
       },
       {
-        "title": "as Pharaoh, the magicians, and the Israelites witnessed the miracles of Moses",
+        "title": "The key to Muhammad's perpetual, eternal, miracle",
         "page": 4
       },
       {
-        "title": "Abdul-Baqi, and published by the People's Press",
-        "page": 5
-      },
-      {
-        "title": "This is of course what all the non-Muslims claim",
-        "page": 6
-      },
-      {
-        "title": "THE ONLY POSSIBLE EXPLANATION LEFT is that a SUPER BEING did write the Qur'an",
+        "title": "THE ONLY POSSIBLE EXPLANATION LEFT",
         "page": 7
       },
       {
-        "title": "person will have the number 19 imposed on him",
+        "title": "the number 19 was mentioned in verse 30 for 5 distinct reasons",
         "page": 8
       },
       {
-        "title": "A historical fact that supports the identification of the number 19",
-        "page": 9
-      },
-      {
-        "title": "overwhelming. Thus, the greater portion of this physical, touchable, examinable",
+        "title": "One of the Qur'an's unique properties is the existence of alphabetical letters at the beginning of some suras",
         "page": 10
       },
       {
-        "title": "WHO WOULD KNOW THE ONLY SURAS WHICH CONTAIN EQUAL NUMBERS OF THE LETTER QAF",
+        "title": "Starting with a single-lettered Qur'anic initial, let us look at the initial Qaf",
         "page": 11
-      },
-      {
-        "title": "beginning of the only 2 suras which contain 57 Qafs each",
-        "page": 12
       },
       {
         "title": "Moving on the other Qur’anic initials, let us look at the letter Nun",
         "page": 13
       },
       {
-        "title": "Thus, every generation of human beings will receive and witness Muhammad's perpetual miracle",
-        "page": 14
-      },
-      {
-        "title": "this interlocking system, and see how it is complete beyond human ability",
+        "title": "This relationship between the number 19, the letters of BISMILLAHIR RAHMANIR RAHIM, and the Qur’anic initials covers ALL the Qur’anic initials",
         "page": 15
       },
       {
@@ -551,7 +527,7 @@
     ],
     "generated": {
       "model": "gemini-vision-ocr-verified",
-      "verifiedEntries": 16,
+      "verifiedEntries": 10,
       "droppedUnverifiable": 0
     }
   },

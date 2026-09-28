@@ -6,10 +6,7 @@
     "pages": 94,
     "blank_pages": 0,
     "arabic_segments": 3,
-    "canonical_quran_segments": 0,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 0
   },
   {
     "slug": "english_meanings_of_the_quran",
@@ -18,10 +15,7 @@
     "pages": 16,
     "blank_pages": 4,
     "arabic_segments": 11,
-    "canonical_quran_segments": 5,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 5
   },
   {
     "slug": "miracle_of_quran_mysterious_alphabets",
@@ -30,10 +24,7 @@
     "pages": 216,
     "blank_pages": 5,
     "arabic_segments": 95,
-    "canonical_quran_segments": 3,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 3
   },
   {
     "slug": "quran_visual_presentation_of_the_miracle",
@@ -42,10 +33,7 @@
     "pages": 252,
     "blank_pages": 1,
     "arabic_segments": 203,
-    "canonical_quran_segments": 6,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 6
   },
   {
     "slug": "quran_hadith_and_islam",
@@ -54,10 +42,7 @@
     "pages": 92,
     "blank_pages": 0,
     "arabic_segments": 74,
-    "canonical_quran_segments": 11,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 11
   },
   {
     "slug": "islam_volume_1",
@@ -66,10 +51,7 @@
     "pages": 90,
     "blank_pages": 9,
     "arabic_segments": 53,
-    "canonical_quran_segments": 4,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 4
   },
   {
     "slug": "the_computer_speaks",
@@ -78,10 +60,7 @@
     "pages": 280,
     "blank_pages": 11,
     "arabic_segments": 28,
-    "canonical_quran_segments": 1,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 1
   },
   {
     "slug": "the_contact_prayers",
@@ -90,10 +69,7 @@
     "pages": 8,
     "blank_pages": 0,
     "arabic_segments": 7,
-    "canonical_quran_segments": 0,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 0
   },
   {
     "slug": "the_perpetual_miracle_of_muhammad",
@@ -102,10 +78,7 @@
     "pages": 16,
     "blank_pages": 0,
     "arabic_segments": 10,
-    "canonical_quran_segments": 2,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 2
   },
   {
     "slug": "islam_volume_2",
@@ -114,10 +87,7 @@
     "pages": 92,
     "blank_pages": 0,
     "arabic_segments": 61,
-    "canonical_quran_segments": 22,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 22
   },
   {
     "slug": "islam_volume_3_4",
@@ -126,9 +96,6 @@
     "pages": 139,
     "blank_pages": 1,
     "arabic_segments": 85,
-    "canonical_quran_segments": 39,
-    "unverified_arabic_segments": 0,
-    "low_confidence_pages": 0,
-    "mean_ocr_confidence": 98.5
+    "canonical_quran_segments": 39
   }
 ]

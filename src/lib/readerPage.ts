@@ -62,6 +62,17 @@ export interface ReaderPagePayload {
     newsletterJsonData?: Record<string, unknown>;
 }
 
+const preferredBookOrder = [
+    'quran-visual-presentation',
+    'miracle-of-quran-alphabets',
+    'quran-hadith-islam',
+    'islam-volume-1-number-1-april-1974',
+    'islam-volume-1-number-2-july-1974',
+    'islam-volume-1-number-3-4-january-1975',
+    'perpetual-miracle',
+    'computer-speaks',
+] as const;
+
 // The server page resolves every possible asset URL at build time (fully static
 // via generateStaticParams). Only `backHref` differs between the two reader
 // routes that share this resolver, so it's the one thing callers parameterize.
@@ -93,5 +104,21 @@ export function resolveReaderPage(id: string, backHrefResolver: (book: BookData)
     }
 
     const pdfLink = book.type === 'other' ? book.pdfLink : '';
-    return { book, backHref, pdfLink: getPublicAssetUrl(pdfLink) };
+    const books = (booksData as ArchiveBookSummary[])
+        .filter((item) => (item as ArchiveBookSummary & { category?: string }).category === 'Books')
+        .sort((left, right) => {
+            const leftRank = preferredBookOrder.indexOf(left.id as (typeof preferredBookOrder)[number]);
+            const rightRank = preferredBookOrder.indexOf(right.id as (typeof preferredBookOrder)[number]);
+            const normalizedLeft = leftRank < 0 ? Number.MAX_SAFE_INTEGER : leftRank;
+            const normalizedRight = rightRank < 0 ? Number.MAX_SAFE_INTEGER : rightRank;
+            return normalizedLeft - normalizedRight || left.title.localeCompare(right.title);
+        });
+    const currentIndex = books.findIndex((item) => item.id === id);
+    return {
+        book,
+        backHref,
+        pdfLink: getPublicAssetUrl(pdfLink),
+        prevId: currentIndex > 0 ? books[currentIndex - 1].id : null,
+        nextId: currentIndex >= 0 && currentIndex < books.length - 1 ? books[currentIndex + 1].id : null,
+    };
 }

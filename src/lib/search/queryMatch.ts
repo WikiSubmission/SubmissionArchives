@@ -44,6 +44,8 @@ export type QueryMatch = {
     kind: 'phrase' | 'proximity' | 'all-terms' | 'single-term';
     distance?: number;
     matchedTerms: string[];
+    start?: number;
+    end?: number;
 };
 
 export function parseSearchQuery(query: string): SearchQueryParts {
@@ -79,6 +81,7 @@ export function findQueryMatch(
     const proximityWindow = parsed.proximityWindow ?? options.proximityWindow ?? 18;
     const text = content ?? '';
     const normalized = normalizeSearchText(text);
+    const normalizedMap = normalizeSearchTextWithOffsets(text);
 
     if (!normalized || (!parsed.phrases.length && !parsed.terms.length)) {
         return emptyMatch();
@@ -86,14 +89,18 @@ export function findQueryMatch(
 
     const exactPhrase = normalizeSearchText(query);
     if (exactPhrase && normalized.includes(exactPhrase)) {
-        const start = normalized.indexOf(exactPhrase);
+        const normalizedStart = normalized.indexOf(exactPhrase);
+        const start = normalizedMap.offsets[normalizedStart] ?? 0;
+        const end = (normalizedMap.offsets[normalizedStart + exactPhrase.length - 1] ?? start) + 1;
         return {
             matched: true,
-            snippet: createSnippet(text, start, start + exactPhrase.length, snippetRadius),
+            snippet: createSnippet(text, start, end, snippetRadius),
             score: 120,
             kind: 'phrase',
             distance: 0,
             matchedTerms: parsed.highlightTerms,
+            start,
+            end,
         };
     }
 
@@ -105,7 +112,9 @@ export function findQueryMatch(
         }
 
         if (!bestPhrase || phrase.length > bestPhrase.phrase.length) {
-            bestPhrase = { start: phraseStart, end: phraseStart + phrase.length, phrase };
+            const rawStart = normalizedMap.offsets[phraseStart] ?? 0;
+            const rawEnd = (normalizedMap.offsets[phraseStart + phrase.length - 1] ?? rawStart) + 1;
+            bestPhrase = { start: rawStart, end: rawEnd, phrase };
         }
     }
 
@@ -117,6 +126,8 @@ export function findQueryMatch(
             kind: 'phrase',
             distance: 0,
             matchedTerms: parsed.highlightTerms,
+            start: bestPhrase.start,
+            end: bestPhrase.end,
         };
     }
 
@@ -131,6 +142,8 @@ export function findQueryMatch(
                   kind: bestPhrase ? 'phrase' : 'single-term',
                   distance: 0,
                   matchedTerms: parsed.highlightTerms,
+                  start: single.start,
+                  end: single.end,
               }
             : emptyMatch();
     }
@@ -151,6 +164,8 @@ export function findQueryMatch(
             kind: 'proximity',
             distance: windowMatch.distance,
             matchedTerms: parsed.highlightTerms,
+            start: windowMatch.start,
+            end: windowMatch.end,
         };
     }
 
@@ -164,6 +179,8 @@ export function findQueryMatch(
         kind: bestPhrase ? 'phrase' : 'all-terms',
         distance: fallbackWindow.distance,
         matchedTerms: parsed.highlightTerms,
+        start: fallbackWindow.start,
+        end: fallbackWindow.end,
     };
 }
 
@@ -218,6 +235,43 @@ export function normalizeSearchText(text: string) {
         .replace(/[^a-z0-9\s]/g, ' ')
         .replace(/\s+/g, ' ')
         .trim();
+}
+
+// Keep offsets into the original source while applying the same normalization used
+// for matching. Snippets must slice the source text, not the shorter normalized copy;
+// otherwise punctuation and diacritics before a hit shift the quotation away from
+// the matched words.
+function normalizeSearchTextWithOffsets(text: string) {
+    let normalized = '';
+    const offsets: number[] = [];
+    let pendingSpace = false;
+    let pendingSpaceOffset = 0;
+
+    for (let index = 0; index < text.length; index++) {
+        const original = text[index];
+        if (original === "'" || original === '\u2019') continue;
+
+        const lower = original.toLowerCase();
+        const isWord = /[a-z0-9]/.test(lower);
+        if (isWord) {
+            if (pendingSpace && normalized.length > 0) {
+                normalized += ' ';
+                offsets.push(pendingSpaceOffset);
+            }
+            pendingSpace = false;
+            normalized += lower;
+            offsets.push(index);
+        } else if (/\s/.test(original)) {
+            if (!pendingSpace) pendingSpaceOffset = index;
+            pendingSpace = true;
+        } else {
+            // Punctuation becomes a space, matching normalizeSearchText.
+            if (!pendingSpace) pendingSpaceOffset = index;
+            pendingSpace = true;
+        }
+    }
+
+    return { normalized: normalized.trim(), offsets };
 }
 
 function tokenizeSearchText(text: string): SearchToken[] {

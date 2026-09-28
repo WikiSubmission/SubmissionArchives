@@ -91,3 +91,12 @@ at 16:25; the repetition in Quran Study 35 at 1:28:49.
 | `original/ahmed-deedats-end-were-all-the-lies-worth-it.mp4` | Contains no speech. Its transcript is an empty placeholder and nothing is quoted from it. **Untracked in git.** |
 | `transcriptions/ahmed-deedats-end-were-all-the-lies-worth-it.{json,txt,srt}` | The empty placeholder transcripts, kept so the absence is documented rather than inferred. |
 | `original/ahmed-deedat-portrait.webp`, `original/ahmed-deedat-portrait-2.webp` | Portraits. Not used in the article. |
+
+## Added in the 1982–1988 sweep
+
+| File | What it is |
+|---|---|
+| `messenger-audio/messenger-audio-68-friday-sermon-17-dec-1982.json` | Friday Sermon, Tucson, 17 December 1982. At 50:05–50:09 Khalifa says of Deedat, "He still doesn't know it [...] I just lent him a book by mail," dating an active, cordial exchange to six years before the telegram. The surrounding discussion of 19 and the numerical value of *wāḥid* is heavily degraded in the transcript; only the four clean lines are quoted. Cited in footnote 3. |
+| `newsletters/1988_01_January.pdf` | *Muslim Perspective*, January 1988. The Masjid Tucson book list still carries "QURAN: THE ULTIMATE MIRACLE by Ahmad Deedat (Illustrated) . . . 2.85", four months before the telegram and down from the $3.80 of the December 1985 list. Cited in footnote 4. |
+
+Together with the acknowledgment of 19 February 1979 and the December 1985 catalogue, these give the article its five dated fixed points before the break.

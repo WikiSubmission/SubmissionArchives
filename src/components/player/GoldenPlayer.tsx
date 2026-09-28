@@ -187,6 +187,7 @@ export default function GoldenPlayer({
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [autoTrack, setAutoTrack] = useState(true);
+  const [isTranscriptSyncAreaVisible, setIsTranscriptSyncAreaVisible] = useState(false);
 
   /* ---------- Transcript Language ---------- */
   const hasArabicTranscript = (arabicSegments?.length ?? 0) > 0;
@@ -196,6 +197,8 @@ export default function GoldenPlayer({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const playerRef = useRef<any>(null);
   const transcriptRef = useRef<HTMLDivElement>(null);
+  const transcriptSectionRef = useRef<HTMLElement>(null);
+  const transcriptToolbarRef = useRef<HTMLDivElement>(null);
   const toastTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const lastProgrammaticScrollRef = useRef(0);
   const hasSeekedToInitial = useRef(false);
@@ -327,6 +330,33 @@ export default function GoldenPlayer({
       window.removeEventListener("touchmove", handleUserScroll);
       window.removeEventListener("scroll", handleUserScroll);
     };
+  }, []);
+
+  /* ---------- Keep the floating sync action inside the transcript reading area ---------- */
+  useEffect(() => {
+    const section = transcriptSectionRef.current;
+    const toolbar = transcriptToolbarRef.current;
+    if (!section || !toolbar || typeof IntersectionObserver === "undefined") return;
+
+    let sectionInView = false;
+    let toolbarInView = false;
+    let toolbarHasBeenSeen = false;
+    const updateVisibility = () =>
+      setIsTranscriptSyncAreaVisible(sectionInView && toolbarHasBeenSeen && !toolbarInView);
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.target === section) sectionInView = entry.isIntersecting;
+        if (entry.target === toolbar) {
+          toolbarInView = entry.isIntersecting;
+          if (entry.isIntersecting) toolbarHasBeenSeen = true;
+        }
+      }
+      updateVisibility();
+    });
+
+    observer.observe(section);
+    observer.observe(toolbar);
+    return () => observer.disconnect();
   }, []);
 
   /* ---------- Sync To Active Cue ---------- */
@@ -496,8 +526,8 @@ export default function GoldenPlayer({
   const thumbnailLabel = mediaType === "quran-study"
     ? `Quran Study — QS ${String(qsNum).padStart(2, "0")}`
     : mediaType === "messenger-audio"
-    ? `Messenger Audio — MA ${String(qsNum).padStart(2, "0")}`
-    : typeLabel;
+      ? `Messenger Audio — MA ${String(qsNum).padStart(2, "0")}`
+      : typeLabel;
 
   return (
     <div className="qs-golden-player min-h-screen">
@@ -513,7 +543,7 @@ export default function GoldenPlayer({
       <div className="qs-container py-6">
         {/* Top Navigation & Breadcrumbs */}
         <div className="qs-top-nav">
-          <div className="flex items-center gap-3 flex-wrap">
+          <div className="qs-top-nav-context">
             <Link href={catalogLink.href} className="qs-back-btn" title={`Back to ${catalogLink.label}`}>
               <ArrowLeft className="w-4 h-4" />
               <span>Back to {catalogLink.label}</span>
@@ -568,7 +598,7 @@ export default function GoldenPlayer({
         <div className="qs-video-stage">
           <div className="qs-video-player">
             {hasStartedPlayback ? (
-              <div className="relative w-full h-full flex items-center justify-center bg-black z-10">
+              <div className="relative w-full h-full bg-black z-10">
                 {isVideo ? (
                   /* ===== VIDEO PLAYER (YouTube / MP4) ===== */
                   <ReactPlayer
@@ -578,6 +608,7 @@ export default function GoldenPlayer({
                     controls={true}
                     width="100%"
                     height="100%"
+                    style={{ position: "absolute", top: 0, left: 0 }}
                     playbackRate={playbackSpeed}
                     muted={isMuted}
                     onPlay={() => setIsPlaying(true)}
@@ -591,6 +622,11 @@ export default function GoldenPlayer({
                         playerRef.current.seekTo(initialSeekTime, "seconds");
                         hasSeekedToInitial.current = true;
                       }
+                    }}
+                    config={{
+                      youtube: {
+                        playerVars: { modestbranding: 1, rel: 0, iv_load_policy: 3 },
+                      } as Record<string, unknown>,
                     }}
                   />
                 ) : mediaUrl.includes("youtube.com") || mediaUrl.includes("youtu.be") ? (
@@ -602,6 +638,7 @@ export default function GoldenPlayer({
                     controls={true}
                     width="100%"
                     height="100%"
+                    style={{ position: "absolute", top: 0, left: 0 }}
                     playbackRate={playbackSpeed}
                     muted={isMuted}
                     onPlay={() => setIsPlaying(true)}
@@ -615,6 +652,11 @@ export default function GoldenPlayer({
                         playerRef.current.seekTo(initialSeekTime, "seconds");
                         hasSeekedToInitial.current = true;
                       }
+                    }}
+                    config={{
+                      youtube: {
+                        playerVars: { modestbranding: 1, rel: 0, iv_load_policy: 3 },
+                      } as Record<string, unknown>,
                     }}
                   />
                 ) : (
@@ -920,7 +962,7 @@ export default function GoldenPlayer({
 
           {/* ========== RIGHT MAIN: TRANSCRIPT ========== */}
           <main className="qs-main-content">
-            <section className="qs-section" aria-label="Transcript">
+            <section ref={transcriptSectionRef} className="qs-section" aria-label="Transcript">
               {/* Section Header */}
               <div className="qs-section-header">
                 <div className="flex items-center gap-3">
@@ -946,7 +988,7 @@ export default function GoldenPlayer({
               </div>
 
               {/* Transcript Toolbar & Search */}
-              <div className="qs-transcript-toolbar">
+              <div ref={transcriptToolbarRef} className="qs-transcript-toolbar">
                 <div className="qs-search-box">
                   <Search className="w-3.5 h-3.5" />
                   <input
@@ -1095,12 +1137,13 @@ export default function GoldenPlayer({
               </div>
 
               {/* Floating Sync Button when user scrolls away and playback is active */}
-              {!autoTrack && hasStartedPlayback && activeSegmentIndex !== -1 && (
+              {!autoTrack && hasStartedPlayback && activeSegmentIndex !== -1 && isTranscriptSyncAreaVisible && (
                 <div className="qs-floating-sync-wrap">
                   <button
                     type="button"
                     onClick={syncToActive}
                     className="qs-floating-sync-btn"
+                    aria-label={`Sync transcript to playback at ${formatTime(absoluteTime)}`}
                     title="Sync transcript with current playback position"
                   >
                     <LocateFixed className="w-4 h-4" />

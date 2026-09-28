@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import NewsletterViewer, { type IssueType } from './NewsletterViewer';
 import PDFReaderClient from './PDFReaderWrapper';
+import type { BookTocEntry } from '@/lib/bookPreviews';
 
 type EditionAsset = { pdfUrl: string; startPage?: number };
 
@@ -24,7 +25,7 @@ export type ReaderData =
           nextId?: string | null;
           backHref?: string;
       }
-    | { kind: 'pdf'; pdfUrl: string; title: string; documentId: string; prevId?: string | null; nextId?: string | null; backHref: string }
+    | { kind: 'pdf'; pdfUrl: string; title: string; documentId: string; prevId?: string | null; nextId?: string | null; outline?: BookTocEntry[]; backHref: string }
     | { kind: 'appendix'; editions: Record<string, EditionAsset>; defaultEdition: string; title: string; documentId: string; backHref: string };
 
 const MAX_PAGE = 10000;
@@ -65,6 +66,7 @@ function ReaderWithParams(props: ReaderData) {
         const initialPage = pageFromUrl ?? asset.startPage ?? 1;
         return (
             <PDFReaderClient
+                key={`${props.documentId}:${edition}`}
                 pdfUrl={asset.pdfUrl}
                 title={props.title}
                 documentId={props.documentId}
@@ -77,6 +79,7 @@ function ReaderWithParams(props: ReaderData) {
 
     return (
         <PDFReaderClient
+            key={props.documentId}
             pdfUrl={props.pdfUrl}
             title={props.title}
             documentId={props.documentId}
@@ -84,6 +87,7 @@ function ReaderWithParams(props: ReaderData) {
             initialQuery={query}
             prevId={props.prevId}
             nextId={props.nextId}
+            outline={props.outline}
             backHref={props.backHref}
         />
     );

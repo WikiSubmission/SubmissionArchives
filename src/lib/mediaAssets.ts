@@ -89,9 +89,12 @@ export function getMediaAssetUrl(item: {
     id?: string;
     youtubeUrl?: string | null;
     youtubeId?: string | null;
+    youtubeStartTime?: number | null;
 }) {
     if (item.youtubeId) {
-        return `https://www.youtube.com/watch?v=${item.youtubeId}`;
+        // Preserve a source clip offset while keeping the canonical video URL.
+        const startTime = getFiniteTime(item.youtubeStartTime) || getUrlTimeParam(item.youtubeUrl);
+        return `https://www.youtube.com/watch?v=${item.youtubeId}${startTime ? `&t=${Math.floor(startTime)}s` : ''}`;
     }
     if (item.youtubeUrl) {
         return item.youtubeUrl;

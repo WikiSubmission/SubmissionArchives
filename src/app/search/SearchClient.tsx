@@ -10,6 +10,7 @@ import {
     BookMarked,
     Check,
     ChevronDown,
+    ChevronRight,
     FileText,
     Headphones,
     Play,
@@ -62,6 +63,7 @@ type SearchResultMedia = {
     primaryNumber?: number;
     alternateNumbers?: string[];
     alternateNumberLabel?: string;
+    isOcr?: boolean;
 };
 
 type SearchResult = {
@@ -143,6 +145,7 @@ function SearchContent() {
     const abortRef = useRef<AbortController | null>(null);
     const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const suggestAbortRef = useRef<AbortController | null>(null);
+    const submittedQueryRef = useRef<string | null>(initialQuery.trim() || null);
     const suggestCacheRef = useRef<Map<string, Suggestion[]>>(new Map());
     const searchFieldRef = useRef<HTMLDivElement>(null);
     const isFirstRunRef = useRef(true);
@@ -446,6 +449,13 @@ function SearchContent() {
     useEffect(() => {
         const needle = query.trim();
 
+        if (needle && submittedQueryRef.current === needle) {
+            suggestAbortRef.current?.abort();
+            setSuggestions([]);
+            setSuggestOpen(false);
+            return;
+        }
+
         if (needle.length < MIN_SUGGEST_LENGTH) {
             suggestAbortRef.current?.abort();
             const timer = setTimeout(() => {
@@ -596,12 +606,16 @@ function SearchContent() {
     const handleSearchSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if (debounceRef.current) clearTimeout(debounceRef.current);
+        submittedQueryRef.current = query.trim();
+        suggestAbortRef.current?.abort();
+        setSuggestions([]);
         setSuggestOpen(false);
         syncUrl(query, filters);
         void runQuery(0);
     }, [query, filters, runQuery, syncUrl]);
 
     const clearSearchQuery = useCallback(() => {
+        submittedQueryRef.current = null;
         setQuery('');
         setSuggestions([]);
         setSuggestOpen(false);
@@ -620,7 +634,7 @@ function SearchContent() {
             />
 
             <main id="main-content" className="relative z-[1] overflow-hidden">
-                <div className="mx-auto max-w-[880px] px-4 py-8 sm:px-7 lg:py-12">
+                <div className="mx-auto max-w-5xl px-4 py-8 sm:px-7 lg:py-12">
                     {/* Hero Header */}
                     <header className="mb-7 border-b border-ed-rule pb-7">
                         <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
@@ -656,7 +670,10 @@ function SearchContent() {
                                             name="q"
                                             type="text"
                                             value={query}
-                                            onChange={(event) => setQuery(event.target.value)}
+                                            onChange={(event) => {
+                                                submittedQueryRef.current = null;
+                                                setQuery(event.target.value);
+                                            }}
                                             placeholder="Search transcripts, perspectives, appendices..."
                                             aria-label="Search transcripts, perspectives, appendices"
                                             className="w-full rounded-[4px] border border-ed-rule bg-ed-surface py-2.5 pl-10 pr-10 text-sm sm:text-base text-ed-fg placeholder:text-ed-fg-muted outline-none transition-all focus:border-ed-rule-strong focus:bg-ed-surface-strong"
@@ -836,20 +853,6 @@ function SearchContent() {
                                     </div>
                                 ) : null}
 
-                                {/* Stats Line below search bar */}
-                                <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-ed-rule text-xs">
-                                    <div className="flex items-center gap-2 font-sans font-bold text-ed-fg">
-                                        <span>{total > 0 ? `${total} documents, ${totalMatches} passages` : 'Search Preserved Archive'}</span>
-                                        {isSearching && results.length > 0 ? (
-                                            <span aria-live="polite" className="font-mono text-[0.68rem] font-normal text-ed-fg-muted">
-                                                Updating results…
-                                            </span>
-                                        ) : null}
-                                    </div>
-                                    <span className="font-mono text-[0.68rem] text-ed-fg-muted">
-                                        Exact phrases and nearby terms are already folded into the ranking.
-                                    </span>
-                                </div>
                         </div>
 
                         {errorMsg ? (
@@ -857,6 +860,23 @@ function SearchContent() {
                                 {errorMsg}
                             </div>
                         ) : null}
+
+                        <div className="flex flex-col gap-2 border-b border-ed-rule pb-3 sm:flex-row sm:items-end sm:justify-between">
+                            <div>
+                                <h2 className="text-lg font-semibold text-ed-fg">Results</h2>
+                                <p className="mt-0.5 text-sm text-ed-fg-muted" aria-live="polite">
+                                    {query.trim()
+                                        ? `${total} ${total === 1 ? 'source' : 'sources'} · ${totalMatches} ${totalMatches === 1 ? 'passage' : 'passages'}`
+                                        : 'Search across the preserved archive'}
+                                    {isSearching && results.length > 0 ? ' · Updating…' : ''}
+                                </p>
+                            </div>
+                            {query.trim() ? (
+                                <span className="font-mono text-[0.68rem] uppercase tracking-wider text-ed-fg-muted">
+                                    Ranked by relevance
+                                </span>
+                            ) : null}
+                        </div>
 
                         {/* Search Results List */}
                         <div ref={listRef} id="search-results" role="listbox" aria-label="Search results" className="space-y-6">
@@ -988,7 +1008,8 @@ function SearchResultCard({
     const mediaLink = getMediaLink(media, query);
     const thumbnailSrc = getThumbnailSrc(media);
     const isDocument = isDocumentType(media.type);
-    const visibleMatches = expanded ? matches : matches.slice(0, 3);
+    const visibleMatches = expanded ? matches : matches.slice(0, 2);
+    const matchUnit = media.type === 'quran' ? 'verses' : isDocument ? 'pages' : 'passages';
     const bestMatch = matches[0];
     const bestHref = bestMatch ? getMatchHref(media, bestMatch, query) : mediaLink;
 
@@ -1015,17 +1036,17 @@ function SearchResultCard({
             id={cardId}
             role="group"
             aria-label={cardTitle}
-            className={`group relative flex flex-col overflow-hidden rounded-[12px] border border-ed-rule bg-ed-surface p-5 sm:p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md ${
+            className={`group relative flex flex-col overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-4 sm:p-5 transition-colors duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong ${
                 cardActive ? 'ring-2 ring-ed-accent ring-offset-2 ring-offset-ed-bg' : ''
             }`}
         >
             <div className="space-y-5">
                 {/* Main Media & Header Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-6 items-start">
+                <div className="grid grid-cols-[72px_minmax(0,1fr)] items-center gap-4 sm:grid-cols-[112px_minmax(0,1fr)] sm:gap-5 lg:grid-cols-[144px_minmax(0,1fr)]">
                     <Link
                         href={bestHref}
                         className={`group relative overflow-hidden rounded-[8px] border border-ed-rule bg-ed-bg ${
-                            isDocument ? 'aspect-[3/4] w-full max-w-[160px] mx-auto' : 'aspect-video w-full'
+                            isDocument ? 'aspect-[3/4] w-full max-w-[160px]' : 'aspect-video w-full'
                         }`}
                         aria-label={`Open ${media.displayTitle || media.title}`}
                     >
@@ -1053,16 +1074,21 @@ function SearchResultCard({
                         ) : null}
                     </Link>
 
-                    <div className="min-w-0 space-y-2.5">
+                    <div className="min-w-0 space-y-2">
                         {/* Top Badges Row */}
-                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-ed-rule pb-3">
-                            <div className="flex items-center gap-2">
+                        <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5 border-b border-ed-rule pb-2.5">
+                            <div className="flex flex-wrap items-center gap-1.5">
                                 <span className="rounded-[4px] border border-ed-rule bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg">
                                     {String(rank).padStart(2, '0')}
                                 </span>
                                 <span className="rounded-[4px] border border-ed-rule bg-ed-surface px-3 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg-muted uppercase tracking-wider">
                                     {getMediaTypeLabel(media.type)}
                                 </span>
+                                {media.isOcr ? (
+                                    <span className="rounded-[4px] border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 font-mono text-[0.62rem] font-bold uppercase tracking-wider text-amber-300">
+                                        OCR text
+                                    </span>
+                                ) : null}
                                 {media.displayDate ? (
                                     <span className="font-mono text-xs text-ed-fg-muted">
                                         {media.displayDate}
@@ -1078,7 +1104,7 @@ function SearchResultCard({
                         {/* Title & Author */}
                         <Link href={mediaLink} className="block pt-0.5 group">
                             <h3
-                                className="text-xl sm:text-2xl font-semibold tracking-tight text-ed-fg leading-snug transition-colors group-hover:text-ed-accent"
+                                className="text-lg sm:text-xl font-semibold tracking-tight text-ed-fg leading-snug transition-colors group-hover:text-ed-accent"
                                 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                             >
                                 {media.displayTitle || media.title}
@@ -1099,22 +1125,27 @@ function SearchResultCard({
                         id={bestPassageId}
                         role="option"
                         aria-selected={bestPassageActive}
-                        className={`block rounded-[8px] border border-ed-rule bg-ed-surface-strong p-4 sm:p-5 transition hover:border-ed-rule-strong ${
+                        className={`block border-t border-ed-rule pt-4 transition-colors hover:border-ed-rule-strong ${
                             bestPassageActive ? 'ring-2 ring-ed-accent' : ''
                         }`}
                     >
-                        <div className="flex items-center justify-between gap-2 mb-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
                             <span className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
-                                Best passage
+                                {media.isOcr && typeof bestMatch.page === 'number'
+                                    ? `OCR excerpt · PDF page ${bestMatch.page}`
+                                    : 'Best passage'}
                             </span>
                             <span className="inline-flex items-center gap-1.5 rounded-[4px] bg-ed-accent text-white dark:text-[#0F0E0D] px-3.5 py-1 font-mono text-xs font-bold transition-all hover:opacity-90">
-                                <Play className="h-3 w-3 fill-current" />
-                                {isDocumentType(media.type) ? `Open Page ${bestMatch.page || 1}` : `Play at ${formatTime(bestMatch.start_time)}`}
+                                {isDocumentType(media.type) ? (
+                                    <><FileText className="h-3.5 w-3.5" />{`Open ${media.isOcr ? 'PDF ' : ''}Page ${bestMatch.page || 1}`}</>
+                                ) : (
+                                    <><Play className="h-3 w-3 fill-current" />{`Play at ${formatTime(bestMatch.start_time)}`}</>
+                                )}
                             </span>
                         </div>
 
-                        <div className="flex gap-3 items-start">
-                            <span className="font-serif text-3xl leading-none text-ed-fg-muted select-none">“</span>
+                        <div className="flex gap-2.5 items-start">
+                            <span className="font-serif text-2xl leading-none text-ed-fg-muted select-none">“</span>
                             <p
                                 className="text-sm sm:text-base leading-relaxed text-ed-fg"
                                 dangerouslySetInnerHTML={{
@@ -1129,7 +1160,7 @@ function SearchResultCard({
                 {visibleMatches.length > 1 ? (
                     <div className="pt-2 border-t border-ed-rule space-y-3">
                         <p className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
-                            Passages in this {isDocument ? 'document' : 'recording'}
+                            More matching {matchUnit}
                         </p>
 
                         <div className="relative pl-6 space-y-3.5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-ed-rule">
@@ -1151,7 +1182,7 @@ function SearchResultCard({
                 ) : null}
 
                 {/* Expander Button */}
-                {matches.length > 3 ? (
+                {matches.length > 2 ? (
                     <div className="pt-2">
                         <button
                             type="button"
@@ -1159,7 +1190,7 @@ function SearchResultCard({
                             aria-expanded={expanded}
                             className="inline-flex items-center gap-2 rounded-[4px] border border-ed-rule bg-ed-surface px-5 py-2 font-mono text-xs font-semibold text-ed-fg-muted transition-all hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg"
                         >
-                            <span>{expanded ? 'Show fewer passages' : `Show ${matches.length - 3} more passages`}</span>
+                            <span>{expanded ? 'Show fewer matches' : `Show ${matches.length - 2} more ${matchUnit}`}</span>
                             <ChevronDown className={`h-3.5 w-3.5 transition-transform ${expanded ? 'rotate-180' : ''}`} />
                         </button>
                     </div>
@@ -1199,12 +1230,15 @@ function SearchMatchRow({
 
             <div className="flex items-start gap-3 min-w-0 flex-1">
                 <span className="font-mono text-xs font-bold text-ed-fg shrink-0 pt-0.5">
-                    {getQuranVerseRef(media, match) || (isDocumentType(media.type) ? `Page ${match.page || 1}` : formatTime(match.start_time))}
+                    {getQuranVerseRef(media, match) || (isDocumentType(media.type)
+                        ? `${media.isOcr ? 'PDF p.' : 'Page'} ${match.page || 1}`
+                        : formatTime(match.start_time))}
                 </span>
                 <div className="min-w-0 flex-1">
-                    {match.kind || match.label ? (
+                    {media.isOcr || match.kind || match.label ? (
                         <span className="block font-mono text-[0.62rem] uppercase tracking-wider text-ed-fg-muted mb-0.5">
-                            {match.label ? `${getContentLabelText(match.label)} · ` : ''}
+                            {media.isOcr ? 'OCR text · ' : ''}
+                            {match.label && !media.isOcr ? `${getContentLabelText(match.label)} · ` : ''}
                             {getMatchKindLabel(match.kind || '')}
                         </span>
                     ) : null}
@@ -1218,8 +1252,10 @@ function SearchMatchRow({
             </div>
 
             <div className="flex items-center gap-1 shrink-0 text-ed-fg-muted group-hover:text-ed-fg">
-                <Play className="h-3.5 w-3.5 fill-current" />
-                <ChevronDown className="h-3.5 w-3.5" />
+                {isDocumentType(media.type)
+                    ? <FileText className="h-3.5 w-3.5" />
+                    : <Play className="h-3.5 w-3.5 fill-current" />}
+                <ChevronRight className="h-3.5 w-3.5" />
             </div>
         </Link>
     );

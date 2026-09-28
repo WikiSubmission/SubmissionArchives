@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { getBookData, getBookDescription, generateReaderStaticParams, resolveReaderPage, type BookData } from '@/lib/readerPage';
+import { getBookPreviews } from '@/lib/bookPreviews';
 import LibraryReaderWrapper from './LibraryReaderWrapper';
 import type { IssueType } from './NewsletterViewer';
 
@@ -31,6 +32,7 @@ export default async function PDFReaderPage({ params }: Props) {
     const { id } = await params;
     const payload = resolveReaderPage(id, backHrefFor);
     const { book, backHref } = payload;
+    const bookToc = book.type === 'other' ? getBookPreviews()[id]?.toc : undefined;
 
     if (book.type === 'newsletter' && payload.pdfLink) {
         return (
@@ -80,6 +82,7 @@ export default async function PDFReaderPage({ params }: Props) {
                 title={book.title}
                 prevId={payload.prevId}
                 nextId={payload.nextId}
+                outline={bookToc}
                 backHref={backHref}
             />
         </main>

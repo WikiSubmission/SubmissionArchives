@@ -6,10 +6,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { X } from 'lucide-react';
 import { Document, Page, Thumbnail, pdfjs } from 'react-pdf';
+import { useVirtualizer } from '@tanstack/react-virtual';
 import type { TextContent } from 'pdfjs-dist/types/src/display/api';
 import type { PageCallback } from 'react-pdf/dist/shared/types.js';
-import { getHighlightTerms } from '@/lib/search/queryMatch';
+import { findQueryMatch, getHighlightTerms } from '@/lib/search/queryMatch';
 import { getProgress, saveProgress, shouldOfferResume } from '@/lib/readingProgress';
+import type { BookTocEntry } from '@/lib/bookPreviews';
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import '../pdf-theme.css';
@@ -27,6 +29,7 @@ type Props = {
     prevId?: string | null;
     nextId?: string | null;
     backHref?: string;
+    outline?: BookTocEntry[];
 };
 
 type TextItem = {
@@ -43,10 +46,10 @@ type OutlineItem = {
 
 type LayoutMode = 'single' | 'spread' | 'continuous';
 type ReadingTheme = 'default' | 'sepia' | 'dark';
+type OcrPage = { page: number; text: string };
+type OcrMatch = { page: number; before: string; matchedText: string; after: string; matchCount: number };
 
-const ZOOM_KEY = 'reader-zoom';
-const LAYOUT_KEY = 'reader-layout';
-const THEME_KEY = 'reader-theme';
+const preferenceKey = (key: string, documentId: string) => `${key}:${documentId}`;
 const ZOOM_MIN = 0.4;
 const ZOOM_MAX = 3.0;
 const ZOOM_STEP = 0.15;
@@ -104,7 +107,7 @@ function computeHighlightRanges(items: TextItem[], terms: string[]): Map<number,
         }
     }
 
-    for (const [, itemRanges] of ranges) {
+    for (const [itemIndex, itemRanges] of ranges) {
         itemRanges.sort((a, b) => a[0] - b[0]);
         const merged: Array<[number, number]> = [];
         for (const [start, end] of itemRanges) {
@@ -115,6 +118,7 @@ function computeHighlightRanges(items: TextItem[], terms: string[]): Map<number,
                 merged.push([start, end]);
             }
         }
+        ranges.set(itemIndex, merged);
     }
 
     return ranges;
@@ -129,6 +133,7 @@ export default function PDFReaderClient({
     prevId,
     nextId,
     backHref = '/written#books',
+    outline: curatedToc,
 }: Props) {
     const router = useRouter();
     const [numPages, setNumPages] = useState<number | null>(null);
@@ -151,26 +156,28 @@ export default function PDFReaderClient({
     // Persisted preferences
     const [zoom, setZoom] = useState(() => {
         if (typeof window === 'undefined') return 1;
-        const saved = parseFloat(localStorage.getItem(ZOOM_KEY) || '1');
+        const saved = parseFloat(localStorage.getItem(preferenceKey('reader-zoom', documentId)) || '1');
         return Number.isFinite(saved) ? Math.min(Math.max(saved, ZOOM_MIN), ZOOM_MAX) : 1;
     });
 
     const [layoutMode, setLayoutMode] = useState<LayoutMode>(() => {
         if (typeof window === 'undefined') return 'single';
-        const saved = localStorage.getItem(LAYOUT_KEY) as LayoutMode;
+        const saved = localStorage.getItem(preferenceKey('reader-layout', documentId)) as LayoutMode;
         return saved === 'spread' || saved === 'continuous' ? saved : 'single';
     });
 
     const [readingTheme, setReadingTheme] = useState<ReadingTheme>(() => {
         if (typeof window === 'undefined') return 'default';
-        const saved = localStorage.getItem(THEME_KEY) as ReadingTheme;
+        const saved = localStorage.getItem(preferenceKey('reader-theme', documentId)) as ReadingTheme;
         return saved === 'sepia' || saved === 'dark' ? saved : 'default';
     });
 
     const [rotation, setRotation] = useState(0);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [sidebarTab, setSidebarTab] = useState<'thumbnails' | 'outline'>('thumbnails');
-    const [outline, setOutline] = useState<OutlineItem[]>([]);
+    const [outline, setOutline] = useState<OutlineItem[]>(() =>
+        (curatedToc ?? []).map((entry) => ({ title: entry.title, pageNumber: entry.page })),
+    );
     const [isFullscreen, setIsFullscreen] = useState(false);
 
     // Popover states
@@ -189,6 +196,9 @@ export default function PDFReaderClient({
     const [isEditingPage, setIsEditingPage] = useState(false);
     const [pageInput, setPageInput] = useState(String(Math.max(1, initialPage || 1)));
     const [resumePage, setResumePage] = useState<number | null>(null);
+    const [ocrPages, setOcrPages] = useState<OcrPage[] | null>(null);
+    const [ocrLoading, setOcrLoading] = useState(false);
+    const [ocrError, setOcrError] = useState(false);
 
     // Refs
     const readerRootRef = useRef<HTMLDivElement>(null);
@@ -197,25 +207,67 @@ export default function PDFReaderClient({
     const pageInputRef = useRef<HTMLInputElement>(null);
     const hasScrolledToMatch = useRef(false);
     const marksRef = useRef<HTMLElement[]>([]);
-    const highlightRangesRef = useRef<Map<number, Array<[number, number]>>>(new Map());
+    const highlightRangesRef = useRef<Map<number, Map<number, Array<[number, number]>>>>(new Map());
+    const pageTextItemsRef = useRef<Map<number, TextItem[]>>(new Map());
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const pdfDocRef = useRef<any>(null);
+    const thumbnailScrollRef = useRef<HTMLDivElement>(null);
 
-    const query = searchQuery.trim().toLowerCase();
+    const query = searchQuery.trim().replace(/\s+/g, ' ').toLowerCase();
     const highlightTerms = useMemo(() => getHighlightTerms(query), [query]);
+    const ocrMatches = useMemo<OcrMatch[]>(() => {
+        if (!ocrPages || !query) return [];
+        return ocrPages.flatMap((page) => {
+            const match = findQueryMatch(page.text, query, { snippetRadius: 0 });
+            if (!match.matched || typeof match.start !== 'number' || typeof match.end !== 'number') return [];
+
+            const start = Math.max(0, match.start - 72);
+            const end = Math.min(page.text.length, match.end + 112);
+            const beforeText = page.text.slice(start, match.start);
+            const afterText = page.text.slice(match.end, end);
+            return [{
+                page: page.page,
+                before: `${start > 0 ? '…' : ''}${beforeText}`,
+                matchedText: page.text.slice(match.start, match.end),
+                after: `${end < page.text.length ? '…' : ''}${afterText}`,
+                matchCount: 1,
+            }];
+        });
+    }, [ocrPages, query]);
 
     // Save preferences
     useEffect(() => {
-        localStorage.setItem(ZOOM_KEY, String(zoom));
-    }, [zoom]);
+        localStorage.setItem(preferenceKey('reader-zoom', documentId), String(zoom));
+    }, [documentId, zoom]);
 
     useEffect(() => {
-        localStorage.setItem(LAYOUT_KEY, layoutMode);
-    }, [layoutMode]);
+        localStorage.setItem(preferenceKey('reader-layout', documentId), layoutMode);
+    }, [documentId, layoutMode]);
 
     useEffect(() => {
-        localStorage.setItem(THEME_KEY, readingTheme);
-    }, [readingTheme]);
+        localStorage.setItem(preferenceKey('reader-theme', documentId), readingTheme);
+    }, [documentId, readingTheme]);
+
+    useEffect(() => {
+        if (!searchOpen || !curatedToc?.length || ocrPages) return;
+        const controller = new AbortController();
+        setOcrLoading(true);
+        setOcrError(false);
+        fetch(`/api/books/${encodeURIComponent(documentId)}/ocr`, { signal: controller.signal })
+            .then(async (response) => {
+                if (!response.ok) throw new Error('OCR request failed');
+                return response.json() as Promise<{ pages?: OcrPage[] }>;
+            })
+            .then((data) => setOcrPages(data.pages ?? []))
+            .catch((error: unknown) => {
+                if (error instanceof Error && error.name === 'AbortError') return;
+                setOcrError(true);
+            })
+            .finally(() => {
+                if (!controller.signal.aborted) setOcrLoading(false);
+            });
+        return () => controller.abort();
+    }, [curatedToc?.length, documentId, ocrPages, searchOpen]);
 
     // Track reading progress
     useEffect(() => {
@@ -271,14 +323,32 @@ export default function PDFReaderClient({
         return Math.min(availableWidth, availableHeight * ratio, 1400);
     }, [containerSize, sidebarOpen, pageAspectRatio, rotation, layoutMode]);
 
+    // TanStack Virtual's imperative methods intentionally prevent React Compiler memoization.
+    // eslint-disable-next-line react-hooks/incompatible-library
+    const continuousVirtualizer = useVirtualizer({
+        count: layoutMode === 'continuous' ? numPages ?? 0 : 0,
+        getScrollElement: () => containerRef.current,
+        estimateSize: () => (pageAspectRatio ? (pageWidth * zoom) / pageAspectRatio : 800) + 48,
+        overscan: 3,
+    });
+    const thumbnailVirtualizer = useVirtualizer({
+        count: sidebarOpen && sidebarTab === 'thumbnails' ? numPages ?? 0 : 0,
+        getScrollElement: () => thumbnailScrollRef.current,
+        estimateSize: () => 220,
+        overscan: 4,
+    });
+
     // Reset on document change
-    const [resetKey, setResetKey] = useState({ pdfUrl, initialPage });
-    if (resetKey.pdfUrl !== pdfUrl || resetKey.initialPage !== initialPage) {
-        setResetKey({ pdfUrl, initialPage });
+    const [resetKey, setResetKey] = useState({ pdfUrl, initialPage, documentId });
+    if (resetKey.pdfUrl !== pdfUrl || resetKey.initialPage !== initialPage || resetKey.documentId !== documentId) {
+        setResetKey({ pdfUrl, initialPage, documentId });
         const resetPage = Math.max(1, initialPage || 1);
         setPageNumber(resetPage);
         setPageInput(String(resetPage));
         setRotation(0);
+        setPageAspectRatio(null);
+        setNumPages(null);
+        setOutline((curatedToc ?? []).map((entry) => ({ title: entry.title, pageNumber: entry.page })));
         setSearchQuery(initialQuery);
         setMatchCount(0);
         setCurrentMatch(0);
@@ -303,6 +373,15 @@ export default function PDFReaderClient({
         observer.observe(el);
         return () => observer.disconnect();
     }, []);
+
+    useEffect(() => {
+        if (layoutMode === 'continuous' && numPages) {
+            continuousVirtualizer.scrollToIndex(Math.min(initialPage, numPages) - 1, {
+                align: 'start',
+                behavior: 'auto',
+            });
+        }
+    }, [continuousVirtualizer, initialPage, layoutMode, numPages, pdfUrl]);
 
     // Fullscreen listener
     useEffect(() => {
@@ -335,10 +414,9 @@ export default function PDFReaderClient({
         setPageInput(String(clamped));
 
         if (layoutMode === 'continuous') {
-            const pageEl = document.getElementById(`pdf-page-${clamped}`);
-            pageEl?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            continuousVirtualizer.scrollToIndex(clamped - 1, { align: 'start', behavior: 'smooth' });
         }
-    }, [numPages, layoutMode]);
+    }, [numPages, layoutMode, continuousVirtualizer]);
 
     const jumpToMatch = useCallback((direction: 'next' | 'prev') => {
         const marks = marksRef.current;
@@ -449,15 +527,22 @@ export default function PDFReaderClient({
         }
     };
 
-    const handleGetTextSuccess = (textContent: TextContent) => {
+    const handleGetTextSuccess = (pageNumber: number, textContent: TextContent) => {
         const items = textContent.items
             .map((item, itemIndex) => ({ str: 'str' in item ? item.str : '', itemIndex }))
             .filter((item) => item.str);
-        highlightRangesRef.current = computeHighlightRanges(items, highlightTerms);
+        pageTextItemsRef.current.set(pageNumber, items);
+        highlightRangesRef.current.set(pageNumber, computeHighlightRanges(items, highlightTerms));
     };
 
-    const highlightRenderer = (textItem: TextItem) => {
-        const ranges = highlightRangesRef.current.get(textItem.itemIndex);
+    useEffect(() => {
+        highlightRangesRef.current = new Map(
+            [...pageTextItemsRef.current.entries()].map(([page, items]) => [page, computeHighlightRanges(items, highlightTerms)]),
+        );
+    }, [highlightTerms]);
+
+    const highlightRenderer = (pageNumber: number, textItem: TextItem) => {
+        const ranges = highlightRangesRef.current.get(pageNumber)?.get(textItem.itemIndex);
         if (!ranges || ranges.length === 0) return textItem.str;
 
         let result = '';
@@ -503,6 +588,13 @@ export default function PDFReaderClient({
     const handleDocumentLoadSuccess = async (pdfDoc: any) => {
         pdfDocRef.current = pdfDoc;
         setNumPages(pdfDoc.numPages);
+
+        if (curatedToc?.length) {
+            setOutline(curatedToc.map((entry) => ({ title: entry.title, pageNumber: entry.page })));
+            return;
+        }
+
+        setOutline([]);
 
         try {
             const rawOutline = await pdfDoc.getOutline();
@@ -1106,6 +1198,43 @@ export default function PDFReaderClient({
                             / to focus
                         </span>
                     </div>
+                    {curatedToc?.length && query ? (
+                        <div className="mx-auto mt-2 max-h-40 max-w-3xl overflow-y-auto rounded-md border border-[#2A2928] bg-[#11100F] p-2" aria-live="polite">
+                            <div className="px-1 pb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#9E9690]">
+                                OCR page matches
+                            </div>
+                            {ocrLoading ? (
+                                <p className="px-1 py-2 text-xs text-[#9E9690]">Searching the book text…</p>
+                            ) : ocrError ? (
+                                <p className="px-1 py-2 text-xs text-[#9E9690]">OCR search is temporarily unavailable.</p>
+                            ) : ocrMatches.length ? (
+                                <div className="space-y-1">
+                                    {ocrMatches.slice(0, 12).map((match) => {
+                                        return (
+                                            <button
+                                                key={match.page}
+                                                type="button"
+                                                onClick={() => goToPage(match.page)}
+                                                className="flex w-full items-start gap-3 rounded px-2 py-1.5 text-left transition-colors hover:bg-[#1C1B1A]"
+                                            >
+                                                <span className="shrink-0 pt-0.5 text-[11px] font-semibold text-[#C8794A]">
+                                                    p. {match.page} · {match.matchCount}
+                                                </span>
+                                                <span className="line-clamp-2 text-xs leading-relaxed text-[#D5CEC7]">
+                                                    {match.before}<mark className="rounded-sm bg-[#C8794A]/30 text-[#F5F0EB]">{match.matchedText}</mark>{match.after}
+                                                </span>
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            ) : ocrPages ? (
+                                <p className="px-1 py-2 text-xs text-[#9E9690]">No OCR matches found.</p>
+                            ) : null}
+                            {ocrMatches.length > 12 ? (
+                                <p className="px-2 pt-1 text-[10px] text-[#9E9690]">Showing 12 of {ocrMatches.length} matching pages.</p>
+                            ) : null}
+                        </div>
+                    ) : null}
                 </div>
             )}
 
@@ -1141,35 +1270,44 @@ export default function PDFReaderClient({
                         </div>
 
                         {/* Sidebar Tab Content */}
-                        <div className="flex-1 overflow-y-auto p-2 sm:p-3 scrollbar-thin">
+                        <div
+                            ref={sidebarTab === 'thumbnails' ? thumbnailScrollRef : undefined}
+                            className="flex-1 overflow-y-auto p-2 sm:p-3 scrollbar-thin"
+                        >
                             {sidebarTab === 'thumbnails' ? (
-                                <Document file={pdfUrl} options={pdfOptions}>
-                                    {numPages &&
-                                        Array.from({ length: numPages }, (_, i) => (
+                                <div style={{ height: thumbnailVirtualizer.getTotalSize(), position: 'relative' }}>
+                                    {thumbnailVirtualizer.getVirtualItems().map((virtualPage) => {
+                                        const pageIndex = virtualPage.index;
+                                        return (
                                             <button
-                                                key={i}
+                                                key={virtualPage.key}
+                                                ref={thumbnailVirtualizer.measureElement}
+                                                data-index={pageIndex}
                                                 type="button"
-                                                onClick={() => goToPage(i + 1)}
-                                                className={`mb-2.5 w-full rounded-[8px] border p-1.5 transition-all text-left group ${pageNumber === i + 1 || (layoutMode === 'spread' && spreadPages.includes(i + 1))
+                                                onClick={() => goToPage(pageIndex + 1)}
+                                                className={`absolute left-0 top-0 w-full rounded-[8px] border p-1.5 transition-all text-left group ${pageNumber === pageIndex + 1 || (layoutMode === 'spread' && spreadPages.includes(pageIndex + 1))
                                                     ? 'border-[#C8794A] bg-[#C8794A]/15 shadow-md shadow-[#C8794A]/10'
                                                     : 'border-transparent hover:border-[#2A2928] hover:bg-[#161514]'
                                                     }`}
-                                                aria-label={`Go to page ${i + 1}`}
-                                                aria-current={pageNumber === i + 1 ? 'true' : undefined}
+                                                aria-label={`Go to page ${pageIndex + 1}`}
+                                                aria-current={pageNumber === pageIndex + 1 ? 'true' : undefined}
+                                                style={{ transform: `translateY(${virtualPage.start}px)` }}
                                             >
                                                 <div className="overflow-hidden rounded-[4px] bg-[#1C1B1A] border border-[#2A2928] flex justify-center">
                                                     <Thumbnail
-                                                        pageNumber={i + 1}
+                                                        pdf={pdfDocRef.current}
+                                                        pageNumber={pageIndex + 1}
                                                         width={180}
                                                         className="rounded-md"
                                                     />
                                                 </div>
                                                 <span className="mt-1.5 block text-center text-[11px] text-[#A8A099] group-hover:text-[#F5F0EB] tabular-nums">
-                                                    Page {i + 1}
+                                                    Page {pageIndex + 1}
                                                 </span>
                                             </button>
-                                        ))}
-                                </Document>
+                                        );
+                                    })}
+                                </div>
                             ) : (
                                 <div className="space-y-1">
                                     {outline.map((item, idx) => (
@@ -1202,6 +1340,17 @@ export default function PDFReaderClient({
                 {/* PDF Viewer Canvas Container */}
                 <div
                     ref={containerRef}
+                    onScroll={(event) => {
+                        if (layoutMode !== 'continuous') return;
+                        const scrollTop = event.currentTarget.scrollTop;
+                        const visiblePage = continuousVirtualizer
+                            .getVirtualItems()
+                            .find((item) => item.end > scrollTop + 48);
+                        if (visiblePage && pageNumber !== visiblePage.index + 1) {
+                            setPageNumber(visiblePage.index + 1);
+                            setPageInput(String(visiblePage.index + 1));
+                        }
+                    }}
                     className="min-h-0 flex-1 overflow-auto overscroll-contain bg-ed-bg px-3 py-5 pb-24 sm:px-7 sm:py-7 sm:pb-8"
                 >
                     <Document
@@ -1222,9 +1371,9 @@ export default function PDFReaderClient({
                                     pageNumber={pageNumber}
                                     width={pageWidth * zoom}
                                     rotate={rotation}
-                                    customTextRenderer={highlightRenderer}
+                                    customTextRenderer={(item) => highlightRenderer(pageNumber, item)}
                                     onLoadSuccess={handlePageLoadSuccess}
-                                    onGetTextSuccess={handleGetTextSuccess}
+                                    onGetTextSuccess={(textContent) => handleGetTextSuccess(pageNumber, textContent)}
                                     onRenderSuccess={handlePageRenderSuccess}
                                     className="soft-shell overflow-hidden rounded-[6px]"
                                 />
@@ -1239,9 +1388,9 @@ export default function PDFReaderClient({
                                             pageNumber={pg}
                                             width={pageWidth * zoom}
                                             rotate={rotation}
-                                            customTextRenderer={highlightRenderer}
+                                            customTextRenderer={(item) => highlightRenderer(pg, item)}
                                             onLoadSuccess={handlePageLoadSuccess}
-                                            onGetTextSuccess={handleGetTextSuccess}
+                                            onGetTextSuccess={(textContent) => handleGetTextSuccess(pg, textContent)}
                                             onRenderSuccess={handlePageRenderSuccess}
                                             className={`overflow-hidden ${spreadPages.length > 1 && idx === 0
                                                 ? 'pdf-spread-left rounded-l-lg'
@@ -1264,29 +1413,37 @@ export default function PDFReaderClient({
                         )}
 
                         {layoutMode === 'continuous' && (
-                            <div className="space-y-6 flex flex-col items-center">
-                                {numPages &&
-                                    Array.from({ length: numPages }, (_, i) => (
+                            <div
+                                className="relative mx-auto w-full"
+                                style={{ height: continuousVirtualizer.getTotalSize() }}
+                            >
+                                {continuousVirtualizer.getVirtualItems().map((virtualPage) => {
+                                    const page = virtualPage.index + 1;
+                                    return (
                                         <div
-                                            key={`continuous-${i + 1}`}
-                                            id={`pdf-page-${i + 1}`}
-                                            className="flex flex-col items-center"
+                                            key={virtualPage.key}
+                                            ref={continuousVirtualizer.measureElement}
+                                            data-index={virtualPage.index}
+                                            id={`pdf-page-${page}`}
+                                            className="absolute left-0 top-0 flex w-full flex-col items-center"
+                                            style={{ transform: `translateY(${virtualPage.start}px)` }}
                                         >
                                             <Page
-                                                pageNumber={i + 1}
+                                                pageNumber={page}
                                                 width={pageWidth * zoom}
                                                 rotate={rotation}
-                                                customTextRenderer={highlightRenderer}
-                                                onLoadSuccess={i === 0 ? handlePageLoadSuccess : undefined}
-                                                onGetTextSuccess={handleGetTextSuccess}
+                                                customTextRenderer={(item) => highlightRenderer(page, item)}
+                                                onLoadSuccess={page === 1 ? handlePageLoadSuccess : undefined}
+                                                onGetTextSuccess={(textContent) => handleGetTextSuccess(page, textContent)}
                                                 onRenderSuccess={handlePageRenderSuccess}
                                                 className="soft-shell overflow-hidden rounded-[6px]"
                                             />
                                             <span className="mt-2 text-[11px] text-ed-fg-muted">
-                                                Page {i + 1} of {numPages}
+                                                Page {page} of {numPages}
                                             </span>
                                         </div>
-                                    ))}
+                                    );
+                                })}
                             </div>
                         )}
                     </Document>

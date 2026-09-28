@@ -46,6 +46,7 @@ export type SearchMedia = {
     primaryNumber?: number;
     alternateNumbers?: string[];
     alternateNumberLabel?: string;
+    isOcr?: boolean;
 };
 
 export type SearchResult = {
@@ -61,13 +62,19 @@ const searchCache = new LRUCache<string, SearchResult[]>({
 });
 
 let cachedMasterIndex: ArchiveRecord[] | null = null;
+let cachedMasterIndexMtime: number | null = null;
 
 function getSearchIndex() {
-    if (!cachedMasterIndex) {
-        const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', 'MASTER_INDEX.json');
-        cachedMasterIndex = fs.existsSync(filePath)
-            ? (JSON.parse(fs.readFileSync(filePath, 'utf8')) as ArchiveRecord[])
-            : [];
+    const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', 'MASTER_INDEX.json');
+    const fileMtime = fs.existsSync(filePath) ? fs.statSync(filePath).mtimeMs : null;
+
+    if (!cachedMasterIndex || cachedMasterIndexMtime !== fileMtime) {
+        cachedMasterIndex = fileMtime === null
+            ? []
+            : (JSON.parse(fs.readFileSync(filePath, 'utf8')) as ArchiveRecord[]);
+        cachedMasterIndexMtime = fileMtime;
+        cachedFlatIndex = null;
+        searchCache.clear();
     }
     return cachedMasterIndex;
 }
@@ -337,6 +344,9 @@ export function runSearch(query: string, filters: string[], proximityWindow: num
 
     // cleanQuery encodes every operator, so it alone distinguishes cache entries.
     const cacheKey = `${cleanQuery}::${[...cleanFilters].sort().join(',')}::${cleanWindow}`;
+    // Check the source index before looking up a cached query so a changed index
+    // invalidates both the query result cache and the derived posting lists.
+    getSearchIndex();
     const cached = searchCache.get(cacheKey);
     if (cached) return cached;
 
@@ -392,7 +402,8 @@ function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWind
             const segment = item.segments[index];
             if (!segment) continue;
 
-            const text = segment.text || '';
+            const sourceText = segment.text || '';
+            const text = item.type === 'other' ? cleanBookOcrForSearch(sourceText, segment.label) : sourceText;
             if (hasExcludedTerm(text, parsed.exclusions)) continue;
 
             const result = findQueryMatch(text, parsed.text, { proximityWindow });
@@ -404,7 +415,7 @@ function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWind
             // every match on the same document collapses to the same id.
             matches.push({
                 id: `${item.id}-${segment.page ?? segment.start ?? index}`,
-                content: result.snippet || segment.text || '',
+                content: result.snippet || text,
                 start_time: segment.start ?? 0,
                 page: segment.page,
                 score: result.score,
@@ -415,6 +426,10 @@ function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWind
         }
 
         if (matches.length === 0) continue;
+
+        const orderedMatches = item.type === 'other' || item.type === 'appendix'
+            ? collapseDocumentMatches(matches)
+            : sortMatches(matches);
 
         results.push({
             media: {
@@ -430,8 +445,9 @@ function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWind
                 primaryNumber: item.primaryNumber,
                 alternateNumbers: item.alternateNumbers,
                 alternateNumberLabel: item.alternateNumberLabel,
+                isOcr: item.type === 'other' && /\bocr\b/i.test(item.transcriptionMethod || ''),
             },
-            matches: sortMatches(matches).slice(0, 20),
+            matches: orderedMatches.slice(0, 20),
         });
     }
 
@@ -482,7 +498,43 @@ function hasExcludedTerm(text: string, exclusions: string[]): boolean {
 }
 
 function sortMatches(matches: SearchMatch[]) {
-    return matches.sort((a, b) => (b.score ?? 0) - (a.score ?? 0) || a.start_time - b.start_time);
+    return matches.sort((a, b) => (b.score ?? 0) - (a.score ?? 0)
+        || (a.page ?? Number.MAX_SAFE_INTEGER) - (b.page ?? Number.MAX_SAFE_INTEGER)
+        || a.start_time - b.start_time);
+}
+
+// OCR pages can be split into multiple search chunks. The reader opens at PDF-page
+// granularity, so returning several near-identical excerpts from that same page adds
+// noise without adding a distinct citation. Keep the strongest excerpt per page.
+function collapseDocumentMatches(matches: SearchMatch[]) {
+    const byPage = new Map<number, SearchMatch>();
+    const withoutPage: SearchMatch[] = [];
+    for (const match of sortMatches(matches)) {
+        if (typeof match.page !== 'number') {
+            withoutPage.push(match);
+            continue;
+        }
+        if (!byPage.has(match.page)) byPage.set(match.page, match);
+    }
+    return sortMatches([...byPage.values(), ...withoutPage]);
+}
+
+// Repeated X/asterisk/equal-sign runs in scanned books are decorative OCR
+// separators (for example, chapter rules), not searchable prose. Strip only those
+// obvious runs from search text and excerpts; the facsimile and canonical OCR remain
+// untouched and the result still cites the exact PDF page.
+function cleanBookOcrForSearch(text: string, label?: string) {
+    let cleaned = text;
+    const pageTitle = label?.replace(/^page\s*-\s*/i, '').trim();
+    if (pageTitle && pageTitle.length >= 12) {
+        const escapedTitle = pageTitle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        cleaned = cleaned.replace(new RegExp(`^(${escapedTitle})(?:\\s+\\1)+`, 'i'), '$1');
+    }
+
+    return cleaned
+        .replace(/(?:x{5,}|\*{5,}|_{5,}|={5,})/gi, ' ')
+        .replace(/[ \t]{2,}/g, ' ')
+        .trim();
 }
 
 function rankResult(result: SearchResult): SearchResult {

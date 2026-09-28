@@ -126,3 +126,28 @@ Cited for footnote 1 and the article's opening. The cassette audio itself is not
 > **Note on the broadcast date.** The source gives January 1974 without a day. Two
 > candidate intervals were discarded during the audit in section 8 because they required
 > pinning it to a specific date the archive does not have.
+
+## Messenger audio held under this slug
+
+| File | What it is |
+|---|---|
+| `messenger-audio/messenger-audio-64-friday-sermon-26-nov-1982-by-dr-rashad-khalifa.json` | Friday Sermon, 26 November 1982. Cues 47:42–52:00 carry Khalifa's first-person account of the Libyan dungeon. |
+| `messenger-audio/messenger-audio-68-friday-sermon-17-dec-1982.json` | Friday Sermon, 17 December 1982. Cues 54:40–55:25 give the career sequence and "I was Gaddafi's advisor, science advisor for two years"; 55:47–56:05 the assessment of Gaddafi; 56:21–57:21 the billboard maxim wrongly captioned *ḥadīth sharīf* and Gaddafi's reaction to learning it was not a hadith; 59:48 "He turned Libya into a big prison." |
+
+**Dating consequence recorded in section 4.** The 26 November 1982 sermon is a terminus ante quem for the detention, which makes the FBI source's "approximately seven years ago" (from February 1990, so about 1983) impossible. Within the same account Khalifa cites the disappearance of Imam Musa al-Sadr, who vanished in Tripoli on 31 August 1978, as an event already past. The detention therefore falls after 31 August 1978 and on or before 26 November 1982.
+
+## Text of record for the FBI material
+
+The quotable text for every FBI citation is the page-by-page transcription, not the raw PDF:
+
+- `transcripts/fbi/fbi_dossier_combined.md` — all four parts in one file, 549 pages, with a global
+  sequence number per page and a key-passage index. Mirrored at `public/data/fbi/`.
+- `transcripts/fbi/fbi_dossier_part_1..4.md` — the same content split by release part.
+- `public/data/fbi/fbi_master_index.json` — per-page date, origin, document type, classification.
+
+Cite in the native form `part N, p. M`, which matches the source PDF. Page numbering restarts at 1
+in each part, so the part must always be given.
+
+**One known transcription slip.** At part 2, p. 35 the transcription renders the name "MUOMMAR
+KADDAFI"; the scan reads "KADDAFFI" with a double F. The editorial quotes the scan. Where a
+quotation matters, check it against the page image as well as the transcription.

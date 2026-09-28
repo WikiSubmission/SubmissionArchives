@@ -28424,479 +28424,193 @@
     "date": "12/24/1982"
   },
   {
-    "id": "messenger-audio/73 Messenger Audio",
-    "title": "MA 73  —  Messenger Audio",
-    "displayTitle": "MA 73  —  Messenger Audio",
+    "id": "messenger-audio/73 Friday Sermon 31 Dec 1982",
+    "title": "Messenger Audio 73 — Friday Sermon — Trials, Divine Provision, and Self-Defense (Rashad)",
+    "displayTitle": "Messenger Audio 73 — Friday Sermon — Trials, Divine Provision, and Self-Defense (Rashad)",
     "type": "messenger-audio",
     "author": "Dr. Rashad Khalifa",
     "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "73 Messenger Audio",
+    "folder": "73 Friday Sermon 31 Dec 1982",
     "vttFile": "MA73.en-US.vtt",
     "primaryNumber": 73,
     "alternateNumbers": [
       "25"
     ],
     "alternateNumberLabel": "Legacy 25",
-    "youtubeId": "UfJHYxpAAmI",
-    "youtubeUrl": "https://www.youtube.com/watch?v=UfJHYxpAAmI"
+    "youtubeId": "xi0pOkpPaKY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=xi0pOkpPaKY&t=22s",
+    "youtubeStartTime": 22,
+    "duration_seconds": 5706,
+    "description": "Dr. Rashad Khalifa opens with Sura 2:214 on the trials faced by believers, then discusses God's promise to provide an exit from hardship and provision from unexpected sources. The discussion applies those verses to insurance, jobs, a Denver flood, charitable obligations, and relying on God. The later Q&A examines fighting only in defense of the freedom to worship God, preparation for defense, and the spiritual consequences of oppression.",
+    "fullDate": "1982-12-31",
+    "year": 1982,
+    "date": "12/31/1982",
+    "chapters": [
+      {
+        "id": 1,
+        "startTime": 0.0,
+        "endTime": 182.361,
+        "title": "Believers and the test of hardship",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 2,
+        "startTime": 182.361,
+        "endTime": 361.575,
+        "title": "God’s promise and the believers’ responsibility",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 3,
+        "startTime": 361.575,
+        "endTime": 840.787,
+        "title": "Provision, trust in God, and insurance",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 4,
+        "startTime": 840.787,
+        "endTime": 1080.562,
+        "title": "The Denver flood and divine judgment",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 5,
+        "startTime": 1080.562,
+        "endTime": 1231.518,
+        "title": "Charity and care for those closest to us",
+        "speaker": "Carl"
+      },
+      {
+        "id": 6,
+        "startTime": 1231.518,
+        "endTime": 1800.9,
+        "title": "When fighting is permitted",
+        "speaker": "Martha"
+      },
+      {
+        "id": 7,
+        "startTime": 1800.9,
+        "endTime": 2645.974,
+        "title": "Defense, preparedness, and Sura 8:60",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 8,
+        "startTime": 2645.974,
+        "endTime": 3300.0,
+        "title": "The lottery and unlawful gain",
+        "speaker": "A man"
+      },
+      {
+        "id": 9,
+        "startTime": 3300.0,
+        "endTime": 4802.513,
+        "title": "Charity, reliance on God, and contentment",
+        "speaker": "A man"
+      },
+      {
+        "id": 10,
+        "startTime": 4802.513,
+        "endTime": null,
+        "title": "Self-defense and the freedom to worship God",
+        "speaker": "A woman"
+      }
+    ]
   },
   {
-    "id": "messenger-audio/74 Messenger Audio",
-    "title": "MA 74  —  Messenger Audio",
-    "displayTitle": "MA 74  —  Messenger Audio",
+    "id": "messenger-audio/74 Friday Sermon 31 Dec 1982",
+    "title": "Messenger Audio 74 — Friday Sermon — Marriage, Repentance, and Forgiveness (Rashad)",
+    "displayTitle": "Messenger Audio 74 — Friday Sermon — Marriage, Repentance, and Forgiveness (Rashad)",
     "type": "messenger-audio",
     "author": "Dr. Rashad Khalifa",
     "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "74 Messenger Audio",
+    "folder": "74 Friday Sermon 31 Dec 1982",
     "vttFile": "MA74.en-US.vtt",
     "primaryNumber": 74,
     "alternateNumbers": [
       "26"
     ],
     "alternateNumberLabel": "Legacy 26",
-    "youtubeId": "EX6V7Lt_g8Q",
-    "youtubeUrl": "https://www.youtube.com/watch?v=EX6V7Lt_g8Q"
-  },
-  {
-    "id": "messenger-audio/75 Messenger Audio",
-    "title": "MA 75  —  Messenger Audio",
-    "displayTitle": "MA 75  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "75 Messenger Audio",
-    "vttFile": "MA75.en-US.vtt",
-    "primaryNumber": 75,
-    "alternateNumbers": [
-      "27"
-    ],
-    "alternateNumberLabel": "Legacy 27",
-    "youtubeId": "MP-uWuVXPdc",
-    "youtubeUrl": "https://www.youtube.com/watch?v=MP-uWuVXPdc"
-  },
-  {
-    "id": "messenger-audio/76 Messenger Audio",
-    "title": "MA 76  —  Messenger Audio",
-    "displayTitle": "MA 76  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "76 Messenger Audio",
-    "vttFile": "MA76.en-US.vtt",
-    "primaryNumber": 76,
-    "alternateNumbers": [
-      "28.1"
-    ],
-    "alternateNumberLabel": "Legacy 28.1",
-    "youtubeId": "syTPdPwv9Kk",
-    "youtubeUrl": "https://www.youtube.com/watch?v=syTPdPwv9Kk"
-  },
-  {
-    "id": "messenger-audio/77 Messenger Audio",
-    "title": "MA 77  —  Messenger Audio",
-    "displayTitle": "MA 77  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "77 Messenger Audio",
-    "vttFile": "MA77.en-US.vtt",
-    "primaryNumber": 77,
-    "alternateNumbers": [
-      "28.2"
-    ],
-    "alternateNumberLabel": "Legacy 28.2",
-    "youtubeId": "xnwqbpvVRGQ",
-    "youtubeUrl": "https://www.youtube.com/watch?v=xnwqbpvVRGQ"
-  },
-  {
-    "id": "messenger-audio/78 Messenger Audio",
-    "title": "MA 78  —  Messenger Audio",
-    "displayTitle": "MA 78  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "78 Messenger Audio",
-    "vttFile": "MA78.en-US.vtt",
-    "primaryNumber": 78,
-    "alternateNumbers": [
-      "29"
-    ],
-    "alternateNumberLabel": "Legacy 29",
-    "youtubeId": "0eHjl3CR8S8",
-    "youtubeUrl": "https://www.youtube.com/watch?v=0eHjl3CR8S8"
-  },
-  {
-    "id": "messenger-audio/79 Messenger Audio",
-    "title": "MA 79  —  Messenger Audio",
-    "displayTitle": "MA 79  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "79 Messenger Audio",
-    "vttFile": "MA79.en-US.vtt",
-    "primaryNumber": 79,
-    "alternateNumbers": [
-      "30.1"
-    ],
-    "alternateNumberLabel": "Legacy 30.1",
-    "youtubeId": "bepJYvW0XxQ",
-    "youtubeUrl": "https://www.youtube.com/watch?v=bepJYvW0XxQ"
-  },
-  {
-    "id": "messenger-audio/80 Messenger Audio",
-    "title": "MA 80  —  Messenger Audio",
-    "displayTitle": "MA 80  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "80 Messenger Audio",
-    "vttFile": "MA80.en-US.vtt",
-    "primaryNumber": 80,
-    "alternateNumbers": [
-      "30.2"
-    ],
-    "alternateNumberLabel": "Legacy 30.2",
-    "youtubeId": "DXLSKJn3NPI",
-    "youtubeUrl": "https://www.youtube.com/watch?v=DXLSKJn3NPI"
-  },
-  {
-    "id": "messenger-audio/81 Messenger Audio",
-    "title": "MA 81  —  Messenger Audio",
-    "displayTitle": "MA 81  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "81 Messenger Audio",
-    "vttFile": "MA81.en-US.vtt",
-    "primaryNumber": 81,
-    "alternateNumbers": [
-      "31.1"
-    ],
-    "alternateNumberLabel": "Legacy 31.1",
-    "youtubeId": "zkcxlhET2jI",
-    "youtubeUrl": "https://www.youtube.com/watch?v=zkcxlhET2jI"
-  },
-  {
-    "id": "messenger-audio/82 Messenger Audio",
-    "title": "MA 82  —  Messenger Audio",
-    "displayTitle": "MA 82  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "82 Messenger Audio",
-    "vttFile": "MA82.en-US.vtt",
-    "primaryNumber": 82,
-    "alternateNumbers": [
-      "31.2"
-    ],
-    "alternateNumberLabel": "Legacy 31.2",
-    "youtubeId": "S40SN4KVF_U",
-    "youtubeUrl": "https://www.youtube.com/watch?v=S40SN4KVF_U"
-  },
-  {
-    "id": "messenger-audio/83 Messenger Audio",
-    "title": "MA 83  —  Messenger Audio",
-    "displayTitle": "MA 83  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "83 Messenger Audio",
-    "vttFile": "MA83.en-US.vtt",
-    "primaryNumber": 83,
-    "alternateNumbers": [
-      "32"
-    ],
-    "alternateNumberLabel": "Legacy 32",
-    "youtubeId": "AwSXkca9API",
-    "youtubeUrl": "https://www.youtube.com/watch?v=AwSXkca9API"
-  },
-  {
-    "id": "messenger-audio/84 Messenger Audio",
-    "title": "MA 84  —  Messenger Audio",
-    "displayTitle": "MA 84  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "84 Messenger Audio",
-    "vttFile": "MA84.en-US.vtt",
-    "primaryNumber": 84,
-    "alternateNumbers": [
-      "33.1"
-    ],
-    "alternateNumberLabel": "Legacy 33.1",
-    "youtubeId": "m9QGqoy3psA",
-    "youtubeUrl": "https://www.youtube.com/watch?v=m9QGqoy3psA"
-  },
-  {
-    "id": "messenger-audio/85 Messenger Audio",
-    "title": "MA 85  —  Messenger Audio",
-    "displayTitle": "MA 85  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "85 Messenger Audio",
-    "vttFile": "MA85.en-US.vtt",
-    "primaryNumber": 85,
-    "alternateNumbers": [
-      "33.2"
-    ],
-    "alternateNumberLabel": "Legacy 33.2",
-    "youtubeId": "HDfxRIGuYAQ",
-    "youtubeUrl": "https://www.youtube.com/watch?v=HDfxRIGuYAQ"
-  },
-  {
-    "id": "messenger-audio/86 Messenger Audio",
-    "title": "MA 86  —  Messenger Audio",
-    "displayTitle": "MA 86  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "86 Messenger Audio",
-    "vttFile": "MA86.en-US.vtt",
-    "primaryNumber": 86,
-    "alternateNumbers": [
-      "34.1"
-    ],
-    "alternateNumberLabel": "Legacy 34.1",
-    "youtubeId": "iYOiVtR3OWw",
-    "youtubeUrl": "https://www.youtube.com/watch?v=iYOiVtR3OWw"
-  },
-  {
-    "id": "messenger-audio/87 Messenger Audio",
-    "title": "MA 87  —  Messenger Audio",
-    "displayTitle": "MA 87  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "87 Messenger Audio",
-    "vttFile": "MA87.en-US.vtt",
-    "primaryNumber": 87,
-    "alternateNumbers": [
-      "34.2"
-    ],
-    "alternateNumberLabel": "Legacy 34.2",
-    "youtubeId": "Az4UWiAPUqQ",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Az4UWiAPUqQ"
-  },
-  {
-    "id": "messenger-audio/88 Messenger Audio",
-    "title": "MA 88  —  Messenger Audio",
-    "displayTitle": "MA 88  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "88 Messenger Audio",
-    "vttFile": "MA88.en-US.vtt",
-    "primaryNumber": 88,
-    "alternateNumbers": [
-      "35"
-    ],
-    "alternateNumberLabel": "Legacy 35",
-    "youtubeId": "Oese-TZjQwc",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Oese-TZjQwc"
-  },
-  {
-    "id": "messenger-audio/89 Messenger Audio",
-    "title": "MA 89  —  Messenger Audio",
-    "displayTitle": "MA 89  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "89 Messenger Audio",
-    "vttFile": "MA89.en-US.vtt",
-    "primaryNumber": 89,
-    "alternateNumbers": [
-      "36.1"
-    ],
-    "alternateNumberLabel": "Legacy 36.1",
-    "youtubeId": "mncLsw6EQa0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=mncLsw6EQa0"
-  },
-  {
-    "id": "messenger-audio/90 Messenger Audio",
-    "title": "MA 90  —  Messenger Audio",
-    "displayTitle": "MA 90  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "90 Messenger Audio",
-    "vttFile": "MA90.en-US.vtt",
-    "primaryNumber": 90,
-    "alternateNumbers": [
-      "36.2"
-    ],
-    "alternateNumberLabel": "Legacy 36.2",
-    "youtubeId": "NnXuNU8oGGU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=NnXuNU8oGGU"
-  },
-  {
-    "id": "messenger-audio/91 Messenger Audio",
-    "title": "MA 91  —  Messenger Audio",
-    "displayTitle": "MA 91  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "91 Messenger Audio",
-    "vttFile": "MA91.en-US.vtt",
-    "primaryNumber": 91,
-    "alternateNumbers": [
-      "37.1"
-    ],
-    "alternateNumberLabel": "Legacy 37.1",
-    "youtubeId": "WXgm6aKspiU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=WXgm6aKspiU"
-  },
-  {
-    "id": "messenger-audio/92 Messenger Audio",
-    "title": "MA 92  —  Messenger Audio",
-    "displayTitle": "MA 92  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "92 Messenger Audio",
-    "vttFile": "MA92.en-US.vtt",
-    "primaryNumber": 92,
-    "alternateNumbers": [
-      "37.2"
-    ],
-    "alternateNumberLabel": "Legacy 37.2",
-    "youtubeId": "xBURXRd5aUs",
-    "youtubeUrl": "https://www.youtube.com/watch?v=xBURXRd5aUs"
-  },
-  {
-    "id": "messenger-audio/93 Messenger Audio",
-    "title": "MA 93  —  Messenger Audio",
-    "displayTitle": "MA 93  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "93 Messenger Audio",
-    "vttFile": "MA93.en-US.vtt",
-    "primaryNumber": 93,
-    "alternateNumbers": [
-      "38.1"
-    ],
-    "alternateNumberLabel": "Legacy 38.1",
-    "youtubeId": "D2AMGCCbnys",
-    "youtubeUrl": "https://www.youtube.com/watch?v=D2AMGCCbnys"
-  },
-  {
-    "id": "messenger-audio/94 Messenger Audio",
-    "title": "MA 94  —  Messenger Audio",
-    "displayTitle": "MA 94  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "94 Messenger Audio",
-    "vttFile": "MA94.en-US.vtt",
-    "primaryNumber": 94,
-    "alternateNumbers": [
-      "38.2"
-    ],
-    "alternateNumberLabel": "Legacy 38.2",
-    "youtubeId": "ICarTxaAI7A",
-    "youtubeUrl": "https://www.youtube.com/watch?v=ICarTxaAI7A"
-  },
-  {
-    "id": "messenger-audio/95 Messenger Audio",
-    "title": "MA 95  —  Messenger Audio",
-    "displayTitle": "MA 95  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "95 Messenger Audio",
-    "vttFile": "MA95.en-US.vtt",
-    "primaryNumber": 95,
-    "alternateNumbers": [
-      "39"
-    ],
-    "alternateNumberLabel": "Legacy 39",
-    "youtubeId": "fJA-7u-DyIo",
-    "youtubeUrl": "https://www.youtube.com/watch?v=fJA-7u-DyIo"
-  },
-  {
-    "id": "messenger-audio/96 Messenger Audio",
-    "title": "MA 96  —  Messenger Audio",
-    "displayTitle": "MA 96  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "96 Messenger Audio",
-    "vttFile": "MA96.en-US.vtt",
-    "primaryNumber": 96,
-    "alternateNumbers": [
-      "41"
-    ],
-    "alternateNumberLabel": "Legacy 41",
-    "youtubeId": "uUMONQuSZCw",
-    "youtubeUrl": "https://www.youtube.com/watch?v=uUMONQuSZCw"
-  },
-  {
-    "id": "messenger-audio/97 Messenger Audio",
-    "title": "MA 97  —  Messenger Audio",
-    "displayTitle": "MA 97  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "97 Messenger Audio",
-    "vttFile": "MA97.en-US.vtt",
-    "primaryNumber": 97,
-    "alternateNumbers": [
-      "43.1"
-    ],
-    "alternateNumberLabel": "Legacy 43.1",
-    "youtubeId": "c9EUugYkMNk",
-    "youtubeUrl": "https://www.youtube.com/watch?v=c9EUugYkMNk"
-  },
-  {
-    "id": "messenger-audio/98 Messenger Audio",
-    "title": "MA 98  —  Messenger Audio",
-    "displayTitle": "MA 98  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "98 Messenger Audio",
-    "vttFile": "MA98.en-US.vtt",
-    "primaryNumber": 98,
-    "alternateNumbers": [
-      "43.2"
-    ],
-    "alternateNumberLabel": "Legacy 43.2",
-    "youtubeId": "xGj3a8cvHQU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=xGj3a8cvHQU"
-  },
-  {
-    "id": "messenger-audio/99 Messenger Audio",
-    "title": "MA 99  —  Messenger Audio",
-    "displayTitle": "MA 99  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "99 Messenger Audio",
-    "vttFile": "MA99.en-US.vtt",
-    "primaryNumber": 99,
-    "alternateNumbers": [
-      "44"
-    ],
-    "alternateNumberLabel": "Legacy 44",
-    "youtubeId": "ahiy4lztAHI",
-    "youtubeUrl": "https://www.youtube.com/watch?v=ahiy4lztAHI"
-  },
-  {
-    "id": "messenger-audio/100 Messenger Audio",
-    "title": "MA 100  —  Messenger Audio",
-    "displayTitle": "MA 100  —  Messenger Audio",
-    "type": "messenger-audio",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
-    "folder": "100 Messenger Audio",
-    "vttFile": "MA100.en-US.vtt",
-    "primaryNumber": 100,
-    "alternateNumbers": [
-      "46"
-    ],
-    "alternateNumberLabel": "Legacy 46",
-    "youtubeId": "76pqtAZHV-I",
-    "youtubeUrl": "https://www.youtube.com/watch?v=76pqtAZHV-I"
+    "youtubeId": "rBraK-SLFN8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=rBraK-SLFN8&t=11s",
+    "youtubeStartTime": 11,
+    "duration_seconds": 2859,
+    "description": "Dr. Rashad Khalifa concludes a discussion of marriage, orphaned children, and the Quran’s guidance on marrying believers, Christians, and Jews. The recording then turns to Sura 2:222 on menstruation, followed by questions about vows, expiation, sincere repentance, and divine forgiveness. Khalifa distinguishes deliberate wrongdoing from unintended acts, discusses the limits of forgiveness in idol worship, and closes with Sura 4:92–93 on accidental and deliberate killing.",
+    "fullDate": "1982-12-31",
+    "year": 1982,
+    "date": "12/31/1982",
+    "chapters": [
+      {
+        "id": 1,
+        "startTime": 0.0,
+        "endTime": 303.435,
+        "title": "Marriage, orphans, and religious responsibility",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 2,
+        "startTime": 303.435,
+        "endTime": 632.579,
+        "title": "Marriage to Jews and Christians",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 3,
+        "startTime": 632.579,
+        "endTime": 840.317,
+        "title": "Sura 2:222 and menstruation",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 4,
+        "startTime": 840.317,
+        "endTime": 1200.0,
+        "title": "Vows, expiation, and intention",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 5,
+        "startTime": 1200.0,
+        "endTime": 1620.198,
+        "title": "Repentance and readiness to meet God",
+        "speaker": "A woman"
+      },
+      {
+        "id": 6,
+        "startTime": 1620.198,
+        "endTime": 1773.358,
+        "title": "Sura 2:222 and marital conduct",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 7,
+        "startTime": 1773.358,
+        "endTime": 2100.159,
+        "title": "Sura 2:225 and the intention behind vows",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 8,
+        "startTime": 2100.159,
+        "endTime": 2340.168,
+        "title": "Forgiveness and the exception of idol worship",
+        "speaker": "A woman"
+      },
+      {
+        "id": 9,
+        "startTime": 2340.168,
+        "endTime": 2703.683,
+        "title": "Quranic authority and hypocrisy",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 10,
+        "startTime": 2703.683,
+        "endTime": null,
+        "title": "Accidental and deliberate killing in Sura 4",
+        "speaker": "A man"
+      }
+    ]
   }
 ]

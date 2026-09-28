@@ -13,6 +13,10 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const MASTER = path.join(ROOT, 'public', 'data', 'generated_indices', 'MASTER_INDEX.json');
 const OUT = path.join(ROOT, 'data', 'catalog', 'book-previews.json');
+const CORPUS_MANIFEST = path.join(ROOT, 'data', 'sources', 'books', 'corpus_manifest.json');
+const corpusManifest = fs.existsSync(CORPUS_MANIFEST)
+    ? JSON.parse(fs.readFileSync(CORPUS_MANIFEST, 'utf8'))
+    : [];
 
 const MASTER_TOCS = {
     'salat-booklet': [
@@ -28,20 +32,14 @@ const MASTER_TOCS = {
     ],
     'perpetual-miracle': [
         { title: 'THE PERPETUAL MIRACLE OF MUHAMMAD (peace be upon him)', page: 1 },
-        { title: 'If all the humans and all jinn', page: 2 },
-        { title: 'None of us witnessed Moses when he turned his staff into a serpent', page: 3 },
-        { title: 'as Pharaoh, the magicians, and the Israelites witnessed the miracles of Moses', page: 4 },
-        { title: "Abdul-Baqi, and published by the People's Press", page: 5 },
-        { title: 'This is of course what all the non-Muslims claim', page: 6 },
-        { title: "THE ONLY POSSIBLE EXPLANATION LEFT is that a SUPER BEING did write the Qur'an", page: 7 },
-        { title: 'person will have the number 19 imposed on him', page: 8 },
-        { title: 'A historical fact that supports the identification of the number 19', page: 9 },
-        { title: 'overwhelming. Thus, the greater portion of this physical, touchable, examinable', page: 10 },
-        { title: 'WHO WOULD KNOW THE ONLY SURAS WHICH CONTAIN EQUAL NUMBERS OF THE LETTER QAF', page: 11 },
-        { title: 'beginning of the only 2 suras which contain 57 Qafs each', page: 12 },
+        { title: 'What is the miracle of Muhammad?', page: 3 },
+        { title: "The key to Muhammad's perpetual, eternal, miracle", page: 4 },
+        { title: 'THE ONLY POSSIBLE EXPLANATION LEFT', page: 7 },
+        { title: 'the number 19 was mentioned in verse 30 for 5 distinct reasons', page: 8 },
+        { title: "One of the Qur'an's unique properties is the existence of alphabetical letters at the beginning of some suras", page: 10 },
+        { title: 'Starting with a single-lettered Qur\'anic initial, let us look at the initial Qaf', page: 11 },
         { title: 'Moving on the other Qur’anic initials, let us look at the letter Nun', page: 13 },
-        { title: "Thus, every generation of human beings will receive and witness Muhammad's perpetual miracle", page: 14 },
-        { title: 'this interlocking system, and see how it is complete beyond human ability', page: 15 },
+        { title: 'This relationship between the number 19, the letters of BISMILLAHIR RAHMANIR RAHIM, and the Qur’anic initials covers ALL the Qur’anic initials', page: 15 },
         { title: "THE QUR'AN MUHAMMAD'S PERPETUAL MIRACLE", page: 16 },
     ],
     'english-meanings-of-the-quran': [
@@ -242,10 +240,14 @@ for (const book of books) {
     const prev = existing[book.id] || {};
     const toc = MASTER_TOCS[book.id] || prev.toc || [];
     const maxPage = (book.segments || []).reduce((max, s) => Math.max(max, Number(s.page) || 0), 0);
+    const sourceFile = path.basename(book.filename || book.pdfLink || '');
+    const sourceMetadata = corpusManifest.find((entry) => entry.source_pdf === sourceFile);
 
     results[book.id] = {
         description: prev.description || `${book.displayTitle || book.title} published by Masjid Tucson.`,
-        pageCount: maxPage || prev.pageCount || 0,
+        // OCR omits blank pages by design, so the highest indexed page can be
+        // lower than the actual PDF length. The canonical manifest tracks all pages.
+        pageCount: Number(sourceMetadata?.pages) || maxPage || prev.pageCount || 0,
         toc: toc.map(({ title, page }) => ({ title, page })),
         generated: {
             model: 'gemini-vision-ocr-verified',
