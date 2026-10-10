@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { Media } from '@/types/media';
 import { getMediaHref } from '@/lib/utils';
+import './videos.css';
 
 type VideoSection = {
     id: string;
@@ -151,7 +152,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
     };
 
     return (
-        <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
+        <div className="video-archive-shell relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
             {/* Ambient page glow */}
             <div
                 aria-hidden
@@ -164,32 +165,31 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
             />
 
             <main id="main-content" className="relative z-[1] overflow-hidden">
-                <div className="mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12">
+                <div className="video-archive-container mx-auto max-w-[1320px] px-4 py-8 sm:px-7 lg:py-12">
                     {/* Hero Header */}
-                    <header className="mb-7 flex flex-wrap items-end justify-between gap-8 border-b border-ed-rule pb-7">
+                    <header className="va-hero mb-7 flex flex-wrap items-end justify-between gap-8 border-b border-ed-rule pb-7">
                         <div className="max-w-[640px]">
-                            <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
+                            <div className="va-kicker mb-3.5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-ed-accent">
                                 <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
                                     <circle cx="12" cy="12" r="10" />
                                 </svg>
-                                Video Archive Index
+                                <span>Moving image collection</span><span aria-hidden="true">·</span><span>Masjid Tucson</span>
                             </div>
                             <h1
                                 className="mb-3 text-[clamp(32px,4.2vw,46px)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg"
                                 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                             >
-                                The Video Archives
+                                Video archive
                             </h1>
                             <p
                                 className="text-[16.5px] leading-[1.6] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
-                                Systematic study sequences and preserved recordings, arranged for steady, focused engagement.
-                                Preserved master recordings from Masjid Tucson.
+                                Talks, debates, lessons, and preserved public recordings. Browse the collection by subject, then open a record to watch and explore its transcript.
                             </p>
                         </div>
 
-                        <div className="flex flex-shrink-0 gap-6 rounded-[8px] border border-ed-rule bg-ed-surface px-6 py-4 shadow-sm">
+                        <div className="va-stats flex flex-shrink-0 gap-6 border-l border-ed-rule pl-6">
                             <div className="flex flex-col">
                                 <span className="text-[24px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
                                     {initialVideos.length}
@@ -210,7 +210,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                     </header>
 
                     {/* Collection Tabs */}
-                    <div role="tablist" className="mb-6 flex flex-wrap gap-2" aria-label="Collections">
+                    <div role="tablist" className="va-collections mb-6 flex flex-wrap gap-2" aria-label="Video collections">
                         <button
                             role="tab"
                             aria-selected={activeTab === 'all'}
@@ -353,7 +353,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
 
                         return (
                             <section key={section.id} id={section.id} className="mb-14">
-                                <div className="mb-7 flex items-center gap-4 border-b border-ed-rule pb-3">
+                                <div className="va-section-heading mb-7 flex items-center gap-4 border-b border-ed-rule pb-3">
                                     <h2
                                         className="whitespace-nowrap text-[22px] font-semibold tracking-[-0.01em] text-ed-fg"
                                         style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
@@ -366,7 +366,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                     </span>
                                 </div>
 
-                                <div className="grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-3">
+                                <div className="va-video-grid grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-3">
                                     {visible.map((video) => (
                                         <VideoCard key={video.id} video={video} />
                                     ))}
@@ -408,7 +408,7 @@ function VideoCard({ video }: { video: Media }) {
     return (
         <Link
             href={getMediaHref(video.id)}
-            className="group relative flex flex-col overflow-hidden rounded-[12px] border border-ed-rule bg-ed-surface transition-all duration-[280ms] ease-out hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md"
+            className="va-video-card group relative flex flex-col overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface transition-all duration-[280ms] ease-out hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong"
         >
             {/* 16:9 Thumbnail Stage */}
             <div

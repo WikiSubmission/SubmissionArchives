@@ -4,7 +4,26 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { X } from 'lucide-react';
+import {
+    ArrowLeft,
+    BookOpen,
+    ChevronLeft,
+    ChevronRight,
+    Download,
+    ExternalLink,
+    Keyboard,
+    Maximize,
+    Minimize,
+    MoreHorizontal,
+    PanelLeft,
+    Quote,
+    RotateCw,
+    Search,
+    Sun,
+    X,
+    ZoomIn,
+    ZoomOut,
+} from 'lucide-react';
 import { Document, Page, Thumbnail, pdfjs } from 'react-pdf';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import type { TextContent } from 'pdfjs-dist/types/src/display/api';
@@ -60,8 +79,8 @@ const chromeButtonClassLg =
 const toolbarButtonClass =
     'inline-flex min-h-9 items-center justify-center rounded-[4px] px-2.5 text-[11px] font-semibold tracking-[0.02em] text-ed-fg-muted transition-colors hover:bg-ed-surface-strong hover:text-ed-fg active:bg-ed-surface-raised disabled:pointer-events-none disabled:opacity-30';
 
-const dockPillClass =
-    'inline-flex min-w-[4.25rem] items-center justify-center rounded-[4px] border border-ed-rule bg-ed-surface px-2.5 py-1 text-[11px] font-semibold tabular-nums text-ed-fg';
+const toolbarIconButtonClass =
+    'inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-[4px] text-ed-fg-secondary transition-colors hover:bg-ed-surface-strong hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent active:bg-ed-surface-raised disabled:pointer-events-none disabled:opacity-30';
 
 function computeHighlightRanges(items: TextItem[], terms: string[]): Map<number, Array<[number, number]>> {
     const ranges = new Map<number, Array<[number, number]>>();
@@ -184,6 +203,7 @@ export default function PDFReaderClient({
     const [showZoomPopover, setShowZoomPopover] = useState(false);
     const [showLayoutPopover, setShowLayoutPopover] = useState(false);
     const [showThemePopover, setShowThemePopover] = useState(false);
+    const [showMorePopover, setShowMorePopover] = useState(false);
     const [showHelpModal, setShowHelpModal] = useState(false);
     const [showCiteModal, setShowCiteModal] = useState(false);
     const [citationStyle, setCitationStyle] = useState<'permalink' | 'apa' | 'mla' | 'chicago'>('permalink');
@@ -661,395 +681,84 @@ export default function PDFReaderClient({
     /* ==================== TOOLBAR COMPONENT ==================== */
     const toolbar = (
         <div className="flex items-center gap-1">
-            {/* Search Toggle */}
-            <button
-                type="button"
-                onClick={() => {
-                    setSearchOpen((s) => !s);
-                    if (!searchOpen) setTimeout(() => searchInputRef.current?.focus(), 50);
-                }}
-                className={`${toolbarButtonClass} ${searchOpen ? 'text-[#C8794A] bg-[#C8794A]/10' : ''}`}
-                title="Search in document (Forward slash)"
-                aria-label="Search in document"
-                aria-pressed={searchOpen}
-            >
-                <span>Search</span>
+            <button type="button" onClick={() => { setSearchOpen((s) => !s); if (!searchOpen) setTimeout(() => searchInputRef.current?.focus(), 50); }} className={`${toolbarIconButtonClass} ${searchOpen ? 'text-ed-accent bg-ed-accent-soft' : ''}`} title="Search in document (/)" aria-label="Search in document" aria-pressed={searchOpen}>
+                <Search className="h-4 w-4" aria-hidden="true" />
             </button>
+            <div className="mx-1 h-5 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
 
-            <div className="mx-1 h-5 w-px shrink-0 bg-[#2A2928]" aria-hidden="true" />
-
-            {/* Layout Mode Selector Popover */}
             <div className="relative popover-container">
-                <button
-                    type="button"
-                    onClick={() => {
-                        setShowLayoutPopover((s) => !s);
-                        setShowZoomPopover(false);
-                        setShowThemePopover(false);
-                    }}
-                    className={`${toolbarButtonClass} ${showLayoutPopover ? 'text-[#C8794A]' : ''}`}
-                    title="Layout View Mode"
-                    aria-label="Page layout mode"
-                >
-                    {layoutMode === 'single' && <span>Single</span>}
-                    {layoutMode === 'spread' && <span>Spread</span>}
-                    {layoutMode === 'continuous' && <span>Continuous</span>}
+                <button type="button" onClick={() => { setShowLayoutPopover((s) => !s); setShowZoomPopover(false); setShowThemePopover(false); }} className={`${toolbarIconButtonClass} ${showLayoutPopover ? 'text-ed-accent bg-ed-accent-soft' : ''}`} title={`Page layout: ${layoutMode}`} aria-label={`Page layout: ${layoutMode}`} aria-expanded={showLayoutPopover}>
+                    <BookOpen className="h-4 w-4" aria-hidden="true" />
                 </button>
-
-                {showLayoutPopover && (
-                    <div className="reader-popover">
-                        <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">
-                            Page Layout
-                        </div>
-                        <button
-                            type="button"
-                            onClick={() => {
-                                setLayoutMode('single');
-                                setShowLayoutPopover(false);
-                            }}
-                            className="reader-popover-item"
-                            data-active={layoutMode === 'single'}
-                        >
-                            <span className="flex items-center gap-2">
-                                Single Page
-                            </span>
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => {
-                                setLayoutMode('spread');
-                                setShowLayoutPopover(false);
-                            }}
-                            className="reader-popover-item"
-                            data-active={layoutMode === 'spread'}
-                        >
-                            <span className="flex items-center gap-2">
-                                Two-Page Spread
-                            </span>
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => {
-                                setLayoutMode('continuous');
-                                setShowLayoutPopover(false);
-                            }}
-                            className="reader-popover-item"
-                            data-active={layoutMode === 'continuous'}
-                        >
-                            <span className="flex items-center gap-2">
-                                Continuous Scroll
-                            </span>
-                        </button>
-                    </div>
-                )}
+                {showLayoutPopover && <div className="reader-popover">
+                    <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">Page Layout</div>
+                    <button type="button" onClick={() => { setLayoutMode('single'); setShowLayoutPopover(false); }} className="reader-popover-item" data-active={layoutMode === 'single'}>Single Page</button>
+                    <button type="button" onClick={() => { setLayoutMode('spread'); setShowLayoutPopover(false); }} className="reader-popover-item" data-active={layoutMode === 'spread'}>Two-Page Spread</button>
+                    <button type="button" onClick={() => { setLayoutMode('continuous'); setShowLayoutPopover(false); }} className="reader-popover-item" data-active={layoutMode === 'continuous'}>Continuous Scroll</button>
+                </div>}
             </div>
 
-            {/* Reading Theme Selector Popover */}
             <div className="relative popover-container">
-                <button
-                    type="button"
-                    onClick={() => {
-                        setShowThemePopover((s) => !s);
-                        setShowZoomPopover(false);
-                        setShowLayoutPopover(false);
-                    }}
-                    className={`${toolbarButtonClass} ${showThemePopover ? 'text-[#C8794A]' : ''}`}
-                    title="Reading appearance"
-                    aria-label="Reading theme"
-                >
-                    <span>Reading</span>
+                <button type="button" onClick={() => { setShowThemePopover((s) => !s); setShowZoomPopover(false); setShowLayoutPopover(false); }} className={`${toolbarIconButtonClass} ${showThemePopover ? 'text-ed-accent bg-ed-accent-soft' : ''}`} title="Reading appearance" aria-label="Reading appearance" aria-expanded={showThemePopover}>
+                    <Sun className="h-4 w-4" aria-hidden="true" />
                 </button>
-
-                {showThemePopover && (
-                    <div className="reader-popover">
-                        <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">
-                            Reading Filter
-                        </div>
-                        <button
-                            type="button"
-                            onClick={() => {
-                                setReadingTheme('default');
-                                setShowThemePopover(false);
-                            }}
-                            className="reader-popover-item"
-                            data-active={readingTheme === 'default'}
-                        >
-                            <span className="flex items-center gap-2">
-                                <span className="w-3 h-3 rounded-[4px] bg-white border border-gray-400" /> Studio White
-                            </span>
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => {
-                                setReadingTheme('sepia');
-                                setShowThemePopover(false);
-                            }}
-                            className="reader-popover-item"
-                            data-active={readingTheme === 'sepia'}
-                        >
-                            <span>Warm Sepia</span>
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => {
-                                setReadingTheme('dark');
-                                setShowThemePopover(false);
-                            }}
-                            className="reader-popover-item"
-                            data-active={readingTheme === 'dark'}
-                        >
-                            <span className="flex items-center gap-2">
-                                Dark
-                            </span>
-                        </button>
-                    </div>
-                )}
+                {showThemePopover && <div className="reader-popover">
+                    <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">Reading Appearance</div>
+                    <button type="button" onClick={() => { setReadingTheme('default'); setShowThemePopover(false); }} className="reader-popover-item" data-active={readingTheme === 'default'}>Studio White</button>
+                    <button type="button" onClick={() => { setReadingTheme('sepia'); setShowThemePopover(false); }} className="reader-popover-item" data-active={readingTheme === 'sepia'}>Warm Sepia</button>
+                    <button type="button" onClick={() => { setReadingTheme('dark'); setShowThemePopover(false); }} className="reader-popover-item" data-active={readingTheme === 'dark'}>Dark</button>
+                </div>}
             </div>
 
-            <div className="mx-1 h-5 w-px shrink-0 bg-[#2A2928]" aria-hidden="true" />
-
-            {/* Zoom Controls & Presets */}
+            <div className="mx-1 h-5 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
             <div className="relative flex items-center gap-0.5 popover-container">
-                <button
-                    type="button"
-                    onClick={() => setZoom((z) => Math.max(ZOOM_MIN, z - ZOOM_STEP))}
-                    className={toolbarButtonClass}
-                    title="Decrease zoom"
-                    aria-label="Zoom out"
-                >
-                    <span>Smaller</span>
-                </button>
-
-                <button
-                    type="button"
-                    onClick={() => {
-                        setShowZoomPopover((s) => !s);
-                        setShowLayoutPopover(false);
-                        setShowThemePopover(false);
-                    }}
-                    className="min-w-[54px] px-1.5 py-1 text-center text-xs font-medium text-[#9E9690] hover:text-[#F5F0EB] hover:bg-[#1C1B1A] rounded-[4px] transition-colors tabular-nums"
-                    title="Zoom options"
-                    aria-label="Zoom options"
-                >
-                    {Math.round(zoom * 100)}%
-                </button>
-
-                <button
-                    type="button"
-                    onClick={() => setZoom((z) => Math.min(ZOOM_MAX, z + ZOOM_STEP))}
-                    className={toolbarButtonClass}
-                    title="Increase zoom"
-                    aria-label="Zoom in"
-                >
-                    <span>Larger</span>
-                </button>
-
-                {showZoomPopover && (
-                    <div className="reader-popover">
-                        <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">
-                            Zoom Presets
-                        </div>
-                        <button type="button" onClick={fitToWidth} className="reader-popover-item">
-                            <span>Fit to Width</span>
-                        </button>
-                        <button type="button" onClick={fitToPage} className="reader-popover-item">
-                            <span>Fit to Page</span>
-                        </button>
-                        <div className="my-1 h-px bg-[#2A2928]" />
-                        {[0.5, 0.75, 1.0, 1.25, 1.5, 2.0].map((preset) => (
-                            <button
-                                key={preset}
-                                type="button"
-                                onClick={() => {
-                                    setZoom(preset);
-                                    setShowZoomPopover(false);
-                                }}
-                                className="reader-popover-item"
-                                data-active={Math.abs(zoom - preset) < 0.05}
-                            >
-                                <span>{Math.round(preset * 100)}%</span>
-                            </button>
-                        ))}
-                    </div>
-                )}
+                <button type="button" onClick={() => setZoom((z) => Math.max(ZOOM_MIN, z - ZOOM_STEP))} className={toolbarIconButtonClass} title="Zoom out" aria-label="Zoom out"><ZoomOut className="h-4 w-4" aria-hidden="true" /></button>
+                <button type="button" onClick={() => { setShowZoomPopover((s) => !s); setShowLayoutPopover(false); setShowThemePopover(false); }} className="min-w-[3.25rem] rounded-[4px] px-1.5 py-2 text-center text-xs font-medium tabular-nums text-ed-fg-secondary transition-colors hover:bg-ed-surface-strong hover:text-ed-fg" title="Zoom options" aria-label="Zoom options" aria-expanded={showZoomPopover}>{Math.round(zoom * 100)}%</button>
+                <button type="button" onClick={() => setZoom((z) => Math.min(ZOOM_MAX, z + ZOOM_STEP))} className={toolbarIconButtonClass} title="Zoom in" aria-label="Zoom in"><ZoomIn className="h-4 w-4" aria-hidden="true" /></button>
+                {showZoomPopover && <div className="reader-popover">
+                    <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">Zoom</div>
+                    <button type="button" onClick={() => { fitToWidth(); setShowZoomPopover(false); }} className="reader-popover-item">Fit to Width</button>
+                    <button type="button" onClick={() => { fitToPage(); setShowZoomPopover(false); }} className="reader-popover-item">Fit to Page</button>
+                    <div className="my-1 h-px bg-ed-rule" />
+                    {[0.5, 0.75, 1.0, 1.25, 1.5, 2.0].map((preset) => <button key={preset} type="button" onClick={() => { setZoom(preset); setShowZoomPopover(false); }} className="reader-popover-item" data-active={Math.abs(zoom - preset) < 0.05}>{Math.round(preset * 100)}%</button>)}
+                </div>}
             </div>
 
-            <div className="mx-1 h-5 w-px shrink-0 bg-[#2A2928]" aria-hidden="true" />
-
-            {/* Page Navigation */}
+            <div className="mx-1 h-5 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
             <div className="flex items-center gap-0.5">
-                <button
-                    type="button"
-                    onClick={() => goToPage(layoutMode === 'spread' ? pageNumber - 2 : pageNumber - 1)}
-                    disabled={pageNumber <= 1}
-                    className={toolbarButtonClass}
-                    title="Previous page"
-                    aria-label="Previous page"
-                >
-                    <span>Previous</span>
-                </button>
-
-                {isEditingPage ? (
-                    <input
-                        ref={pageInputRef}
-                        type="text"
-                        inputMode="numeric"
-                        value={pageInput}
-                        onChange={(e) => setPageInput(e.target.value)}
-                        onBlur={handlePageInputSubmit}
-                        onKeyDown={(e) => {
-                            if (e.key === 'Enter') handlePageInputSubmit();
-                            if (e.key === 'Escape') {
-                                setPageInput(String(pageNumber));
-                                setIsEditingPage(false);
-                            }
-                        }}
-                        className="w-16 text-center text-xs tabular-nums bg-transparent border-b border-[#C8794A] text-[#F5F0EB] focus:outline-none"
-                        autoFocus
-                        aria-label="Go to page"
-                    />
-                ) : (
-                    <button
-                        type="button"
-                        onClick={() => {
-                            setIsEditingPage(true);
-                            setPageInput(String(pageNumber));
-                            setTimeout(() => pageInputRef.current?.select(), 50);
-                        }}
-                        className={dockPillClass}
-                        title="Click to jump to page"
-                        aria-label={`Page ${pageNumber} of ${numPages ?? 'unknown'}. Click to edit.`}
-                    >
-                        <span aria-live="polite">{pageNumber}</span>
-                        <span className="text-[#A8A099]">of</span>
-                        <span>{numPages ?? 'Loading'}</span>
-                    </button>
-                )}
-
-                <button
-                    type="button"
-                    onClick={() => goToPage(layoutMode === 'spread' ? pageNumber + 2 : pageNumber + 1)}
-                    disabled={!numPages || pageNumber >= numPages}
-                    className={toolbarButtonClass}
-                    title="Next page"
-                    aria-label="Next page"
-                >
-                    <span>Next</span>
-                </button>
+                <button type="button" onClick={() => goToPage(layoutMode === 'spread' ? pageNumber - 2 : pageNumber - 1)} disabled={pageNumber <= 1} className={toolbarIconButtonClass} title="Previous page (←)" aria-label="Previous page"><ChevronLeft className="h-4 w-4" aria-hidden="true" /></button>
+                {isEditingPage ? <input ref={pageInputRef} type="text" inputMode="numeric" value={pageInput} onChange={(e) => setPageInput(e.target.value)} onBlur={handlePageInputSubmit} onKeyDown={(e) => { if (e.key === 'Enter') handlePageInputSubmit(); if (e.key === 'Escape') { setPageInput(String(pageNumber)); setIsEditingPage(false); } }} className="w-[5.25rem] rounded-[4px] border border-ed-accent bg-ed-surface px-2 py-2 text-center text-xs tabular-nums text-ed-fg focus:outline-none" autoFocus aria-label="Go to page" /> : <button type="button" onClick={() => { setIsEditingPage(true); setPageInput(String(pageNumber)); setTimeout(() => pageInputRef.current?.select(), 50); }} className="inline-flex h-9 min-w-[5.25rem] items-center justify-center gap-1.5 rounded-[4px] border border-ed-rule px-2 text-xs font-medium tabular-nums text-ed-fg hover:border-ed-rule-strong hover:bg-ed-surface-strong" title="Jump to page" aria-label={`Page ${pageNumber} of ${numPages ?? 'unknown'}. Click to edit.`}><span aria-live="polite">{pageNumber}</span><span className="text-ed-fg-muted">/</span><span className="text-ed-fg-secondary">{numPages ?? '…'}</span></button>}
+                <button type="button" onClick={() => goToPage(layoutMode === 'spread' ? pageNumber + 2 : pageNumber + 1)} disabled={!numPages || pageNumber >= numPages} className={toolbarIconButtonClass} title="Next page (→)" aria-label="Next page"><ChevronRight className="h-4 w-4" aria-hidden="true" /></button>
             </div>
 
-            {/* Document Navigation (Prev/Next Book) */}
-            {(prevId || nextId) && (
-                <>
-                    <div className="mx-1 h-5 w-px shrink-0 bg-[#2A2928]" aria-hidden="true" />
-                    <div className="flex items-center gap-0.5">
-                        {prevId ? (
-                            <Link
-                                href={`/library/${prevId}`}
-                                prefetch
-                                className={toolbarButtonClass}
-                                title="Previous document"
-                                aria-label="Previous document"
-                            >
-                                <span>Previous</span>
-                            </Link>
-                        ) : null}
-                        {nextId ? (
-                            <Link
-                                href={`/library/${nextId}`}
-                                prefetch
-                                className={toolbarButtonClass}
-                                title="Next document"
-                                aria-label="Next document"
-                            >
-                                <span>Next</span>
-                            </Link>
-                        ) : null}
-                    </div>
-                </>
-            )}
-
-            <div className="mx-1 h-5 w-px shrink-0 bg-[#2A2928]" aria-hidden="true" />
-
-            {/* Rotation */}
-            <button
-                type="button"
-                onClick={() => setRotation((r) => (r + 90) % 360)}
-                className={toolbarButtonClass}
-                title="Rotate 90° (R)"
-                aria-label="Rotate page"
-            >
-                <span>Rotate</span>
-            </button>
-
-            {/* Fullscreen Toggle */}
-            <button
-                type="button"
-                onClick={toggleFullscreen}
-                className={toolbarButtonClass}
-                title="Toggle Fullscreen (F)"
-                aria-label="Toggle fullscreen"
-            >
-                {isFullscreen ? <span>Exit full screen</span> : <span>Full screen</span>}
-            </button>
-
-            <div className="mx-1 h-5 w-px shrink-0 bg-[#2A2928]" aria-hidden="true" />
-
-            {/* Direct PDF Link */}
-            <Link
-                href={pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={toolbarButtonClass}
-                title="Open original PDF in new tab"
-                aria-label="Open original PDF"
-            >
-                <span>Open PDF</span>
-            </Link>
-
-            {/* Download */}
-            <a
-                href={pdfUrl}
-                download
-                className={toolbarButtonClass}
-                title="Download PDF"
-                aria-label="Download PDF"
-            >
-                <span>Download</span>
-            </a>
-
-            {/* Help / Shortcuts */}
-            <button
-                type="button"
-                onClick={() => setShowHelpModal(true)}
-                className={toolbarButtonClass}
-                title="Keyboard Shortcuts (?)"
-                aria-label="Keyboard shortcuts"
-            >
-                <span>Shortcuts</span>
-            </button>
-
-            {/* Cite Button */}
-            <button
-                type="button"
-                onClick={() => setShowCiteModal(true)}
-                className={toolbarButtonClass}
-                title="Cite this page"
-                aria-label="Cite"
-            >
-                <span>Cite</span>
-            </button>
+            <div className="mx-1 h-5 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
+            <div className="relative popover-container">
+                <button type="button" onClick={() => setShowMorePopover((s) => !s)} className={`${toolbarIconButtonClass} ${showMorePopover ? 'text-ed-accent bg-ed-accent-soft' : ''}`} title="More document actions" aria-label="More document actions" aria-haspopup="true" aria-expanded={showMorePopover}><MoreHorizontal className="h-5 w-5" aria-hidden="true" /></button>
+                {showMorePopover && <div className="reader-popover min-w-[220px]" aria-label="More document actions">
+                    <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">Document</div>
+                    {prevId && <Link href={`/library/${prevId}`} prefetch onClick={() => setShowMorePopover(false)} className="reader-popover-item" title="Previous document"><span className="flex items-center gap-2"><ChevronLeft className="h-4 w-4" />Previous book</span></Link>}
+                    {nextId && <Link href={`/library/${nextId}`} prefetch onClick={() => setShowMorePopover(false)} className="reader-popover-item" title="Next document"><span className="flex items-center gap-2"><ChevronRight className="h-4 w-4" />Next book</span></Link>}
+                    <div className="my-1 h-px bg-ed-rule" />
+                    <button type="button" onClick={() => { setRotation((r) => (r + 90) % 360); setShowMorePopover(false); }} className="reader-popover-item"><span className="flex items-center gap-2"><RotateCw className="h-4 w-4" />Rotate page</span><kbd>R</kbd></button>
+                    <button type="button" onClick={() => { toggleFullscreen(); setShowMorePopover(false); }} className="reader-popover-item"><span className="flex items-center gap-2">{isFullscreen ? <Minimize className="h-4 w-4" /> : <Maximize className="h-4 w-4" />}{isFullscreen ? 'Exit full screen' : 'Full screen'}</span><kbd>F</kbd></button>
+                    <div className="my-1 h-px bg-ed-rule" />
+                    <Link href={pdfUrl} target="_blank" rel="noopener noreferrer" onClick={() => setShowMorePopover(false)} className="reader-popover-item"><span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" />Open original PDF</span></Link>
+                    <a href={pdfUrl} download onClick={() => setShowMorePopover(false)} className="reader-popover-item"><span className="flex items-center gap-2"><Download className="h-4 w-4" />Download PDF</span></a>
+                    <div className="my-1 h-px bg-ed-rule" />
+                    <button type="button" onClick={() => { setShowHelpModal(true); setShowMorePopover(false); }} className="reader-popover-item"><span className="flex items-center gap-2"><Keyboard className="h-4 w-4" />Keyboard shortcuts</span><kbd>?</kbd></button>
+                    <button type="button" onClick={() => { setShowCiteModal(true); setShowMorePopover(false); }} className="reader-popover-item"><span className="flex items-center gap-2"><Quote className="h-4 w-4" />Cite this page</span></button>
+                </div>}
+            </div>
         </div>
     );
-
     return (
         <div
             ref={readerRootRef}
             className={`relative flex h-full flex-col overflow-hidden bg-ed-bg text-ed-fg pdf-theme-${readingTheme}`}
         >
             {/* Header */}
-            <header className="relative z-10 flex h-[60px] shrink-0 items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg/90 backdrop-blur-xl px-4 sm:px-7">
-                <div className="flex shrink-0 items-center gap-3">
+            <header className="relative z-10 flex h-[60px] shrink-0 items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg px-4 sm:px-7">
+                <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
                     <Link
                         href={backHref}
                         onClick={handleBack}
@@ -1057,7 +766,7 @@ export default function PDFReaderClient({
                         title="Back"
                         aria-label="Back"
                     >
-                        Back
+                        <ArrowLeft className="h-4 w-4" aria-hidden="true" />
                     </Link>
 
                     <div className="hidden h-4 w-px bg-ed-rule sm:block" />
@@ -1066,11 +775,12 @@ export default function PDFReaderClient({
                     <button
                         type="button"
                         onClick={() => setSidebarOpen((s) => !s)}
-                        className={`${toolbarButtonClass} ${sidebarOpen ? 'text-ed-accent bg-ed-accent-soft' : ''}`}
+                        className={`${toolbarIconButtonClass} ${sidebarOpen ? 'text-ed-accent bg-ed-accent-soft' : ''}`}
                         title="Toggle Navigation Sidebar"
                         aria-label="Toggle sidebar"
+                        aria-pressed={sidebarOpen}
                     >
-                        <span>Pages</span>
+                        <PanelLeft className="h-4 w-4" aria-hidden="true" />
                     </button>
 
                     <h1
@@ -1084,7 +794,7 @@ export default function PDFReaderClient({
 
                 {/* Desktop Toolbar */}
                 <div
-                    className="hidden min-w-0 items-center gap-0.5 rounded-[8px] border border-[#2A2928] bg-[#161514]/80 p-1 shadow-sm overflow-x-auto sm:flex"
+                    className="hidden shrink-0 items-center gap-0.5 lg:flex"
                     role="toolbar"
                     aria-label="Document controls"
                 >
@@ -1092,7 +802,7 @@ export default function PDFReaderClient({
                 </div>
 
                 {/* Mobile Sidebar Toggle */}
-                <div className="flex items-center gap-1 sm:hidden">
+                <div className="flex items-center gap-1 lg:hidden">
                     <button
                         type="button"
                         onClick={() => setSearchOpen((s) => !s)}
@@ -1451,7 +1161,7 @@ export default function PDFReaderClient({
             </div>
 
             {/* Mobile Floating Bottom Dock */}
-            <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] sm:hidden">
+            <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] lg:hidden">
                 <div
                     className="scrollbar-none pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-center gap-0.5 overflow-x-auto rounded-[8px] border border-ed-rule bg-ed-surface/90 p-1.5 shadow-lg backdrop-blur-xl"
                     role="toolbar"

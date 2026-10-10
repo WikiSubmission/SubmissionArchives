@@ -28448,7 +28448,7 @@
     "chapters": [
       {
         "id": 1,
-        "startTime": 0.0,
+        "startTime": 0,
         "endTime": 182.361,
         "title": "Believers and the test of hardship",
         "speaker": "Dr. Khalifa"
@@ -28498,13 +28498,13 @@
       {
         "id": 8,
         "startTime": 2645.974,
-        "endTime": 3300.0,
+        "endTime": 3300,
         "title": "The lottery and unlawful gain",
         "speaker": "A man"
       },
       {
         "id": 9,
-        "startTime": 3300.0,
+        "startTime": 3300,
         "endTime": 4802.513,
         "title": "Charity, reliance on God, and contentment",
         "speaker": "A man"
@@ -28543,7 +28543,7 @@
     "chapters": [
       {
         "id": 1,
-        "startTime": 0.0,
+        "startTime": 0,
         "endTime": 303.435,
         "title": "Marriage, orphans, and religious responsibility",
         "speaker": "Dean Majul"
@@ -28565,13 +28565,13 @@
       {
         "id": 4,
         "startTime": 840.317,
-        "endTime": 1200.0,
+        "endTime": 1200,
         "title": "Vows, expiation, and intention",
         "speaker": "Dr. Khalifa"
       },
       {
         "id": 5,
-        "startTime": 1200.0,
+        "startTime": 1200,
         "endTime": 1620.198,
         "title": "Repentance and readiness to meet God",
         "speaker": "A woman"
@@ -28610,6 +28610,215 @@
         "endTime": null,
         "title": "Accidental and deliberate killing in Sura 4",
         "speaker": "A man"
+      }
+    ]
+  },
+  {
+    "id": "messenger-audio/75 Friday Sermon 5 Nov 1982",
+    "title": "Messenger Audio 75 — Friday Sermon — Quranic Interpretation, Adam and Eve, and Salvation (Dean Majul & Rashad)",
+    "displayTitle": "Messenger Audio 75 — Friday Sermon — Quranic Interpretation, Adam and Eve, and Salvation (Dean Majul & Rashad)",
+    "type": "messenger-audio",
+    "author": "Dean Majul; Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
+    "folder": "75 Friday Sermon 5 Nov 1982",
+    "vttFile": "MA75.en-US.vtt",
+    "primaryNumber": 75,
+    "alternateNumbers": [
+      "30"
+    ],
+    "alternateNumberLabel": "Legacy 30",
+    "youtubeId": "T6i7ycD2wHI",
+    "youtubeUrl": "https://www.youtube.com/watch?v=T6i7ycD2wHI",
+    "youtubeStartTime": 0,
+    "duration_seconds": 3303,
+    "description": "Dean Majul presents a method for interpreting the Quran through its own verses, warning against overreliance on Biblical accounts and Hadith. He applies this method to Adam and Eve, their garments, and the garment of righteousness, then discusses Sura 95 in relation to Sura 3:33. A discussion follows on translation and allegory. Dr. Rashad Khalifa then leads a study of Sura 2:62 and 3:113–115, discussing salvation, belief in God alone, and righteous Jews and Christians.",
+    "fullDate": "1982-11-05",
+    "year": 1982,
+    "date": "11/05/1982",
+    "chapters": [
+      {
+        "id": 1,
+        "startTime": 1.664,
+        "endTime": 33.327,
+        "title": "Call to prayer",
+        "speaker": "A man"
+      },
+      {
+        "id": 2,
+        "startTime": 33.327,
+        "endTime": 331,
+        "title": "Dean Majul: interpreting the Quran through the Quran",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 3,
+        "startTime": 331,
+        "endTime": 614.242,
+        "title": "Biblical accounts and the limits of comparison",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 4,
+        "startTime": 614.242,
+        "endTime": 790.427,
+        "title": "Hadith, clear verses, and allegories",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 5,
+        "startTime": 790.427,
+        "endTime": 1213.256,
+        "title": "Adam and Eve: nakedness and the garden",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 6,
+        "startTime": 1213.256,
+        "endTime": 1676.934,
+        "title": "The garment of righteousness in Sura 7:26",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 7,
+        "startTime": 1676.934,
+        "endTime": 2140,
+        "title": "Sura 95 and the messengers in Sura 3:33",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 8,
+        "startTime": 2140,
+        "endTime": 2172.224,
+        "title": "Closing supplications",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 9,
+        "startTime": 2172.224,
+        "endTime": 2617.079,
+        "title": "Discussion of garments, allegory, and translation",
+        "speaker": "Dean Majul"
+      },
+      {
+        "id": 10,
+        "startTime": 2617.079,
+        "endTime": 2751.136,
+        "title": "Sura 2:62: minimum requirements for salvation",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 11,
+        "startTime": 2751.136,
+        "endTime": 2968.885,
+        "title": "Belief in God alone and Christian beliefs",
+        "speaker": "A woman"
+      },
+      {
+        "id": 12,
+        "startTime": 2968.885,
+        "title": "Righteous Jews and Christians: Sura 3:113–115",
+        "speaker": "Dr. Khalifa"
+      }
+    ]
+  },
+  {
+    "id": "messenger-audio/76 Friday Sermon 7 Jan 1983",
+    "title": "Messenger Audio 76 — Friday Sermon — Marriage, Dowry, Divorce, and Reconciliation (Rashad)",
+    "displayTitle": "Messenger Audio 76 — Friday Sermon — Marriage, Dowry, Divorce, and Reconciliation (Rashad)",
+    "type": "messenger-audio",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/audios/messenger-audios/default.jpg",
+    "folder": "76 Friday Sermon 7 Jan 1983",
+    "vttFile": "MA76.en-US.vtt",
+    "primaryNumber": 76,
+    "alternateNumbers": [
+      "31"
+    ],
+    "alternateNumberLabel": "Legacy 31",
+    "youtubeId": "NENqO1HkG-I",
+    "youtubeUrl": "https://www.youtube.com/watch?v=NENqO1HkG-I",
+    "youtubeStartTime": 0,
+    "duration_seconds": 911,
+    "description": "An unidentified man opens with remarks on Satan, division among believers, and the scriptures’ call to worship one God. The recording then shifts to Dr. Rashad Khalifa answering questions on dowry, pregnancy after divorce, verbal declarations of divorce, reconciliation, and waiting periods. Diana asks about Sura 2:228, and Abdullah asks about repeated divorce and remarriage. Khalifa discusses dowry practices and concludes by urging sincere observance of Quranic commandments rather than attempts to evade them.",
+    "fullDate": "1983-01-07",
+    "year": 1983,
+    "date": "01/07/1983",
+    "chapters": [
+      {
+        "id": 1,
+        "startTime": 0,
+        "endTime": 117.427,
+        "title": "Satan, division, and the scriptures",
+        "speaker": "A man"
+      },
+      {
+        "id": 2,
+        "startTime": 117.427,
+        "endTime": 148.935,
+        "title": "Dowry before marriage",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 3,
+        "startTime": 148.935,
+        "endTime": 204.132,
+        "title": "Diana asks about pregnancy and reconciliation: Sura 2:228",
+        "speaker": "Diana"
+      },
+      {
+        "id": 4,
+        "startTime": 204.132,
+        "endTime": 290.513,
+        "title": "Verbal divorce and Abdullah’s question",
+        "speaker": "A man"
+      },
+      {
+        "id": 5,
+        "startTime": 290.513,
+        "endTime": 379,
+        "title": "Waiting periods and physical separation",
+        "speaker": "A woman"
+      },
+      {
+        "id": 6,
+        "startTime": 379,
+        "endTime": 408.126,
+        "title": "Widows and mourning",
+        "speaker": "A man"
+      },
+      {
+        "id": 7,
+        "startTime": 408.126,
+        "endTime": 632.27,
+        "title": "Dowry: value, agreement, and regional practices",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 8,
+        "startTime": 632.27,
+        "endTime": 674.867,
+        "title": "Questions about widows",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 9,
+        "startTime": 674.867,
+        "endTime": 811.525,
+        "title": "Repeated divorce and remarriage",
+        "speaker": "Dr. Khalifa"
+      },
+      {
+        "id": 10,
+        "startTime": 811.525,
+        "endTime": 880.311,
+        "title": "Waiting periods after a spouse’s death",
+        "speaker": "Abdullah"
+      },
+      {
+        "id": 11,
+        "startTime": 880.311,
+        "title": "Following commandments with conviction",
+        "speaker": "Dr. Khalifa"
       }
     ]
   }

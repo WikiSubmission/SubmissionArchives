@@ -69,6 +69,7 @@ export interface ArchiveBookSummary {
     author: string;
     filename: string;
     pdfLink: string;
+    pdfRevision?: string;
     thumbnailOverride?: string;
     transcriptionSource?: string;
     transcriptionMethod?: string;

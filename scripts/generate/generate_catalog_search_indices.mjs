@@ -1228,6 +1228,9 @@ async function main() {
     .map((item) => {
       const summary = { ...item };
       delete summary.segments;
+      // A new PDF checksum gives readers a fresh URL when the scan is replaced.
+      const pdfAsset = assetManifest.find((asset) => asset.record_id === item.id && asset.asset_kind === 'pdf');
+      summary.pdfRevision = pdfAsset?.sha256?.slice(0, 16);
       return summary;
     });
 

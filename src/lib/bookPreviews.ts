@@ -24,6 +24,7 @@ export type BookSummaryItem = {
     title: string;
     displayTitle?: string;
     author?: string;
+    year?: number;
     thumbnailOverride?: string;
     transcriptionMethod?: string;
 };

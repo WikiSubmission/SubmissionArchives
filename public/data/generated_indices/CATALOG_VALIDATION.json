@@ -4,12 +4,12 @@
   "warnings": [
     "1 record(s) are clearly marked without searchable segments."
   ],
-  "recordCount": 380,
-  "segmentCount": 105998,
+  "recordCount": 356,
+  "segmentCount": 98492,
   "categoryCounts": {
     "Appendices": 40,
     "Books": 11,
-    "Messenger Audios": 48,
+    "Messenger Audios": 24,
     "Quran": 114,
     "Quran Studies": 52,
     "Submitter Perspectives": 64,
@@ -17,7 +17,7 @@
   },
   "typeCounts": {
     "appendix": 40,
-    "messenger-audio": 48,
+    "messenger-audio": 24,
     "other": 11,
     "perspective": 64,
     "quran": 114,

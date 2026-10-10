@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowRight, ArrowUpRight, BookOpen } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 import booksData from '../../../public/data/generated_indices/BOOKS_LIST.json';
 import { getNewsletterIssues } from '@/lib/newsletterCatalog';
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 const preferredBookOrder = [
     'quran-visual-presentation',
-    'miracle-of-quran-alphabets',
     'quran-hadith-islam',
+    'miracle-of-quran-alphabets',
     'islam-volume-1-number-1-april-1974',
     'islam-volume-1-number-2-july-1974',
     'islam-volume-1-number-3-4-january-1975',
@@ -49,6 +49,7 @@ export default function WrittenArchivePage() {
         title: book.title,
         displayTitle: book.displayTitle,
         author: book.author,
+        year: book.year,
         thumbnailOverride: book.thumbnailOverride ? getPublicAssetUrl(book.thumbnailOverride) : undefined,
         transcriptionMethod: book.transcriptionMethod,
     }));
@@ -138,7 +139,7 @@ export default function WrittenArchivePage() {
                             </h2>
                             <div className="h-px flex-1 bg-ed-rule" />
                             <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-ed-fg-muted">
-                                {books.length} volumes
+                                {books.length} titles
                             </span>
                         </div>
 

@@ -288,13 +288,18 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
                             <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <circle cx="12" cy="12" r="10" />
                             </svg>
-                            Audio Archive Index
+                            <span>Listening desk</span><span aria-hidden="true">·</span><span>1987–1990</span>
                         </div>
-                        <h1 className="aa-hero-title">The Audio Archives</h1>
+                        <h1 className="aa-hero-title">Audio archive</h1>
                         <p className="aa-hero-desc">
-                            Systematic study sequences and preserved recordings, arranged for steady, focused engagement.
-                            Digitized directly from the historical analog cassette masters recorded at Masjid Tucson (1987–1990).
+                            Quran study sessions and messenger recordings, digitized from historical cassette masters at Masjid Tucson. Find a session, then listen with its transcript and study materials.
                         </p>
+                        <div className="aa-waveform" aria-hidden="true">
+                            {[18, 30, 22, 42, 26, 52, 35, 23, 45, 30, 55, 25, 38, 20, 46, 31, 18, 40, 24, 50, 33, 22, 43, 27, 36, 18, 48, 25, 39, 21, 45, 29].map((height, index) => (
+                                <span key={index} style={{ height }} />
+                            ))}
+                            <span className="aa-waveform-caption">Preserved spoken record · Browse by collection</span>
+                        </div>
                     </div>
 
                     <div className="aa-hero-stats">

@@ -14,6 +14,7 @@ import { ToastProvider } from '@/components/ui/Toast';
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/config/site';
 
 import './globals.css';
+import './site-chrome.css';
 
 const inter = Inter({
     variable: '--font-inter',

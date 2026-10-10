@@ -13,7 +13,8 @@
     "transcriptionSource": "data/sources/books/the_computer_speaks/the_computer_speaks_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 567
+    "segmentCount": 567,
+    "pdfRevision": "9ff6b6c1009a49db"
   },
   {
     "id": "english-meanings-of-the-quran",
@@ -22,14 +23,15 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/english-meanings-of-the-quran.jpg",
+    "thumbnailOverride": "/content/written/books/thumbnails/english-meanings-of-the-quran.webp",
     "filename": "english-meanings-of-the-quran.pdf",
     "pdfLink": "/content/written/books/english-meanings-of-the-quran.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 26
+    "segmentCount": 26,
+    "pdfRevision": "7f6f72123bb6b73a"
   },
   {
     "id": "eternity-screenplay",
@@ -38,14 +40,15 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/eternity-screenplay.jpg",
+    "thumbnailOverride": "/content/written/books/thumbnails/eternity-screenplay.webp",
     "filename": "eternity-screenplay.pdf",
     "pdfLink": "/content/written/books/eternity-screenplay.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/eternity_screenplay/eternity_screenplay_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 175
+    "segmentCount": 175,
+    "pdfRevision": "91d9ff6c77cedc31"
   },
   {
     "id": "islam-volume-1-number-1-april-1974",
@@ -55,14 +58,15 @@
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
     "year": 1974,
-    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-1-april-1974.jpg",
+    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-1-april-1974.webp",
     "filename": "islam-volume-1-number-1-april-1974.pdf",
     "pdfLink": "/content/written/books/islam-volume-1-number-1-april-1974.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_1/islam_volume_1_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 213
+    "segmentCount": 213,
+    "pdfRevision": "d94bbeddd687bb8b"
   },
   {
     "id": "islam-volume-1-number-2-july-1974",
@@ -72,14 +76,15 @@
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
     "year": 1974,
-    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-2-july-1974.jpg",
+    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-2-july-1974.webp",
     "filename": "islam-volume-1-number-2-july-1974.pdf",
     "pdfLink": "/content/written/books/islam-volume-1-number-2-july-1974.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_2/islam_volume_2_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 239
+    "segmentCount": 239,
+    "pdfRevision": "594d7e10bf8731f8"
   },
   {
     "id": "islam-volume-1-number-3-4-january-1975",
@@ -89,14 +94,15 @@
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
     "year": 1975,
-    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-3-4-january-1975.jpg",
+    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-3-4-january-1975.webp",
     "filename": "islam-volume-1-number-3-4-january-1975.pdf",
     "pdfLink": "/content/written/books/islam-volume-1-number-3-4-january-1975.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_3_4/islam_volume_3_4_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 325
+    "segmentCount": 325,
+    "pdfRevision": "1337ad0c1a1d1c73"
   },
   {
     "id": "miracle-of-quran-alphabets",
@@ -105,14 +111,15 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/miracle-of-quran-alphabets.jpg",
+    "thumbnailOverride": "/content/written/books/thumbnails/miracle-of-quran-alphabets.png",
     "filename": "miracle-of-quran-alphabets.pdf",
     "pdfLink": "/content/written/books/miracle-of-quran-alphabets.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 361
+    "segmentCount": 361,
+    "pdfRevision": "26ce162e33b55876"
   },
   {
     "id": "perpetual-miracle",
@@ -121,14 +128,15 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/perpetual-miracle.jpg",
+    "thumbnailOverride": "/content/written/books/thumbnails/perpetual-miracle.webp",
     "filename": "perpetual-miracle.pdf",
     "pdfLink": "/content/written/books/perpetual-miracle.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 45
+    "segmentCount": 45,
+    "pdfRevision": "e700c1bdf66f15a2"
   },
   {
     "id": "quran-hadith-islam",
@@ -144,7 +152,8 @@
     "transcriptionSource": "data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 160
+    "segmentCount": 160,
+    "pdfRevision": "63408cc3d67ccec7"
   },
   {
     "id": "quran-visual-presentation",
@@ -160,7 +169,8 @@
     "transcriptionSource": "data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 288
+    "segmentCount": 288,
+    "pdfRevision": "647e6978d2da289b"
   },
   {
     "id": "salat-booklet",
@@ -169,13 +179,14 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/salat-booklet.jpg",
+    "thumbnailOverride": "/content/written/books/thumbnails/salat-booklet.webp",
     "filename": "salat-booklet.pdf",
     "pdfLink": "/content/written/books/salat-booklet.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/the_contact_prayers/the_contact_prayers_complete.json",
     "transcriptionMethod": "AI-assisted OCR with Gemini Vision from high-resolution page renders; not independently proofread",
     "transcriptStatus": "available",
-    "segmentCount": 18
+    "segmentCount": 18,
+    "pdfRevision": "d01997124ab323ce"
   }
 ]

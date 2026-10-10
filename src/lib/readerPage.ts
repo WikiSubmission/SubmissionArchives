@@ -64,11 +64,11 @@ export interface ReaderPagePayload {
 
 const preferredBookOrder = [
     'quran-visual-presentation',
-    'miracle-of-quran-alphabets',
     'quran-hadith-islam',
     'islam-volume-1-number-1-april-1974',
     'islam-volume-1-number-2-july-1974',
     'islam-volume-1-number-3-4-january-1975',
+    'miracle-of-quran-alphabets',
     'perpetual-miracle',
     'computer-speaks',
 ] as const;
@@ -117,7 +117,7 @@ export function resolveReaderPage(id: string, backHrefResolver: (book: BookData)
     return {
         book,
         backHref,
-        pdfLink: getPublicAssetUrl(pdfLink),
+        pdfLink: `${getPublicAssetUrl(pdfLink)}${book.pdfRevision ? `?v=${encodeURIComponent(book.pdfRevision)}` : ''}`,
         prevId: currentIndex > 0 ? books[currentIndex - 1].id : null,
         nextId: currentIndex >= 0 && currentIndex < books.length - 1 ? books[currentIndex + 1].id : null,
     };
