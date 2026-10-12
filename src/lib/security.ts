@@ -1,5 +1,6 @@
 import 'server-only';
 
+import { isIP } from 'node:net';
 import { NextResponse } from 'next/server';
 import { checkRateLimit, type RateLimitResult } from './rateLimit';
 
@@ -10,12 +11,11 @@ import { checkRateLimit, type RateLimitResult } from './rateLimit';
 export { checkRateLimit };
 
 export function getClientIp(headers: Headers) {
-  return (
-    headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    headers.get('x-real-ip')?.trim() ||
-    headers.get('cf-connecting-ip')?.trim() ||
-    'unknown'
-  );
+  // Opt in only when the ingress strips incoming client-supplied IP headers.
+  const header = process.env.TRUSTED_CLIENT_IP_HEADER;
+  if (!header || !['x-forwarded-for', 'x-real-ip', 'cf-connecting-ip'].includes(header)) return 'unknown';
+  const value = headers.get(header)?.split(',')[0]?.trim() ?? '';
+  return isIP(value) ? value : 'unknown';
 }
 
 export function rateLimitResponse(result: RateLimitResult) {
@@ -46,7 +46,7 @@ export function sanitizeSearchQuery(raw: string | null | undefined): {
 
   // Nothing alphanumeric means there is nothing to match; treat as empty rather
   // than handing the matcher a string of punctuation.
-  if (!/[a-z0-9]/i.test(query)) {
+  if (!/[\p{L}\p{N}]/u.test(query)) {
     return { query: '', suspicious: query.length > 0 };
   }
 

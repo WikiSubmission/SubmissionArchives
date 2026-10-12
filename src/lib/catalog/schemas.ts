@@ -8,16 +8,27 @@ import { z } from 'zod';
 // the app does not read, and failing a build over a field nobody consumes would train
 // people to distrust the check.
 
+export const ProvenanceSchema = z.object({
+    originalDate: z.string().max(100).optional(),
+    dateKind: z.enum(['recorded', 'published', 'uploaded', 'unknown']).optional(),
+    dateConfidence: z.enum(['verified', 'catalog', 'unknown']).optional(),
+    edition: z.string().max(100).optional(), sourceUrl: z.string().url().optional(),
+    verification: z.enum(['verified', 'unverified', 'unknown']).optional(),
+    speakerAttribution: z.enum(['verified', 'uncertain', 'unknown']).optional(),
+    transcription: z.string().max(1000).optional(),
+});
+
 const ChapterSchema = z.object({
     id: z.number(),
     startTime: z.number(),
-    endTime: z.number().optional(),
+    endTime: z.number().nullish(),
     title: z.string(),
     description: z.string().optional(),
     speaker: z.string().optional(),
 });
 
 const MediaEntrySchema = z.object({
+    provenance: ProvenanceSchema.optional(),
     id: z.string().min(1),
     title: z.string().min(1),
     displayTitle: z.string().min(1).optional(),

@@ -1,3 +1,7 @@
+import { getCurrentWindow } from '@tauri-apps/api/window'
+import { flushNoteWrites } from './lib/saveQueue'
+import { useWorkspaceDialog } from './hooks/useWorkspaceDialog'
+import { scanArchive } from './lib/notes'
 /* eslint-disable @next/next/no-img-element */
 import { useCallback, useEffect, useState } from 'react'
 import { safeInvoke as invoke } from './lib/ipc'
@@ -51,6 +55,20 @@ interface StudioWorkspaceProps {
 }
 
 function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) {
+  useEffect(() => {
+    if (!('__TAURI_INTERNALS__' in window)) return
+    let disposed = false
+    let unlisten: (() => void) | undefined
+    void getCurrentWindow().onCloseRequested(async event => {
+      event.preventDefault()
+      window.dispatchEvent(new Event('studio:flush-notes'))
+      try { await flushNoteWrites(); await getCurrentWindow().destroy() }
+      catch { notify('A note could not be saved. Keep this window open and retry saving before closing.') }
+    }).then(off => { if (disposed) off(); else unlisten = off }).catch(() => {})
+    return () => { disposed = true; unlisten?.() }
+  }, [])
+  const { ask, notify, dialogs } = useWorkspaceDialog()
+  const [backlinksCount, setBacklinksCount] = useState(0)
   const [activeFilePath, setActiveFilePath] = useState<string | null>(null)
   const [openTabs, setOpenTabs] = useState<TabItem[]>([])
   const [historyStack, setHistoryStack] = useState<string[]>([])
@@ -209,25 +227,28 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   }
 
   const handleNewNote = async () => {
-    const name = window.prompt('Note name')
+    const name = await ask('Note name')
     if (!name) return
     try {
       const path = await invoke<string>('create_note', { dir: archivePath, name })
       handleOpenFile(path)
       setRefreshToken((t) => t + 1)
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
 
   const handleTrash = async (path: string) => {
+    if (!await ask('Move this note to archive trash? Recovery is available in Trash.', false)) return
     try {
+      window.dispatchEvent(new Event('studio:flush-notes'))
+      await flushNoteWrites()
       await invoke('trash_note', { archiveRoot: archivePath, path })
       setOpenTabs((prev) => prev.filter((t) => t.path !== path))
       if (activeFilePath === path) setActiveFilePath(null)
       setRefreshToken((t) => t + 1)
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
 
@@ -238,20 +259,22 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
       handleOpenFile(path)
       setRefreshToken((t) => t + 1)
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
 
   const handleMoveNote = async () => {
     if (!activeFilePath) return
-    const targetDir = window.prompt('Move to folder (full path):', archivePath)
-    if (!targetDir) return
+    const targetDir = await open({ directory: true, multiple: false, defaultPath: archivePath, title: 'Move note to folder' })
+    if (typeof targetDir !== 'string') return
     try {
+      window.dispatchEvent(new Event('studio:flush-notes'))
+      await flushNoteWrites()
       const path = await invoke<string>('move_note', { path: activeFilePath, targetDir })
       handleOpenFile(path)
       setRefreshToken((t) => t + 1)
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
 
@@ -260,7 +283,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
     try {
       await navigator.clipboard.writeText(activeFilePath)
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
 
@@ -273,7 +296,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
       if (!destination) return
       await invoke('write_note', { path: destination, content })
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
 
@@ -291,9 +314,9 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
         notePath: activeFilePath,
         destinationPath: destination,
       })
-      window.alert('Note exported as .sanote package!')
+      notify('Note exported as .sanote package!')
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
 
@@ -305,7 +328,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
       await invoke('import_files', { archiveRoot: archivePath, sourcePaths: paths })
       setRefreshToken((t) => t + 1)
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
 
@@ -320,9 +343,22 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
       await invoke('import_zip', { archiveRoot: archivePath, zipPath: selected })
       setRefreshToken((t) => t + 1)
     } catch (err) {
-      window.alert(String(err))
+      notify(String(err))
     }
   }
+
+  useEffect(() => {
+    let active = true
+    const refresh = () => scanArchive(archivePath).then(notes => {
+      if (!active) return
+      const target = notes.find(n => n.path === activeFilePath)
+      const name = target?.name.toLowerCase()
+      setBacklinksCount(name ? notes.filter(n => n.path !== activeFilePath && n.links.some(link => link.split('|')[0].split('#')[0].trim().toLowerCase() === name)).length : 0)
+    }).catch(() => { if (active) setBacklinksCount(0) })
+    void refresh()
+    const timer = setInterval(refresh, 5000)
+    return () => { active = false; clearInterval(timer) }
+  }, [archivePath, activeFilePath, refreshToken, isSaved])
 
   // Register Global Keybindings via central hook
   useShortcuts({
@@ -538,7 +574,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
             <StatusBar
               wordCount={wordCount}
               charCount={charCount}
-              backlinksCount={0}
+              backlinksCount={backlinksCount}
               editorMode={editorMode}
               onModeChange={setEditorMode}
               isSaved={isSaved}
@@ -547,6 +583,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
         }
       />
 
+      {dialogs}
       {/* Modals */}
       {quickSwitcherOpen && (
         <QuickSwitcher archivePath={archivePath} onOpenFile={handleOpenFile} onClose={() => setQuickSwitcherOpen(false)} />

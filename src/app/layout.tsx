@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
-import { Amiri, Inter, JetBrains_Mono, Roboto_Slab, Frank_Ruhl_Libre, DM_Sans, Newsreader, Source_Serif_4 } from 'next/font/google';
+import { Amiri, Inter, Frank_Ruhl_Libre, DM_Sans, Newsreader, Source_Serif_4 } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import { WebVitals } from '@/components/analytics/WebVitals';
@@ -46,11 +46,7 @@ const sourceSerif4 = Source_Serif_4({
     preload: false,
 });
 
-const jetbrainsMono = JetBrains_Mono({
-    variable: '--font-jetbrains-mono',
-    subsets: ['latin'],
-    display: 'swap',
-});
+
 
 // Arabic, Hebrew, and slab are loaded on demand
 const amiri = Amiri({
@@ -69,22 +65,9 @@ const frankRuhlLibre = Frank_Ruhl_Libre({
     preload: false,
 });
 
-const robotoSlab = Roboto_Slab({
-    variable: '--font-roboto-slab',
-    subsets: ['latin'],
-    display: 'swap',
-    preload: false,
-});
 
-const superiorSerif = localFont({
-    variable: '--font-local-superior',
-    display: 'swap',
-    src: [
-        { path: '../../public/fonts/LTSuperiorSerif-Regular.woff2', weight: '400', style: 'normal' },
-        { path: '../../public/fonts/LTSuperiorSerif-Medium.woff2', weight: '500', style: 'normal' },
-        { path: '../../public/fonts/LTSuperiorSerif-Bold.woff2', weight: '700', style: 'normal' },
-    ],
-});
+
+
 
 const newYork = localFont({
     variable: '--font-new-york',
@@ -163,7 +146,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
                     {themeBootstrapScript}
                 </Script>
             </head>
-            <body className={`${inter.variable} ${jetbrainsMono.variable} ${newYork.variable} ${departureMono.variable} ${amiri.variable} ${frankRuhlLibre.variable} ${superiorSerif.variable} ${robotoSlab.variable} ${dmSans.variable} ${newsreader.variable} ${sourceSerif4.variable} antialiased`}>
+            <body className={`${inter.variable} ${newYork.variable} ${departureMono.variable} ${amiri.variable} ${frankRuhlLibre.variable} ${dmSans.variable} ${newsreader.variable} ${sourceSerif4.variable} antialiased`}>
                 <a
                     href="#main-content"
                     className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-ed-fg focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-ed-bg"

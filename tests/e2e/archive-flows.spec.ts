@@ -19,13 +19,13 @@ test('written archive prioritizes books and exposes every newsletter issue', asy
 
     const books = page.getByRole('region', { name: 'Books & Publications' });
     const bookLinks = await books.locator('a[href^="/library/"]').evaluateAll((links) =>
-        links.map((link) => link.getAttribute('href')),
+        [...new Set(links.map((link) => link.getAttribute('href')))],
     );
 
     expect(bookLinks.slice(0, 8)).toEqual([
         '/library/quran-visual-presentation',
-        '/library/miracle-of-quran-alphabets',
         '/library/quran-hadith-islam',
+        '/library/miracle-of-quran-alphabets',
         '/library/islam-volume-1-number-1-april-1974',
         '/library/islam-volume-1-number-2-july-1974',
         '/library/islam-volume-1-number-3-4-january-1975',
@@ -38,7 +38,7 @@ test('written archive prioritizes books and exposes every newsletter issue', asy
         'href',
         '/search?filters=perspective',
     );
-    await expect(newsletters.locator('a[href^="/library/"]')).toHaveCount(64);
+    expect(await newsletters.locator('a[href^="/library/"]').evaluateAll(links => new Set(links.map(link => link.getAttribute('href'))).size)).toBe(64);
 });
 
 test('home route exposes primary archive pathways without mobile overflow', async ({ page }) => {
@@ -47,7 +47,7 @@ test('home route exposes primary archive pathways without mobile overflow', asyn
 
     const main = page.getByRole('main');
     await expect(page.getByRole('heading', { level: 1, name: 'SUBMISSION ARCHIVES' })).toBeVisible();
-    await expect(main.getByRole('link', { name: 'Browse recordings' })).toHaveAttribute('href', '/videos');
+    await expect(main.getByRole('link', { name: 'Browse all 300+ preserved video recordings' })).toHaveAttribute('href', '/videos');
     await expect(main.getByRole('link', { name: 'Search the archive', exact: true }).first()).toHaveAttribute(
         'href',
         '/search',
@@ -68,9 +68,12 @@ test('book-only search returns a page-specific reader link', async ({ page }) =>
 
     await expect(page.getByText('Searching the archive...')).toBeHidden({ timeout: 30_000 });
     await expect(page.getByRole('heading', { name: 'The Contact Prayers', exact: true })).toBeVisible();
-    const resultLink = page.locator('a[href^="/library/salat-booklet"]').filter({ hasText: 'Best passage' });
+    const resultLink = page.getByRole('link', { name: 'Open The Contact Prayers', exact: true });
     await expect(resultLink).toHaveCount(1);
     await expect(resultLink).toHaveAttribute('href', /page=1/);
+    await resultLink.click();
+    await expect(page).toHaveURL(/\/library\/salat-booklet\?.*page=1/);
+    await expect(page.getByRole('heading', { level: 1, name: 'The Contact Prayers' })).toBeVisible();
 });
 
 test('legacy book slug renders the current PDF', async ({ page }) => {

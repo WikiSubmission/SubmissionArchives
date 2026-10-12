@@ -35,7 +35,8 @@ export async function GET(
     let pages = pageCache.get(id);
     if (!pages) {
         const sourceRoot = path.resolve(process.cwd(), 'data', 'sources', 'books');
-        const sourcePath = path.resolve(process.cwd(), book.transcriptionSource);
+        const relativeSource = book.transcriptionSource.replace(/^data[\\/]sources[\\/]books[\\/]/, '');
+        const sourcePath = path.resolve(sourceRoot, relativeSource);
         if (!sourcePath.startsWith(`${sourceRoot}${path.sep}`) || !fs.existsSync(sourcePath)) {
             return Response.json({ error: 'OCR text is unavailable for this book.' }, { status: 404 });
         }

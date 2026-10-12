@@ -7,6 +7,7 @@ export const PRIMARY_NAV = [
     { name: 'Written', href: '/written' },
     { name: 'Scriptures', href: '/scripture/quran' },
     { name: 'Search', href: '/search' },
+    { name: 'Editorials', href: '/editorials' },
     { name: 'App', href: '/app' },
 ];
 
@@ -38,6 +39,8 @@ export const FOOTER_NAV = [
             { name: 'Books & Publications', href: '/written#books' },
             { name: 'Archive Editorials', href: '/editorials' },
             { name: 'Historical Editions', href: '/scripture/quran/appendices' },
+            { name: 'Research Collections', href: '/collections' },
+            { name: 'Timeline & Topics', href: '/explore' },
             { name: 'Global Deep Search', href: '/search' },
         ],
     },

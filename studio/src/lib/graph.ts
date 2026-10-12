@@ -105,3 +105,10 @@ export function computeLayout(
 
   return nodes.map((node) => ({ ...node, ...positions.get(node.id)! }))
 }
+
+/** Preserve incoming and outgoing edge direction in the selected local neighborhood. */
+export function neighborhood(ids: string[], edges: [string, string][], selected: string) {
+ const adjacent = new Set([selected])
+ for (const [from, to] of edges) { if (from === selected) adjacent.add(to); if (to === selected) adjacent.add(from) }
+ return ids.filter(id => adjacent.has(id))
+}

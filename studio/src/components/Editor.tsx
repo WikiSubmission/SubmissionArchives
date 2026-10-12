@@ -1,3 +1,4 @@
+import { queueNoteWrite, publishNoteDraft, getNoteDraft, acknowledgeNoteDraft, subscribeNoteDraft } from '../lib/saveQueue'
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import { Markdown } from 'tiptap-markdown'
@@ -92,8 +93,13 @@ export default function Editor({
   const [frontmatter, setFrontmatter] = useState<Record<string, unknown>>({})
   const [historyOpen, setHistoryOpen] = useState(false)
   const saveTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const pendingSave = useRef<(() => void) | null>(null)
   const activeFilePath = useRef<string | null>(null)
   const frontmatterRef = useRef<Record<string, unknown>>({})
+
+  const draftOwner = useRef({})
+  const loadingRef = useRef(true)
+  const [loadingNote, setLoadingNote] = useState(true)
 
   const locked = Boolean(frontmatter.locked)
   const fullWidth = Boolean(frontmatter.fullWidth)
@@ -106,29 +112,26 @@ export default function Editor({
   }, [settings.quran.insertStyle])
 
   const scheduleSave = (editorInstance: ReturnType<typeof useEditor>) => {
-    if (!activeFilePath.current) return
-
+    const path = activeFilePath.current
+    if (!path || !editorInstance || loadingRef.current) return
     if (saveTimeout.current) clearTimeout(saveTimeout.current)
-    saveTimeout.current = setTimeout(() => {
-      const path = activeFilePath.current
-      if (!path || !editorInstance) return
-
-      setStatus('saving')
-      onStatusChange?.(false)
-      const storageInstance = editorInstance.storage as unknown as { markdown: { getMarkdown: () => string } }
-      const body = storageInstance.markdown.getMarkdown()
-      onContentChange?.(body)
-      const content = stringifyWithFrontmatter(body, frontmatterRef.current)
-
-      // Atomic file write + recovery buffer
-      invoke('write_note', { path, content })
-        .then(() => {
-          setStatus('saved')
-          onStatusChange?.(true)
-          invoke('snapshot_note', { archiveRoot: archivePath, notePath: path, content }).catch(() => {})
-        })
-        .catch(() => setStatus('error'))
-    }, 500)
+    const storageInstance = editorInstance.storage as unknown as { markdown: { getMarkdown: () => string } }
+    const body = storageInstance.markdown.getMarkdown()
+    const content = stringifyWithFrontmatter(body, frontmatterRef.current)
+    const draft = publishNoteDraft(path, content, draftOwner.current)
+    onContentChange?.(body)
+    onStatusChange?.(false)
+    pendingSave.current = () => {
+      pendingSave.current = null
+      if (activeFilePath.current === path) setStatus('saving')
+      queueNoteWrite(path, () => invoke('write_note', { path, content })).then(() => {
+        const latest = acknowledgeNoteDraft(path, draft.revision)
+        if (latest && activeFilePath.current === path) { setStatus('saved'); onStatusChange?.(true) }
+        window.dispatchEvent(new Event('studio:notes-changed'))
+        invoke('snapshot_note', { archiveRoot: archivePath, notePath: path, content }).catch(() => {})
+      }).catch(() => { if (activeFilePath.current === path) setStatus('error') })
+    }
+    saveTimeout.current = setTimeout(() => pendingSave.current?.(), 500)
   }
 
   const editor = useEditor({
@@ -177,6 +180,19 @@ export default function Editor({
     }
   }, [editor])
 
+  // Keep split panes on the same draft before either debounce writes to disk.
+  useEffect(() => subscribeNoteDraft((path, draft) => {
+    if (path !== activeFilePath.current || draft.owner === draftOwner.current || !editor) return
+    if (saveTimeout.current) clearTimeout(saveTimeout.current)
+    pendingSave.current = null
+    const { data, content } = parseFrontmatter(draft.content)
+    frontmatterRef.current = data
+    setFrontmatter(data)
+    editor.commands.setContent(content, { emitUpdate: false })
+    onContentChange?.(content)
+    onStatusChange?.(false)
+  }), [editor, onContentChange, onStatusChange])
+
   // Typewriter scrolling in Page mode
   useEffect(() => {
     if (mode !== 'page' || !editor) return
@@ -217,18 +233,25 @@ export default function Editor({
 
   const loadNote = useCallback(
     (path: string) => {
+      loadingRef.current = true
+      setLoadingNote(true)
+      editor?.setEditable(false)
       invoke<string>('read_note', { path })
         .then((raw) => {
-          const { data, content } = parseFrontmatter(raw)
+          if (activeFilePath.current !== path) return
+          const { data, content } = parseFrontmatter(getNoteDraft(path)?.content ?? raw)
           editor?.commands.setContent(content, { emitUpdate: false })
           frontmatterRef.current = data
           setFrontmatter(data)
-          setStatus('idle')
+          loadingRef.current = false
+          setLoadingNote(false)
+          editor?.setEditable(!Boolean(data.locked))
+          setStatus(getNoteDraft(path) ? 'saving' : 'idle')
           onContentChange?.(content)
           onStatusChange?.(true)
           announceMedia(data)
         })
-        .catch(() => setStatus('error'))
+        .catch(() => { if (activeFilePath.current === path) setStatus('error') })
     },
     [announceMedia, editor, onContentChange, onStatusChange]
   )
@@ -237,11 +260,14 @@ export default function Editor({
     activeFilePath.current = filePath
     if (!editor) return
     loadNote(filePath)
+    const flush = () => { if (saveTimeout.current) clearTimeout(saveTimeout.current); pendingSave.current?.() }
+    window.addEventListener('studio:flush-notes', flush)
+    return () => { flush(); activeFilePath.current = null; window.removeEventListener('studio:flush-notes', flush) }
   }, [filePath, editor, loadNote])
 
   useEffect(() => {
-    editor?.setEditable(!locked)
-  }, [locked, editor])
+    editor?.setEditable(!locked && !loadingNote)
+  }, [locked, loadingNote, editor])
 
   /* The panel writes the playhead back into frontmatter so a note reopens where
      the lecture was left. In a split view only the pane the researcher is

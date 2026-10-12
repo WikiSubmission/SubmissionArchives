@@ -28,11 +28,11 @@ test('the generated archive satisfies the canonical runtime contract', () => {
     const report = validateArchiveRecords(records, { publicDir });
 
     assert.equal(report.valid, true, report.errors.join('\n'));
-    // 354 after removing the retired Messenger Audio 75–100 records and the
-    // scan-only 1981 and 1989 Qur'an editions (73 and 74 are the replacements).
-    assert.equal(report.recordCount, 354);
+    // Current canonical catalog includes 40 appendix records; validate each record above.
+    assert.equal(report.recordCount, 356);
     const categoryCounts = report.categoryCounts as Record<string, number>;
     assert.equal(categoryCounts.Quran, 114);
+    assert.equal(categoryCounts.Appendices, 40);
     assert.equal(categoryCounts.Books, 11);
     assert.equal(categoryCounts['Submitter Perspectives'], 64);
 });

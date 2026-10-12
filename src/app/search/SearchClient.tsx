@@ -1,6 +1,10 @@
 'use client';
+import SourceDetails from '@/components/research/SourceDetails';
+import SaveReference from '@/components/research/SaveReference';
+import { highlightSearchText } from '@/lib/search/highlight';
 
 import Image from 'next/image';
+import { isDocumentType, getMatchHref, getMediaLink } from '@/lib/search/navigation';
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -20,9 +24,8 @@ import {
     X,
 } from 'lucide-react';
 import { formatMedia } from '@/lib/formatUtils';
-import { getMediaHref } from '@/lib/utils';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
-import { getHighlightTerms } from '@/lib/search/queryMatch';
+import { } from '@/lib/search/queryMatch';
 import { hasOperators, parseAdvancedQuery } from '@/lib/search/queryParser';
 import { logSearchEvent } from '@/lib/search/analytics';
 import { useSearchKeyboardNav } from './useSearchKeyboardNav';
@@ -1041,6 +1044,8 @@ function SearchResultCard({
             }`}
         >
             <div className="space-y-5">
+                {bestMatch && <SaveReference entry={{ id: `${media.id}:${bestMatch.page ?? bestMatch.start_time}`, sourceId: media.id, kind: media.type === 'quran' ? 'quran' : isDocument ? 'pdf' : 'media', title: cardTitle, url: bestHref, excerpt: bestMatch.content.slice(0, 600), locator: getQuranVerseRef(media, bestMatch) || (isDocument ? `PDF page ${bestMatch.page ?? 1}` : formatTime(bestMatch.start_time)), provenance: media.isOcr ? 'OCR text; consult the original scan' : 'Verify excerpt against the original source' }} />}
+                <SourceDetails source={{ author: media.author, date: media.displayDate, format: getMediaTypeLabel(media.type), transcription: media.isOcr ? 'OCR text; consult the original scan' : undefined }} />
                 {/* Main Media & Header Row */}
                 <div className="grid grid-cols-[72px_minmax(0,1fr)] items-center gap-4 sm:grid-cols-[112px_minmax(0,1fr)] sm:gap-5 lg:grid-cols-[144px_minmax(0,1fr)]">
                     <Link
@@ -1292,11 +1297,6 @@ function getContentLabelText(label: string) {
     }
 }
 
-function getQuranEditionFromLabel(label?: string) {
-    const edition = label?.match(/-(1989|1992)$/)?.[1];
-    return edition === '1989' || edition === '1992' ? edition : undefined;
-}
-
 // "chapter:verse" reference chip (e.g. "49:12"), mirroring how the standalone
 // Qur'an reader identifies a verse — makes a Qur'an search hit self-explanatory
 // without needing to open it first.
@@ -1350,54 +1350,6 @@ function mediaBestScore(matches: SearchMatch[]) {
     return Math.max(0, ...matches.map((match) => match.score ?? 0));
 }
 
-function isDocumentType(type: string) {
-    return ['perspective', 'appendix', 'other', 'quran'].includes(type);
-}
-
-function getDocumentBasePath(media: SearchResultMedia) {
-    if (media.type === 'quran') {
-        return `/scripture/quran/${media.id.replace(/^quran\//, '')}`;
-    }
-    return `/library/${media.id}`;
-}
-
-function getMediaLink(media: SearchResultMedia, query: string) {
-    if (isDocumentType(media.type)) {
-        const params = new URLSearchParams();
-        if (query) params.append('q', query);
-        if (typeof media.page === 'number') params.append('page', String(media.page));
-        return `${getDocumentBasePath(media)}?${params.toString()}`;
-    }
-
-    return getMediaHref(media.id);
-}
-
-function getDocumentMatchLink(media: SearchResultMedia, match: SearchMatch, query: string) {
-    const params = new URLSearchParams();
-    if (query) params.append('q', query);
-
-    if (media.type === 'quran') {
-        const edition = getQuranEditionFromLabel(match.label);
-        if (edition) params.append('edition', edition);
-    }
-
-    const page = typeof match.page === 'number' ? match.page : media.page;
-    if (typeof page === 'number') {
-        params.append('page', String(page));
-    }
-
-    const basePath = getDocumentBasePath(media);
-    const queryString = params.toString();
-    return queryString ? `${basePath}?${queryString}` : basePath;
-}
-
-function getMatchHref(media: SearchResultMedia, match: SearchMatch, query: string) {
-    if (isDocumentType(media.type)) {
-        return getDocumentMatchLink(media, match, query);
-    }
-    return `${getMediaLink(media, query)}?t=${Math.floor(match.start_time)}`;
-}
-
 function getThumbnailSrc(media: SearchResultMedia) {
     if (media.type === 'quran') {
         return '/images/placeholders/quran.jpg';
@@ -1432,41 +1384,4 @@ function formatTime(seconds: number) {
     return `${min}:${sec.toString().padStart(2, '0')}`;
 }
 
-function highlightMatch(text: string, query: string) {
-    const safeText = escapeHtml(text);
-
-    if (!query) {
-        return safeText;
-    }
-
-    const terms = getHighlightTerms(query).map(escapeHtml);
-    if (terms.length === 0) {
-        return safeText;
-    }
-
-    const regex = new RegExp(
-        `(${terms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`,
-        'gi',
-    );
-
-    return safeText.replace(regex, '<span class="qs-highlight">$1</span>');
-}
-
-function escapeHtml(value: string) {
-    return value.replace(/[&<>"']/g, (char) => {
-        switch (char) {
-            case '&':
-                return '&amp;';
-            case '<':
-                return '&lt;';
-            case '>':
-                return '&gt;';
-            case '"':
-                return '&quot;';
-            case "'":
-                return '&#39;';
-            default:
-                return char;
-        }
-    });
-}
+function highlightMatch(text: string, query: string) { return highlightSearchText(text, query); }

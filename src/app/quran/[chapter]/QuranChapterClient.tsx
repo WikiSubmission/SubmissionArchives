@@ -1,4 +1,6 @@
 'use client';
+import SourceDetails from '@/components/research/SourceDetails';
+import SaveReference from '@/components/research/SaveReference';
 
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
@@ -388,6 +390,7 @@ export default function QuranChapterClient({
           </div>
         </div>
       </header>
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-8"><SourceDetails source={{ author: 'Rashad Khalifa (English translation)', edition: '1992 corpus', dateKind: 'Edition', format: 'Arabic text and English translation' }} /></div>
 
       {/* ==================== Main Layout ==================== */}
       <div className="relative z-[1] mx-auto flex max-w-[1600px]">
@@ -816,9 +819,10 @@ function QuranVerseBlock({
           <div
             className={cn(
               'absolute -top-3 right-0 z-10 flex items-center gap-1 rounded-[8px] border border-ed-rule bg-ed-surface/95 p-1 shadow-lg backdrop-blur-2xl transition-all duration-200',
-              hovered || isActive ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0 pointer-events-none',
+              hovered || isActive ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0 pointer-events-none focus-within:translate-y-0 focus-within:opacity-100 focus-within:pointer-events-auto',
             )}
           >
+            <SaveReference entry={{ id: verse.verseId, sourceId: verse.verseId, kind: 'quran', title: `Quran ${verse.verseId}`, url: `/scripture/quran/${verse.verseId.split(':')[0]}?page=${verse.verseNumber}#verse-${verse.verseNumber}`, locator: verse.verseId, excerpt: verse.english.slice(0, 600) }} />
             <ToolbarButton
               icon={copiedId === verse.verseId ? Check : Copy}
               label="Copy verse"

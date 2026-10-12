@@ -1,3 +1,4 @@
+import { hasUnverifiedSpeakerAttribution } from '@/lib/catalog/provenance';
 import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
@@ -223,9 +224,7 @@ export default async function WatchPage({
   // nor the audio can settle who is speaking. Those rows must stay blank rather than
   // inherit the record author, since defaulting them to Khalifa would silently attribute
   // the scholars' interjections to him.
-  const isUnverifiedSpeakerSource =
-    (item.type === "messenger-audio" && (item.primaryNumber ?? 0) >= 72) ||
-    item.id === "video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987";
+  const isUnverifiedSpeakerSource = hasUnverifiedSpeakerAttribution(item);
   const defaultSpeaker = isUnverifiedSpeakerSource ? "" : "Dr. Rashad Khalifa";
   const transcriptDisclaimer =
     item.type === "messenger-audio" && (item.primaryNumber ?? 0) >= 72
@@ -267,7 +266,7 @@ export default async function WatchPage({
     : undefined;
 
   return (
-    <div className="min-h-screen bg-ed-bg text-ed-fg">
+    <div id="main-content" tabIndex={-1} className="min-h-screen bg-ed-bg text-ed-fg">
       <PlayerWrapper
         media={{
           ...item,
@@ -287,6 +286,7 @@ export default async function WatchPage({
         next={next}
         clipStartTime={playbackWindow.startTime}
         clipEndTime={playbackWindow.endTime}
+        unverifiedSpeakerAttribution={isUnverifiedSpeakerSource}
         transcriptDisclaimer={transcriptDisclaimer}
       />
     </div>

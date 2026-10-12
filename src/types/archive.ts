@@ -24,7 +24,19 @@ export interface ArchiveSegment {
     label?: string;
 }
 
+export interface ArchiveProvenance {
+    originalDate?: string;
+    dateKind?: 'recorded' | 'published' | 'uploaded' | 'unknown';
+    dateConfidence?: 'verified' | 'catalog' | 'unknown';
+    edition?: string;
+    sourceUrl?: string;
+    verification?: 'verified' | 'unverified' | 'unknown';
+    speakerAttribution?: 'verified' | 'uncertain' | 'unknown';
+    transcription?: string;
+}
+
 export interface ArchiveRecord {
+    provenance?: ArchiveProvenance;
     id: string;
     title: string;
     displayTitle?: string;

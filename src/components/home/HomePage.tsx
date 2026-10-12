@@ -48,6 +48,11 @@ export default function HomePage() {
             {/* Hero Section */}
             <HeroSection />
 
+            <nav aria-label="Research tools" className="mx-auto flex max-w-[1160px] flex-wrap gap-6 px-4 py-6 sm:px-6">
+                <Link href="/collections" className="inline-flex min-h-11 items-center text-ed-fg-secondary underline underline-offset-4">Research collections</Link>
+                <Link href="/explore" className="inline-flex min-h-11 items-center text-ed-fg-secondary underline underline-offset-4">Timeline & topics</Link>
+                <Link href="/editorials" className="inline-flex min-h-11 items-center text-ed-fg-secondary underline underline-offset-4">Archive editorials</Link>
+            </nav>
             {/* 5 Main Pathways Through The Archive */}
             <section
                 aria-labelledby="archive-pathways-title"
@@ -84,7 +89,7 @@ export default function HomePage() {
                     </Reveal>
                 </header>
 
-                <div className="space-y-20 lg:space-y-28">
+                <div className="space-y-14 lg:space-y-20">
                     {/* Section I: Video Archive */}
                     <VideoArchiveSection />
                     <div className="h-px w-full bg-gradient-to-r from-transparent via-ed-rule to-transparent" aria-hidden="true" />
@@ -109,9 +114,8 @@ export default function HomePage() {
                 <Reveal className="mt-20 lg:mt-28">
                     <section
                         aria-labelledby="preservation-principle-title"
-                        className="group relative overflow-hidden rounded-2xl border border-ed-rule bg-ed-surface p-8 sm:p-12 lg:p-14 shadow-xl transition-all duration-300 hover:border-ed-rule-strong"
+                        className="group relative overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-6 sm:p-10"
                     >
-                        <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-ed-accent/5 blur-3xl" />
                         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
                             <div className="max-w-2xl space-y-3">
                                 <h3
@@ -153,12 +157,9 @@ export default function HomePage() {
                 <Reveal className="mt-12 lg:mt-16">
                     <section
                         aria-labelledby="closing-cta-title"
-                        className="relative overflow-hidden rounded-2xl border border-ed-rule bg-gradient-to-b from-ed-surface to-ed-bg-secondary px-6 py-14 text-center shadow-xl sm:px-12 lg:py-18"
+                        className="relative overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface px-6 py-14 text-center sm:px-12 lg:py-18"
                     >
-                        <div
-                            aria-hidden="true"
-                            className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_80%_at_50%_0%,rgba(184,98,51,0.08),transparent_70%)] dark:bg-[radial-gradient(60%_80%_at_50%_0%,rgba(200,121,74,0.08),transparent_70%)]"
-                        />
+
                         <div className="relative mx-auto max-w-3xl">
                             <TextScramble
                                 as="h2"

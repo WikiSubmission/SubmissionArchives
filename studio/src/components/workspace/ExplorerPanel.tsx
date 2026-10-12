@@ -88,7 +88,7 @@ export default function ExplorerPanel({
         {activeTab === 'tags' && (
           <TagsPane archivePath={archivePath} onOpenFile={onOpenFile} refreshToken={refreshToken} />
         )}
-        {activeTab === 'search' && <SearchPane archivePath={archivePath} onOpenFile={onOpenFile} />}
+        {activeTab === 'search' && <SearchPane key={archivePath} archivePath={archivePath} onOpenFile={onOpenFile} refreshToken={refreshToken} />}
         {activeTab === 'trash' && (
           <TrashPane archivePath={archivePath} onRestore={onOpenFile} refreshToken={refreshToken} />
         )}

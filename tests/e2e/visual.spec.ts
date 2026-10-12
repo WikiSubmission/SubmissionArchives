@@ -22,10 +22,16 @@ test.describe('visual regression', () => {
         { path: '/', name: 'home' },
         { path: '/search?q=miracle', name: 'search-results' },
         { path: '/quran/1', name: 'quran-chapter' },
+        { path: '/library/salat-booklet', name: 'pdf-reader' },
+        { path: '/media/video-program/what-is-life-all-about', name: 'media-reader' },
+        { path: '/collections', name: 'collections' },
+        { path: '/explore', name: 'timeline' },
     ];
 
-    for (const route of routes) {
-        test(`${route.name} matches its baseline`, async ({ page }) => {
+    for (const width of [1280, 390]) for (const route of routes) {
+        test(`${route.name} ${width} matches its baseline`, async ({ page }) => {
+            await page.setViewportSize({ width, height: 900 });
+            await page.emulateMedia({ reducedMotion: 'reduce' });
             await page.goto(route.path);
 
             // Same settle as the accessibility suite: assert on a painted page, not a
@@ -35,7 +41,7 @@ test.describe('visual regression', () => {
                 () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
             );
 
-            await expect(page).toHaveScreenshot(`${route.name}.png`, {
+            await expect(page).toHaveScreenshot(width === 1280 ? `${route.name}.png` : `${route.name}-mobile.png`, {
                 fullPage: true,
                 // Scanned thumbnails and the PDF canvas decode slightly differently run to
                 // run; this absorbs that without hiding a real layout break.

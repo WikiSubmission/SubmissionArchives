@@ -1,0 +1,26 @@
+name: Propose visual baselines for review
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: npm
+      - run: npm ci
+      - run: npm ci --prefix studio
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test tests/e2e/visual.spec.ts --update-snapshots
+        env:
+          VISUAL: '1'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: proposed-baselines-review-before-committing
+          path: tests/e2e/__snapshots__/

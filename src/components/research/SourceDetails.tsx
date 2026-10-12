@@ -1,0 +1,5 @@
+export interface SourceMetadata { dateConfidence?: string; speakerAttribution?: string; sourceUrl?: string; author?: string; date?: string; dateKind?: string; edition?: string; format?: string; transcription?: string; verification?: string; warning?: string; }
+export default function SourceDetails({ source }: { source: SourceMetadata }) {
+    const fields = { Author: source.author, Date: source.date, 'Date kind': source.dateKind, 'Date confidence': source.dateConfidence, Edition: source.edition, Format: source.format, Transcription: source.transcription, Verification: source.verification };
+    return <details className="source-details"><summary>Source Details</summary><dl>{Object.entries(fields).map(([key,value]) => <div key={key} className="contents"><dt>{key}</dt><dd>{value || 'Unknown'}</dd></div>)}</dl>{source.speakerAttribution && <p>Speaker attribution: {source.speakerAttribution}</p>}{source.sourceUrl && /^(https?:\/\/|\/(?!\/))/.test(source.sourceUrl) && <a href={source.sourceUrl}>Open source artifact</a>}{source.warning && <p>{source.warning}</p>}</details>;
+}

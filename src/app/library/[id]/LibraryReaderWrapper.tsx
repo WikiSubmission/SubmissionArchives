@@ -1,4 +1,5 @@
 'use client';
+import type { Bibliography } from '@/lib/citation';
 
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -14,7 +15,7 @@ type EditionAsset = { pdfUrl: string; startPage?: number };
 // requires the Suspense boundary below) and simply *selects* among the
 // pre-resolved assets, rather than the server awaiting searchParams (which would
 // force dynamic rendering).
-export type ReaderData =
+export type ReaderData = { bibliography?: Bibliography } & (
     | {
           kind: 'newsletter-viewer';
           issue: IssueType;
@@ -26,7 +27,7 @@ export type ReaderData =
           backHref?: string;
       }
     | { kind: 'pdf'; pdfUrl: string; title: string; documentId: string; prevId?: string | null; nextId?: string | null; outline?: BookTocEntry[]; backHref: string }
-    | { kind: 'appendix'; editions: Record<string, EditionAsset>; defaultEdition: string; title: string; documentId: string; backHref: string };
+    | { kind: 'appendix'; editions: Record<string, EditionAsset>; defaultEdition: string; title: string; documentId: string; backHref: string });
 
 const MAX_PAGE = 10000;
 
@@ -70,6 +71,7 @@ function ReaderWithParams(props: ReaderData) {
                 pdfUrl={asset.pdfUrl}
                 title={props.title}
                 documentId={props.documentId}
+                bibliography={{ ...props.bibliography, title: props.title, url: `${props.bibliography?.url ?? `/library/${props.documentId}`}?edition=${edition}`, year: Number(edition), edition }}
                 initialPage={initialPage}
                 initialQuery={query}
                 backHref={props.backHref}
@@ -83,6 +85,7 @@ function ReaderWithParams(props: ReaderData) {
             pdfUrl={props.pdfUrl}
             title={props.title}
             documentId={props.documentId}
+            bibliography={props.bibliography}
             initialPage={pageFromUrl ?? 1}
             initialQuery={query}
             prevId={props.prevId}

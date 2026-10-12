@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getBookData, getBookDescription, generateReaderStaticParams, resolveReaderPage, type BookData } from '@/lib/readerPage';
+import { getBookBibliography, getBookData, getBookDescription, generateReaderStaticParams, resolveReaderPage, type BookData } from '@/lib/readerPage';
 import { getBookPreviews } from '@/lib/bookPreviews';
 import LibraryReaderWrapper from './LibraryReaderWrapper';
 import type { IssueType } from './NewsletterViewer';
@@ -42,6 +42,7 @@ export default async function PDFReaderPage({ params }: Props) {
                     documentId={id}
                     pdfUrl={payload.pdfLink}
                     title={book.title}
+                    bibliography={getBookBibliography(book)}
                     prevId={payload.prevId}
                     nextId={payload.nextId}
                     backHref={backHref}
@@ -58,6 +59,7 @@ export default async function PDFReaderPage({ params }: Props) {
                 pdfUrl={payload.pdfLink}
                 documentId={id}
                 title={book.title}
+                    bibliography={getBookBibliography(book)}
                 prevId={payload.prevId}
                 nextId={payload.nextId}
                 backHref={backHref}
@@ -68,7 +70,8 @@ export default async function PDFReaderPage({ params }: Props) {
     if (book.type === 'appendix' && payload.editions && payload.defaultEdition) {
         return (
             <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
-                <LibraryReaderWrapper kind="appendix" documentId={id} editions={payload.editions} defaultEdition={payload.defaultEdition} title={book.title} backHref={backHref} />
+                <LibraryReaderWrapper kind="appendix" documentId={id} editions={payload.editions} defaultEdition={payload.defaultEdition} title={book.title}
+                    bibliography={getBookBibliography(book)} backHref={backHref} />
             </main>
         );
     }
@@ -80,6 +83,7 @@ export default async function PDFReaderPage({ params }: Props) {
                 documentId={id}
                 pdfUrl={payload.pdfLink ?? ''}
                 title={book.title}
+                    bibliography={getBookBibliography(book)}
                 prevId={payload.prevId}
                 nextId={payload.nextId}
                 outline={bookToc}

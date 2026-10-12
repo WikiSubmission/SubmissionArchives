@@ -60,10 +60,20 @@ export function createSearchIndex(notes: NoteRecord[]) {
   })
 }
 
+const indices = new WeakMap<NoteRecord[], ReturnType<typeof createSearchIndex>>()
+function dateBoundary(value: string | undefined): number | undefined {
+  if (!value) return undefined
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) throw new Error('Use YYYY-MM-DD for file modification date filters.')
+  const time = Date.parse(value + 'T00:00:00Z')
+  if (!Number.isFinite(time) || new Date(time).toISOString().slice(0, 10) !== value) throw new Error('Invalid date filter.')
+  return time
+}
 export function performSearch(notes: NoteRecord[], rawQuery: string) {
   const operator = parseSearchQuery(rawQuery)
 
-  let filtered = notes
+  const before = dateBoundary(operator.before)
+  const after = dateBoundary(operator.after)
+  let filtered = notes.filter(n => (before === undefined || (n.modifiedMs !== undefined && n.modifiedMs < before)) && (after === undefined || (n.modifiedMs !== undefined && n.modifiedMs >= after + 86400000)))
 
   if (operator.tag) {
     const t = operator.tag.toLowerCase()
@@ -82,11 +92,13 @@ export function performSearch(notes: NoteRecord[], rawQuery: string) {
     }))
   }
 
-  const fuse = createSearchIndex(filtered)
-  const results = fuse.search(operator.query)
+  let fuse = indices.get(notes)
+  if (!fuse) { fuse = createSearchIndex(notes); indices.set(notes, fuse) }
+  const allowed = new Set(filtered.map(n => n.path))
+  const results = fuse.search(operator.query).filter(r => allowed.has(r.item.path))
 
-  return results.map((r: { item: NoteRecord; matches?: ReadonlyArray<{ indices: ReadonlyArray<[number, number]> }> }) => {
-    const match = r.matches?.[0]
+  return results.map((r: { item: NoteRecord; matches?: ReadonlyArray<{ key?: string; indices: ReadonlyArray<[number, number]> }> }) => {
+    const match = r.matches?.find(m => m.key === 'content')
     let snippet = r.item.content.slice(0, 90)
     if (match && match.indices.length > 0) {
       const [start, end] = match.indices[0]

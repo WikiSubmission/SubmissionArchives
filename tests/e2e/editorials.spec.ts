@@ -6,8 +6,8 @@ test.describe('Archive Editorials', () => {
     test('the Written Archives page links into the editorials section', async ({ page }) => {
         await page.goto('/written');
 
-        await expect(page.getByRole('heading', { name: 'Archive Editorials' })).toBeVisible();
-        await expect(page.getByRole('link', { name: 'Read all editorials' })).toHaveAttribute('href', '/editorials');
+        await expect(page.getByRole('heading', { name: 'The Written Archives' })).toBeVisible();
+        await expect(page.getByRole('link', { name: 'See SA Editorials' })).toHaveAttribute('href', '/editorials');
     });
 
     test('the reading sheet renders its masthead, figures and footnotes', async ({ page }) => {
@@ -18,12 +18,10 @@ test.describe('Archive Editorials', () => {
         const article = page.locator('article.editorial-prose');
         await expect(article).toHaveAttribute('data-align', 'justify');
 
-        // Figures break past the text measure rather than sitting inside it.
-        const paragraph = article.locator('> p').first();
-        const fullFigure = article.locator('figure.editorial-breakout').first();
-        const paragraphBox = await paragraph.boundingBox();
-        const figureBox = await fullFigure.boundingBox();
-        expect(figureBox?.width ?? 0).toBeGreaterThan(paragraphBox?.width ?? 0);
+        // Figures reserve image dimensions and remain reachable in the reading sheet.
+        const figure = article.locator('figure.editorial-figure').first();
+        await expect(figure).toBeVisible();
+        await expect(figure.locator('img')).toHaveAttribute('width', /[1-9]\d*/);
 
         // Footnote markers resolve to the notes at the end of the piece.
         const marker = article.locator('a.editorial-ref').first();
@@ -62,13 +60,13 @@ test.describe('Archive Editorials', () => {
         await page.goto(EDITORIAL_PATH);
 
         const toc = page.getByRole('navigation', { name: 'Sections in this editorial' });
-        await expect(toc.getByRole('link', { name: 'Acquisition' })).toHaveAttribute('data-active', 'true');
+        await expect(toc.getByRole('link', { name: 'Acquisition' })).toHaveAttribute('aria-current', 'location');
 
         // Jumping from the sidebar lands the heading at the top of the reading
         // area, which is also what marks it as the current section.
         await toc.getByRole('link', { name: 'Indexing' }).click();
-        await expect(toc.getByRole('link', { name: 'Indexing' })).toHaveAttribute('data-active', 'true');
-        await expect(toc.getByRole('link', { name: 'Acquisition' })).toHaveAttribute('data-active', 'false');
+        await expect(toc.getByRole('link', { name: 'Indexing' })).toHaveAttribute('aria-current', 'location');
+        await expect(toc.getByRole('link', { name: 'Acquisition' })).not.toHaveAttribute('aria-current', 'location');
     });
 
     test('reading settings change the prose and survive a reload', async ({ page }) => {

@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { MagnifyingGlass, X } from '@phosphor-icons/react'
 import { scanArchive, type NoteRecord } from '../../lib/notes'
 import { performSearch } from '../../lib/search'
 
 interface SearchPaneProps {
   archivePath: string
+  refreshToken?: number
   onOpenFile: (path: string) => void
 }
 
@@ -19,30 +20,37 @@ const PRESET_OPERATORS = [
   { label: 'path:notes/', query: 'path:notes/ ' }
 ]
 
-export default function SearchPane({ archivePath, onOpenFile }: SearchPaneProps) {
+export default function SearchPane({ archivePath, onOpenFile, refreshToken }: SearchPaneProps) {
+  const [notes, setNotes] = useState<NoteRecord[] | null>(null)
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
 
-  const runSearch = (value: string) => {
-    setQuery(value)
-    const trimmed = value.trim()
-    if (!trimmed) {
-      setResults([])
-      return
-    }
-
-    setLoading(true)
-    scanArchive(archivePath)
-      .then((notes) => {
-        const matches = performSearch(notes, trimmed)
-        setResults(matches)
-        setError(null)
-      })
-      .catch((err) => setError(String(err)))
-      .finally(() => setLoading(false))
-  }
+  const sequence = useRef(0)
+  const runSearch = (value: string) => { sequence.current++; setQuery(value); setResults([]); setError(null); setLoading(Boolean(value.trim())) }
+  useEffect(() => {
+    let active = true
+    const refresh = () => scanArchive(archivePath).then(snapshot => {
+      if (active) { setNotes(snapshot); setError(null) }
+    }).catch(err => { if (active) setError(String(err)) })
+    void refresh()
+    const timer = setInterval(refresh, 5000)
+    window.addEventListener('studio:notes-changed', refresh)
+    return () => { active = false; clearInterval(timer); window.removeEventListener('studio:notes-changed', refresh) }
+  }, [archivePath, refreshToken])
+  useEffect(() => {
+    const request = sequence.current
+    const timer = setTimeout(() => {
+      if (request !== sequence.current) return
+      if (!query.trim()) { setResults([]); setLoading(false); return }
+      if (!notes) return
+      try { setResults(performSearch(notes, query.trim())); setError(null) }
+      catch (err) { setResults([]); setError(String(err)) }
+      setLoading(false)
+    }, 250)
+    return () => clearTimeout(timer)
+  }, [query, notes])
 
   const applyOperator = (op: string) => {
     runSearch(op)
@@ -54,6 +62,7 @@ export default function SearchPane({ archivePath, onOpenFile }: SearchPaneProps)
         <div className="flex items-center gap-2 bg-ed-surface border border-ed-rule rounded-lg px-2.5 py-1.5 focus-within:border-ed-accent/50">
           <MagnifyingGlass size={16} weight="bold" className="text-ed-fg-secondary shrink-0" />
           <input
+            aria-label="Search notes"
             autoFocus
             value={query}
             onChange={(e) => runSearch(e.target.value)}
@@ -62,6 +71,7 @@ export default function SearchPane({ archivePath, onOpenFile }: SearchPaneProps)
           />
           {query && (
             <button
+              aria-label="Clear search"
               onClick={() => runSearch('')}
               className="text-ed-fg-secondary hover:text-ed-fg text-xs p-0.5 rounded"
             >
@@ -70,6 +80,7 @@ export default function SearchPane({ archivePath, onOpenFile }: SearchPaneProps)
           )}
         </div>
 
+        <p className="text-[11px] text-ed-fg-secondary">before:/after: YYYY-MM-DD filter file modification dates (UTC), not publication dates.</p>
         {/* Search Operator Quick Pills */}
         <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
           {PRESET_OPERATORS.map((op) => (

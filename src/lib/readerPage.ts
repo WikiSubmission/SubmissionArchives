@@ -1,3 +1,5 @@
+import type { Bibliography } from './citation';
+import { SITE_URL } from '@/config/site';
 import { notFound } from 'next/navigation';
 import { getAdjacentNewsletterIssues, getNewsletterIssue, getNewsletterIssues, type NewsletterIssue } from '@/lib/newsletterCatalog';
 import { getAppendixItem, getAppendixCatalog, type AppendixItem } from '@/lib/appendixCatalog';
@@ -120,5 +122,15 @@ export function resolveReaderPage(id: string, backHrefResolver: (book: BookData)
         pdfLink: `${getPublicAssetUrl(pdfLink)}${book.pdfRevision ? `?v=${encodeURIComponent(book.pdfRevision)}` : ''}`,
         prevId: currentIndex > 0 ? books[currentIndex - 1].id : null,
         nextId: currentIndex >= 0 && currentIndex < books.length - 1 ? books[currentIndex + 1].id : null,
+    };
+}
+
+export function getBookBibliography(book: BookData): Bibliography {
+    return {
+        title: book.title,
+        authors: 'author' in book && book.author ? [book.author] : undefined,
+        year: book.type === 'newsletter' ? book.year : book.type === 'other' ? book.editionYear : undefined,
+        publisher: book.type === 'newsletter' ? book.summary?.publisher : undefined,
+        url: `${SITE_URL}/library/${encodeURIComponent(book.id)}`,
     };
 }

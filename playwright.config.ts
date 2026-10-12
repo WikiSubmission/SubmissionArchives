@@ -1,7 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
 
+const port = process.env.PLAYWRIGHT_PORT || '3000';
+const baseURL = `http://127.0.0.1:${port}`;
 export default defineConfig({
     testDir: './tests/e2e',
+    updateSnapshots: 'none',
     fullyParallel: false,
     forbidOnly: Boolean(process.env.CI),
     retries: process.env.CI ? 1 : 0,
@@ -16,7 +19,7 @@ export default defineConfig({
         ? [['github'], ['html', { open: 'never' }]]
         : [['list'], ['html', { open: 'never' }]],
     use: {
-        baseURL: 'http://127.0.0.1:3000',
+        baseURL,
         trace: 'retain-on-failure',
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
@@ -31,8 +34,8 @@ export default defineConfig({
         command: 'npm run start',
         // The suite runs many searches from one IP well inside the limiter's 60s
         // window; without this the later specs get 429s and fail spuriously.
-        env: { SEARCH_RATE_LIMIT: '1000' },
-        url: 'http://127.0.0.1:3000',
+        env: { SEARCH_RATE_LIMIT: '1000', PORT: port },
+        url: baseURL,
         reuseExistingServer: !process.env.CI,
         timeout: 120_000,
         stdout: 'ignore',

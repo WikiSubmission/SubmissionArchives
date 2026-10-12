@@ -1,3 +1,6 @@
+import { SITE_URL } from '@/config/site';
+import SaveReference from '@/components/research/SaveReference';
+import SourceDetails from '@/components/research/SourceDetails';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -82,6 +85,8 @@ export default async function EditorialPage({ params }: EditorialPageProps) {
                                 prevSlug={neighbours.previous?.slug}
                                 nextSlug={neighbours.next?.slug}
                             >
+                                <SaveReference entry={{ id: slug, sourceId: slug, kind: 'editorial', title: editorial.title, url: `/editorials/${slug}`, excerpt: editorial.summary.slice(0, 600), bibliography: { title: editorial.title, authors: [editorial.author], year: Number(editorial.publishedAt.slice(0, 4)), url: `${SITE_URL}/editorials/${slug}` } }} />
+                                <SourceDetails source={{ author: editorial.author, date: editorial.publishedAt, dateKind: 'Published', format: 'Editorial' }} />
                                 <EditorialBody />
                             </EditorialReader>
                         </div>

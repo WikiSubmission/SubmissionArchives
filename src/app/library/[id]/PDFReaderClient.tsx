@@ -1,4 +1,8 @@
 'use client';
+import ReaderDialog from '@/components/research/ReaderDialog';
+import SaveReference from '@/components/research/SaveReference';
+import SourceDetails from '@/components/research/SourceDetails';
+import { formatCitation, type Bibliography } from '@/lib/citation';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
@@ -40,6 +44,7 @@ if (typeof window !== 'undefined') {
 }
 
 type Props = {
+    bibliography?: Bibliography;
     pdfUrl: string;
     title: string;
     documentId: string;
@@ -144,6 +149,7 @@ function computeHighlightRanges(items: TextItem[], terms: string[]): Map<number,
 }
 
 export default function PDFReaderClient({
+    bibliography,
     pdfUrl,
     title,
     documentId,
@@ -208,6 +214,8 @@ export default function PDFReaderClient({
     const [showCiteModal, setShowCiteModal] = useState(false);
     const [citationStyle, setCitationStyle] = useState<'permalink' | 'apa' | 'mla' | 'chicago'>('permalink');
 
+    const citationText = formatCitation(bibliography ?? { title, url: `/library/${documentId}` }, citationStyle, pageNumber);
+
     // Search state
     const [searchOpen, setSearchOpen] = useState(Boolean(initialQuery));
     const [searchQuery, setSearchQuery] = useState(initialQuery);
@@ -221,6 +229,7 @@ export default function PDFReaderClient({
     const [ocrError, setOcrError] = useState(false);
 
     // Refs
+    const moreActionsRef = useRef<HTMLButtonElement>(null);
     const readerRootRef = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
@@ -733,7 +742,7 @@ export default function PDFReaderClient({
 
             <div className="mx-1 h-5 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
             <div className="relative popover-container">
-                <button type="button" onClick={() => setShowMorePopover((s) => !s)} className={`${toolbarIconButtonClass} ${showMorePopover ? 'text-ed-accent bg-ed-accent-soft' : ''}`} title="More document actions" aria-label="More document actions" aria-haspopup="true" aria-expanded={showMorePopover}><MoreHorizontal className="h-5 w-5" aria-hidden="true" /></button>
+                <button type="button" onClick={(event) => { moreActionsRef.current = event.currentTarget; setShowMorePopover((s) => !s); }} className={`${toolbarIconButtonClass} ${showMorePopover ? 'text-ed-accent bg-ed-accent-soft' : ''}`} title="More document actions" aria-label="More document actions" aria-haspopup="true" aria-expanded={showMorePopover}><MoreHorizontal className="h-5 w-5" aria-hidden="true" /></button>
                 {showMorePopover && <div className="reader-popover min-w-[220px]" aria-label="More document actions">
                     <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">Document</div>
                     {prevId && <Link href={`/library/${prevId}`} prefetch onClick={() => setShowMorePopover(false)} className="reader-popover-item" title="Previous document"><span className="flex items-center gap-2"><ChevronLeft className="h-4 w-4" />Previous book</span></Link>}
@@ -1210,18 +1219,11 @@ export default function PDFReaderClient({
 
             {/* Citation Modal */}
             {showCiteModal && (
-                <div
-                    role="dialog"
-                    aria-modal="true"
-                    aria-label="Copy a citation"
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4"
-                    onClick={(e) => {
-                        if (e.target === e.currentTarget) setShowCiteModal(false);
-                    }}
-                >
+                <ReaderDialog returnFocusRef={moreActionsRef} label="Copy a citation" onClose={() => setShowCiteModal(false)}>
                     <div className="w-full max-w-lg rounded-[8px] border border-ed-rule bg-ed-surface p-6 shadow-2xl space-y-4">
                         <div className="flex items-center justify-between border-b border-ed-rule pb-3">
                             <h2 className="text-sm font-semibold uppercase tracking-wider text-ed-fg">Copy a citation</h2>
+                            <SaveReference entry={{ id: `${documentId}:page:${pageNumber}`, sourceId: documentId, kind: 'pdf', title, url: `/library/${encodeURIComponent(documentId)}?page=${pageNumber}${bibliography?.edition ? `&edition=${bibliography.edition}` : ''}`, locator: `PDF page ${pageNumber}`, excerpt: '', bibliography }} />
                             <button
                                 type="button"
                                 onClick={() => setShowCiteModal(false)}
@@ -1250,26 +1252,17 @@ export default function PDFReaderClient({
                             ))}
                         </div>
 
+                        <SourceDetails source={{ author: bibliography?.authors?.join('; '), date: bibliography?.year?.toString(), dateKind: bibliography?.year ? 'Publication / edition' : undefined, edition: bibliography?.edition, sourceUrl: pdfUrl, format: 'PDF scan', verification: 'Consult original scan; transcription verification unknown' }} />
                         {/* Citation Text */}
                         <div className="rounded-[4px] border border-ed-rule bg-ed-bg p-4 text-xs font-mono text-ed-fg break-all select-all">
-                            {citationStyle === 'permalink' && `${typeof window !== 'undefined' ? window.location.origin : ''}/library/${documentId}?page=${pageNumber}`}
-                            {citationStyle === 'apa' && `Khalifa, R. (1982). ${title}. Submission Archives, p. ${pageNumber}.`}
-                            {citationStyle === 'mla' && `Khalifa, Rashad. ${title}. Submission Archives, 1982, p. ${pageNumber}.`}
-                            {citationStyle === 'chicago' && `Khalifa, Rashad. "${title}." Submission Archives (1982): p. ${pageNumber}.`}
+                            {citationText}
                         </div>
 
                         <div className="flex justify-end gap-2">
                             <button
                                 type="button"
                                 onClick={() => {
-                                    const text =
-                                        citationStyle === 'permalink'
-                                            ? `${typeof window !== 'undefined' ? window.location.origin : ''}/library/${documentId}?page=${pageNumber}`
-                                            : citationStyle === 'apa'
-                                            ? `Khalifa, R. (1982). ${title}. Submission Archives, p. ${pageNumber}.`
-                                            : citationStyle === 'mla'
-                                            ? `Khalifa, Rashad. ${title}. Submission Archives, 1982, p. ${pageNumber}.`
-                                            : `Khalifa, Rashad. "${title}." Submission Archives (1982): p. ${pageNumber}.`;
+                                    const text = citationText;
                                     navigator.clipboard?.writeText(text);
                                 }}
                                 className="inline-flex items-center gap-1.5 rounded-[4px] bg-ed-accent px-4 py-2 text-xs font-semibold text-white dark:text-[#0F0E0D] hover:opacity-90"
@@ -1278,7 +1271,7 @@ export default function PDFReaderClient({
                             </button>
                         </div>
                     </div>
-                </div>
+                </ReaderDialog>
             )}
         </div>
     );

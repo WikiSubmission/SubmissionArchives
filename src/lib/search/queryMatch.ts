@@ -77,11 +77,17 @@ export function findQueryMatch(
     options: { proximityWindow?: number; snippetRadius?: number } = {},
 ): QueryMatch {
     const snippetRadius = options.snippetRadius ?? 80;
+    if (query.startsWith('literal:')) {
+        const literal = query.slice(8).replace(/^"|"$/g, '');
+        const start = literal ? content.indexOf(literal) : -1;
+        return start < 0 ? emptyMatch() : { matched: true, snippet: createSnippet(content, start, start + literal.length, snippetRadius), score: 120, kind: 'phrase', matchedTerms: [literal], start, end: start + literal.length };
+    }
     const parsed = parseSearchQuery(query);
     const proximityWindow = parsed.proximityWindow ?? options.proximityWindow ?? 18;
     const text = content ?? '';
     const normalized = normalizeSearchText(text);
-    const normalizedMap = normalizeSearchTextWithOffsets(text);
+    let sourceMap: ReturnType<typeof normalizeSearchTextWithOffsets> | undefined;
+    const getSourceMap = () => sourceMap ??= normalizeSearchTextWithOffsets(text);
 
     if (!normalized || (!parsed.phrases.length && !parsed.terms.length)) {
         return emptyMatch();
@@ -90,8 +96,8 @@ export function findQueryMatch(
     const exactPhrase = normalizeSearchText(query);
     if (exactPhrase && normalized.includes(exactPhrase)) {
         const normalizedStart = normalized.indexOf(exactPhrase);
-        const start = normalizedMap.offsets[normalizedStart] ?? 0;
-        const end = (normalizedMap.offsets[normalizedStart + exactPhrase.length - 1] ?? start) + 1;
+        const start = getSourceMap().offsets[normalizedStart] ?? 0;
+        const end = getSourceMap().ends[normalizedStart + exactPhrase.length - 1] ?? start;
         return {
             matched: true,
             snippet: createSnippet(text, start, end, snippetRadius),
@@ -112,8 +118,8 @@ export function findQueryMatch(
         }
 
         if (!bestPhrase || phrase.length > bestPhrase.phrase.length) {
-            const rawStart = normalizedMap.offsets[phraseStart] ?? 0;
-            const rawEnd = (normalizedMap.offsets[phraseStart + phrase.length - 1] ?? rawStart) + 1;
+            const rawStart = getSourceMap().offsets[phraseStart] ?? 0;
+            const rawEnd = getSourceMap().ends[phraseStart + phrase.length - 1] ?? rawStart;
             bestPhrase = { start: rawStart, end: rawEnd, phrase };
         }
     }
@@ -193,6 +199,7 @@ export function findQueryMatch(
 // appear nearly everywhere, so they filter almost nothing), and leaving them out keeps
 // this a necessary-but-not-sufficient condition, which is exactly what a pre-filter needs.
 export function getRequiredTokens(query: string): string[] {
+    if (query.startsWith('literal:')) return tokenizeForIndex(query.slice(8));
     const parsed = parseSearchQuery(query);
     const tokens = new Set<string>(parsed.terms);
 
@@ -210,87 +217,55 @@ export function getRequiredTokens(query: string): string[] {
 // Same rules as getRequiredTokens applies when reading a query, so an index built with
 // this will line up with what that asks for.
 export function tokenizeForIndex(text: string): string[] {
-    const normalized = text.toLowerCase().replace(/['’]/g, '');
-    const tokens: string[] = [];
-    const regex = /[a-z0-9]+/g;
-    let match: RegExpExecArray | null;
-
-    while ((match = regex.exec(normalized)) !== null) {
-        if (match[0].length > 1 && !STOPWORDS.has(match[0])) {
-            tokens.push(match[0]);
-        }
-    }
-
-    return tokens;
+    return (normalizeSearchText(text).match(/[\p{L}\p{N}]+/gu) ?? [])
+        .filter(value => value.length > 1 && !STOPWORDS.has(value));
 }
 
 export function getHighlightTerms(query: string) {
     return parseSearchQuery(query).highlightTerms;
 }
 
+// Tolerant mode removes vowel/cantillation marks but preserves base-letter
+// distinctions (including Arabic hamza, alef and ya forms). No orthography folding.
 export function normalizeSearchText(text: string) {
-    return text
-        .toLowerCase()
-        .replace(/['\u2019]/g, '')
-        .replace(/[^a-z0-9\s]/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim();
+    return text.toLowerCase()
+        .replace(/[^\u0000-\u007f]/gu, char => /\p{Script=Latin}/u.test(char) ? char.normalize('NFD').replace(/\p{M}/gu, '') : char)
+        .replace(/[\p{M}'’]/gu, '')
+        .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+        .replace(/\s+/g, ' ').trim();
 }
 
-// Keep offsets into the original source while applying the same normalization used
-// for matching. Snippets must slice the source text, not the shorter normalized copy;
-// otherwise punctuation and diacritics before a hit shift the quotation away from
-// the matched words.
-function normalizeSearchTextWithOffsets(text: string) {
+export function normalizeSearchTextWithOffsets(text: string) {
     let normalized = '';
     const offsets: number[] = [];
-    let pendingSpace = false;
-    let pendingSpaceOffset = 0;
-
-    for (let index = 0; index < text.length; index++) {
-        const original = text[index];
-        if (original === "'" || original === '\u2019') continue;
-
-        const lower = original.toLowerCase();
-        const isWord = /[a-z0-9]/.test(lower);
-        if (isWord) {
-            if (pendingSpace && normalized.length > 0) {
-                normalized += ' ';
-                offsets.push(pendingSpaceOffset);
+    const ends: number[] = [];
+    let pendingSpace = -1;
+    let index = 0;
+    for (const original of text) {
+        const end = index + original.length;
+        const nonAscii = original.charCodeAt(0) > 127;
+        const lower = nonAscii && /\p{Script=Latin}/u.test(original) ? original.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '') : original.toLowerCase();
+        if (original === "'" || original === '\u2019' || (nonAscii && /\p{M}/u.test(original))) {
+            if (ends.length) ends[ends.length - 1] = end;
+        } else if (/[a-z0-9]/.test(lower) || (nonAscii && /[\p{L}\p{N}]/u.test(lower))) {
+            if (pendingSpace >= 0 && normalized.length) {
+                normalized += ' '; offsets.push(pendingSpace); ends.push(index);
             }
-            pendingSpace = false;
+            pendingSpace = -1;
             normalized += lower;
-            offsets.push(index);
-        } else if (/\s/.test(original)) {
-            if (!pendingSpace) pendingSpaceOffset = index;
-            pendingSpace = true;
-        } else {
-            // Punctuation becomes a space, matching normalizeSearchText.
-            if (!pendingSpace) pendingSpaceOffset = index;
-            pendingSpace = true;
-        }
+            for (let n = 0; n < lower.length; n++) { offsets.push(index); ends.push(end); }
+        } else if (pendingSpace < 0) pendingSpace = index;
+        index = end;
     }
-
-    return { normalized: normalized.trim(), offsets };
+    return { normalized, offsets, ends };
 }
 
 function tokenizeSearchText(text: string): SearchToken[] {
-    const normalizedText = text
-        .toLowerCase()
-        .replace(/['\u2019]/g, '');
-    const tokens: SearchToken[] = [];
-    const regex = /[a-z0-9]+/g;
-    let match: RegExpExecArray | null;
-
-    while ((match = regex.exec(normalizedText)) !== null) {
-        tokens.push({
-            value: match[0],
-            start: match.index,
-            end: match.index + match[0].length,
-        });
-    }
-
-    return tokens;
+    const map = normalizeSearchTextWithOffsets(text);
+    return Array.from(map.normalized.matchAll(/[\p{L}\p{N}]+/gu), match => ({
+        value: match[0], start: map.offsets[match.index!],
+        end: map.ends[match.index! + match[0].length - 1],
+    }));
 }
 
 function findBestProximityWindow(tokens: SearchToken[], terms: string[], windowSize: number) {

@@ -1855,3 +1855,28 @@ html:not(.dark) .editorial-figure-frame img[src$=".svg"] {
   filter: none;
   transition: filter 250ms ease;
 }
+/* Semantic aliases preserve established editorial and archive surfaces. */
+:root {
+  --bg: var(--ed-bg); --surface: var(--ed-surface); --text: var(--ed-fg);
+  --muted: var(--ed-fg-secondary); --border: var(--ed-rule); --accent: var(--ed-accent);
+}
+:focus-visible { outline: 2px solid var(--ed-accent); outline-offset: 3px; }
+.research-page { max-width: 70rem; margin: auto; padding: 3rem clamp(1rem, 4vw, 3rem); }
+.research-page h1 { font-family: var(--font-source-serif-4), Georgia, serif; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1rem; }
+.research-page p { max-width: 70ch; }
+.research-controls { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0; }
+.research-page input, .research-page select, .research-page button, .research-save {
+  min-height: 44px; border: 1px solid var(--border); border-radius: 4px; padding: .5rem .75rem;
+  background: var(--surface); color: var(--text); font-size: .875rem;
+}
+.research-page article { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+.research-page article h2 { font-family: var(--font-source-serif-4), Georgia, serif; font-size: 1.5rem; }
+.research-page a { text-decoration: underline; text-underline-offset: 4px; }
+.research-save { display: inline-flex; align-items: center; gap: .4rem; cursor: pointer; }
+.source-details { font-size: .8rem; color: var(--muted); padding: .75rem 0; }
+.source-details summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+.source-details dl { display: grid; grid-template-columns: minmax(6rem, 1fr) 2fr; gap: .5rem 1rem; }
+.reader-native-dialog { max-width: min(90vw, 36rem); max-height: 85dvh; overflow: auto; margin: auto; padding: 1.5rem; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; }
+.reader-native-dialog::backdrop { background: rgb(15 14 13 / .75); }
+@media (pointer: coarse) { .reader-popover-item, .masthead-link { min-height: 44px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto !important; } }

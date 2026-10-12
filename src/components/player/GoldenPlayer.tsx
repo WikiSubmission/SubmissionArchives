@@ -1,4 +1,7 @@
 "use client";
+import SaveReference from "@/components/research/SaveReference";
+import type { ArchiveProvenance } from "@/types/archive";
+import SourceDetails from "@/components/research/SourceDetails";
 
 import { useState, useRef, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
@@ -28,6 +31,7 @@ export interface Segment {
 }
 
 export interface MediaItem {
+  provenance?: ArchiveProvenance;
   id: string;
   type: string;
   title: string;
@@ -57,6 +61,7 @@ export interface GoldenPlayerProps {
   clipEndTime?: number;
   initialSeekTime?: number;
   initialTranscriptLang?: TranscriptLang;
+  unverifiedSpeakerAttribution?: boolean;
   transcriptDisclaimer?: string;
 }
 
@@ -168,6 +173,8 @@ export default function GoldenPlayer({
   next,
   initialSeekTime,
   initialTranscriptLang,
+  transcriptDisclaimer,
+  unverifiedSpeakerAttribution,
 }: GoldenPlayerProps) {
   /* ---------- State ---------- */
   // A record carries a second segment list only when the source playlist has an
@@ -541,6 +548,7 @@ export default function GoldenPlayer({
 
       {/* Main Container */}
       <div className="qs-container py-6">
+        <SourceDetails source={{ author: media.author, date: media.provenance?.originalDate ?? media.displayDate, sourceUrl: media.provenance?.sourceUrl ?? mediaUrl, dateConfidence: media.provenance?.dateConfidence, speakerAttribution: unverifiedSpeakerAttribution ? 'Uncertain; consult the attribution warning' : media.provenance?.speakerAttribution ?? 'Unknown', dateKind: media.provenance?.dateKind, edition: media.provenance?.edition, format: media.type, transcription: media.provenance?.transcription, verification: media.provenance?.verification ?? 'Unknown; verify quotations against the original recording', warning: transcriptDisclaimer }} />
         {/* Top Navigation & Breadcrumbs */}
         <div className="qs-top-nav">
           <div className="qs-top-nav-context">
@@ -828,6 +836,7 @@ export default function GoldenPlayer({
 
               {/* Action Buttons */}
               <div className="qs-action-group">
+                <SaveReference entry={{ id: `${media.id}:${Math.floor(absoluteTime)}`, sourceId: media.id, kind: 'media', title: media.displayTitle || media.title, url: `${getMediaHref(media.id)}?t=${Math.floor(absoluteTime)}`, locator: formatTime(absoluteTime), excerpt: (segments[activeSegmentIndex]?.content ?? '').slice(0, 600), provenance: transcriptDisclaimer?.slice(0, 600) }} />
                 <button type="button" onClick={copyLink} className="qs-btn">
                   <Share2 className="w-3.5 h-3.5" />
                   <span>Copy Link</span>

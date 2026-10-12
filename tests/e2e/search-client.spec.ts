@@ -5,7 +5,7 @@ const RESULT_CARD = '#search-results [data-media-id]';
 // The result list is windowed, so the number of nodes in the DOM is whatever fits
 // the viewport plus overscan — never the number loaded. Assertions therefore go
 // through the stats line and the Load More button rather than counting nodes.
-const STATS = /(\d+) documents, (\d+) passages/;
+const STATS = /(\d+) sources? · (\d+) passages?/;
 const REMAINING = /Load More Results \((\d+) remaining\)/;
 
 async function remainingCount(text: string | null): Promise<number> {
@@ -103,14 +103,14 @@ test.describe('search client', () => {
     test('query operators are surfaced as chips and narrow the result set', async ({ page }) => {
         await page.goto('/search?q=miracle');
         await expect(page.locator(RESULT_CARD).first()).toBeVisible();
-        const unfiltered = await page.getByText(/(\d+) documents/).textContent();
+        const unfiltered = await page.getByText(/(\d+) sources?/).textContent();
 
         await page.goto('/search?q=miracle+-number+type%3Aperspective');
         await expect(page.getByLabel('Active query operators')).toBeVisible();
         await expect(page.getByText('excluding number')).toBeVisible();
         await expect(page.getByText('type:perspective')).toBeVisible();
 
-        const filtered = await page.getByText(/(\d+) documents/).textContent();
+        const filtered = await page.getByText(/(\d+) sources?/).textContent();
         expect(filtered).not.toBe(unfiltered);
     });
 
@@ -130,7 +130,8 @@ test.describe('search client', () => {
 test.describe('citations', () => {
     test('the reader offers a copyable citation in several styles', async ({ page }) => {
         await page.goto('/library/computer-speaks?page=42');
-        await page.getByRole('button', { name: 'Cite' }).click();
+        await page.getByRole('button', { name: 'More document actions', exact: true }).click();
+        await page.getByRole('button', { name: 'Cite this page', exact: true }).click();
 
         const dialog = page.getByRole('dialog', { name: 'Copy a citation' });
         await expect(dialog).toBeVisible();
@@ -138,8 +139,10 @@ test.describe('citations', () => {
         await expect(dialog).toContainText('page=42');
 
         await dialog.getByRole('button', { name: 'APA' }).click();
-        await expect(dialog).toContainText('Submission Archives');
-        await expect(dialog).toContainText('p. 42');
+        await expect(dialog).toContainText('Khalifa, R.');
+        await expect(dialog).toContainText('n.d.');
+        await expect(dialog).toContainText('The Computer Speaks');
+        await expect(dialog).toContainText('PDF page 42');
 
         await page.keyboard.press('Escape');
         await expect(dialog).toBeHidden();
