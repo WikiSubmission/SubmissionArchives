@@ -36,7 +36,8 @@ async function renderFirstPage(pdfPath, outPath) {
 }
 
 function findThumbnail(baseName) {
-  return ['.jpg', '.png'].find((extension) =>
+  // Same extensions the catalog generator links (getThumbnailLink), including committed WebP covers.
+  return ['.jpg', '.jpeg', '.png', '.webp'].find((extension) =>
     fs.existsSync(path.join(THUMB_DIR, `${baseName}${extension}`)),
   );
 }

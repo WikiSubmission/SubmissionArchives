@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { checkRateLimit, getClientIp, rateLimitResponse } from '@/lib/security';
 import { parseSearchEvent } from '@/lib/search/analytics';
 import { logger } from '@/lib/logger';
+import { readBodyWithLimit } from '@/lib/requestBody';
 
 export const runtime = 'nodejs';
 
@@ -20,8 +21,8 @@ export async function POST(request: Request) {
     }
 
     try {
-        const body = await request.text();
-        if (Buffer.byteLength(body, 'utf8') > MAX_BODY_BYTES) {
+        const body = await readBodyWithLimit(request, MAX_BODY_BYTES);
+        if (body === null) {
             return NextResponse.json({ ok: false, error: 'Payload too large.' }, { status: 413 });
         }
 

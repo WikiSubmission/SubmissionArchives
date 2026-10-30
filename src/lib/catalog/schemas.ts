@@ -72,20 +72,8 @@ export const NewsletterCatalogSchema = z.object({
     ).min(1),
 });
 
-const AppendixEditionConfigSchema = z.object({
-    sharedPdf: z.string().optional(),
-    splitPdfs: z.boolean().optional(),
-    startPages: z.record(z.string(), z.number().int().positive()).optional(),
-});
-
-export const AppendixCatalogSchema = z.object({
-    primaryEdition: z.enum(['1981', '1989', '1992']),
-    editions: z.record(z.string(), AppendixEditionConfigSchema),
-});
-
 export const CATALOG_SCHEMAS = [
     { file: 'audios.json', schema: AudioCatalogSchema },
     { file: 'videos.json', schema: VideoCatalogSchema },
     { file: 'newsletters.json', schema: NewsletterCatalogSchema },
-    { file: 'appendix-editions.json', schema: AppendixCatalogSchema },
 ] as const;

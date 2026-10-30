@@ -16,7 +16,6 @@ const eslintConfig = defineConfig([
     "test-results/**",
     "blob-report/**",
     "next-env.d.ts",
-    "studio/**",
     "data/**",
     "raw_data/**",
     "public/**",

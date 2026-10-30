@@ -8,7 +8,6 @@ export const ARCHIVE_RECORD_TYPES = [
     'perspective',
     'appendix',
     'other',
-    'quran',
 ] as const;
 
 export type ArchiveRecordType = (typeof ARCHIVE_RECORD_TYPES)[number];

@@ -25,6 +25,9 @@ const TYPE_ALIASES: Record<string, string> = {
     audios: 'audio',
 };
 
+// Shown as starting points on the search page and the home page.
+export const EXAMPLE_QUERIES = ['"mathematical miracle"', 'contact prayers', 'abraham type:perspective', 'messenger before:1990'];
+
 export function parseAdvancedQuery(raw: string): ParsedQuery {
     const exclusions: string[] = [];
     const types: string[] = [];

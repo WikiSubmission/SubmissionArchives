@@ -4,10 +4,8 @@ async function saveReference(page: import('@playwright/test').Page) {
  await page.getByRole('button',{name:'Save reference',exact:true}).click();
  await expect(page.getByRole('status').filter({hasText:'Saved to Research.'})).toBeVisible();
 }
-test('save and reopen all supported source kinds and export a local backup', async ({page}, testInfo) => {
+test('save and reopen recordings and documents and export a local backup', async ({page}, testInfo) => {
  await page.route('**/*youtube*', route=>route.abort());
- await page.goto('/editorials/how-the-archive-is-assembled');
- await saveReference(page);
  await page.goto('/media/video-program/what-is-life-all-about?t=30');
  await expect(page.locator('.qs-entry').getByRole('button', {name:'Save', exact:true})).toHaveCount(0);
  await saveReference(page);
@@ -21,22 +19,18 @@ test('save and reopen all supported source kinds and export a local backup', asy
  await page.keyboard.press('Escape');
  await expect(page.getByRole('dialog')).not.toBeVisible();
  await expect(page.getByRole('button',{name:'More document actions',exact:true})).toBeFocused();
- await page.goto('/scripture/quran/1?page=1#verse-1');
- await page.locator('#verse-1').hover();
- await saveReference(page);
  await page.goto('/collections');
- await expect(page.locator('article')).toHaveCount(4);
+ await expect(page.locator('article')).toHaveCount(2);
  const links = await page.getByRole('link',{name:'Open original'}).evaluateAll(nodes=>nodes.map(node=>(node as HTMLAnchorElement).getAttribute('href')));
  expect(links.some(link=>link?.includes('?page=2'))).toBe(true);
  expect(links.some(link=>link?.includes('?t='))).toBe(true);
- expect(links.some(link=>link?.includes('#verse-1'))).toBe(true);
  for (const link of links) { await page.goto(link!); await expect(page.locator('#main-content')).toBeVisible(); }
  await page.goto('/collections');
  await page.getByRole('textbox',{name:'Rename Research'}).fill('Archive notes');
  await page.getByRole('textbox',{name:'Rename Research'}).press('Tab');
  await page.getByRole('button',{name:'Move reference up',exact:true}).nth(1).click();
  await expect(page.getByRole('link',{name:'Open original'}).first()).toHaveAttribute('href', links[1]!);
- await page.reload();await expect(page.locator('article')).toHaveCount(4);
+ await page.reload();await expect(page.locator('article')).toHaveCount(2);
  await expect(page.getByRole('textbox',{name:'Rename Archive notes'})).toHaveValue('Archive notes');
  await page.screenshot({path:testInfo.outputPath('collections-review.png'),fullPage:true});
  const bibDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export BibTeX'}).click();

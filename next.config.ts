@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import createMDX from "@next/mdx";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -35,9 +34,6 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  // Editorials are authored as MDX under src/content and imported by the
-  // [slug] route, so .mdx must be a recognised module extension.
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   // Don't advertise the framework via the X-Powered-By response header.
   poweredByHeader: false,
   turbopack: {
@@ -103,11 +99,6 @@ const nextConfig: NextConfig = {
       { source: "/content/books/:path*", destination: "/content/written/books/:path*", permanent: true },
       { source: "/content/newsletter/:path*", destination: "/content/written/newsletters/:path*", permanent: true },
       {
-        source: "/content/appendix/pdfs/1982/1981_Appendices.pdf",
-        destination: "/content/quran/organized_appendices/1981/appendices.pdf",
-        permanent: true,
-      },
-      {
         source: "/content/appendix/pdfs/appendix_:number(\\d+).pdf",
         destination: "/content/quran/organized_appendices/1992/appendix-:number.pdf",
         permanent: true,
@@ -117,25 +108,13 @@ const nextConfig: NextConfig = {
         destination: "/content/quran/organized_appendices/1992/:document.pdf",
         permanent: true,
       },
-      // Scripture route migration: /quran/* → /scripture/*
-      { source: "/quran", destination: "/scripture/quran", permanent: true },
-      { source: "/quran/old-testament", destination: "/scripture/old-testament", permanent: true },
-      { source: "/quran/new-testament", destination: "/scripture/new-testament", permanent: true },
-      { source: "/quran/appendices", destination: "/scripture/quran/appendices", permanent: true },
-      { source: "/quran/:chapter(\\d+)", destination: "/scripture/quran/:chapter", permanent: true },
-      { source: "/quran/bible/:book", destination: "/scripture/bible/:book", permanent: true },
-      { source: "/scriptures/:path*", destination: "/scripture/:path*", permanent: true },
+      // The video and audio archives were merged into one recordings page.
+      { source: "/videos", destination: "/media", permanent: true },
+      { source: "/audios", destination: "/media", permanent: true },
+      // The standalone reader route was folded into /library/:id, which now is the reader.
+      { source: "/library/:id/read", destination: "/library/:id", permanent: true },
     ];
   },
 };
 
-// Turbopack cannot receive JavaScript functions, so plugins are named as
-// strings and resolved on the Rust side.
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: ["remark-frontmatter", "remark-gfm"],
-    rehypePlugins: ["rehype-slug"],
-  },
-});
-
-export default withMDX(nextConfig);
+export default nextConfig;

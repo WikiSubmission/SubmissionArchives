@@ -1,8 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { addEntry, parseCollections, exportBibtex, exportMarkdown, saveCollections, type CollectionStore } from '../../src/lib/research/collections';
-import { neighborhood } from '../../studio/src/lib/graph';
-import { queueNoteWrite, flushNoteWrites } from '../../studio/src/lib/saveQueue';
 import { highlightSearchText } from '../../src/lib/search/highlight';
 test('mixed-source collections serialize, deduplicate and safely export Unicode', () => {
  let store: CollectionStore = {version:1,collections:[{id:'desk',name:'Research [one]',entries:[]}]};
@@ -17,17 +15,6 @@ test('mixed-source collections serialize, deduplicate and safely export Unicode'
  assert.throws(()=>parseCollections('{broken'));
  assert.throws(()=>addEntry(store,'desk',{id:'x',sourceId:'x',kind:'pdf',title:'x',url:'//evil.test',excerpt:''}));
  assert.throws(()=>saveCollections(store,{setItem(){throw new Error('Quota exceeded')}}),/Quota/);
-});
-test('graph neighborhood includes both link directions without unrelated nodes', () => {
- assert.deepEqual(neighborhood(['a','b','c','d'],[['a','b'],['c','a']], 'a'),['a','b','c']);
-});
-test('queued saves serialize same-path writers and retain failures for close recovery', async () => {
- const order: number[]=[];
- await Promise.all([queueNoteWrite('note',async()=>{await new Promise(r=>setTimeout(r,10));order.push(1)}),queueNoteWrite('note',async()=>{order.push(2)})]);
- assert.deepEqual(order,[1,2]);
- await assert.rejects(queueNoteWrite('error',async()=>{throw new Error('disk full')}));
- await assert.rejects(flushNoteWrites(),/disk full/);
- await queueNoteWrite('error',async()=>{});await flushNoteWrites();
 });
 test('highlighting uses original marks and escapes HTML around matched evidence', () => {
  assert.equal(highlightSearchText('<b>שָׁלוֹם</b>','שלום'), '&lt;b&gt;<mark class="qs-highlight">שָׁלוֹם</mark>&lt;/b&gt;');

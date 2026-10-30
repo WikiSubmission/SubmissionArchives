@@ -14,8 +14,7 @@ const emptySubscribe = () => () => {};
 const navigation = PRIMARY_NAV.filter((item) => item.href !== '/search');
 function isNavActive(href: string, pathname: string) {
     if (href === '/') return pathname === '/';
-    if (href === '/scripture/quran') return pathname.startsWith('/scripture') || pathname.startsWith('/quran');
-    if (href === '/written') return ['/written', '/library', '/editorials'].some((prefix) => pathname.startsWith(prefix));
+    if (href === '/written') return ['/written', '/library'].some((prefix) => pathname.startsWith(prefix));
     return pathname.startsWith(href);
 }
 

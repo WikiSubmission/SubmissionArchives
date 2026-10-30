@@ -59,8 +59,6 @@ export interface ReaderPagePayload {
     pdfLink?: string;
     prevId?: string | null;
     nextId?: string | null;
-    editions?: Record<string, { pdfUrl: string; startPage?: number }>;
-    defaultEdition?: string;
     newsletterJsonData?: Record<string, unknown>;
 }
 
@@ -98,11 +96,7 @@ export function resolveReaderPage(id: string, backHrefResolver: (book: BookData)
     }
 
     if (book.type === 'appendix') {
-        const editions: Record<string, { pdfUrl: string; startPage?: number }> = {};
-        for (const [edition, asset] of Object.entries(book.editions)) {
-            if (asset) editions[edition] = { pdfUrl: getPublicAssetUrl(asset.pdfLink), startPage: asset.startPage };
-        }
-        return { book, backHref, editions, defaultEdition: '1992' };
+        return { book, backHref, pdfLink: getPublicAssetUrl(book.pdfLink) };
     }
 
     const pdfLink = book.type === 'other' ? book.pdfLink : '';
@@ -125,11 +119,14 @@ export function resolveReaderPage(id: string, backHrefResolver: (book: BookData)
     };
 }
 
+// Every appendix comes from the 1992 edition of Quran: The Final Testament.
+const APPENDIX_YEAR = 1992;
+
 export function getBookBibliography(book: BookData): Bibliography {
     return {
         title: book.title,
         authors: 'author' in book && book.author ? [book.author] : undefined,
-        year: book.type === 'newsletter' ? book.year : book.type === 'other' ? book.editionYear : undefined,
+        year: book.type === 'newsletter' ? book.year : book.type === 'other' ? book.editionYear : APPENDIX_YEAR,
         publisher: book.type === 'newsletter' ? book.summary?.publisher : undefined,
         url: `${SITE_URL}/library/${encodeURIComponent(book.id)}`,
     };

@@ -22,17 +22,6 @@
         "C:\\Users\\Jonathan\\Desktop\\QuranTalk"
       ],
       "port": 8934
-    },
-    {
-      "name": "studio",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run",
-        "dev",
-        "--prefix",
-        "studio"
-      ],
-      "port": 1420
     }
   ]
 }

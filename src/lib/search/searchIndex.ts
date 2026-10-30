@@ -3,60 +3,58 @@ import 'server-only';
 import fs from 'fs';
 import path from 'path';
 import { LRUCache } from 'lru-cache';
-import { findQueryMatch, getRequiredTokens, normalizeSearchText, tokenizeForIndex } from '@/lib/search/queryMatch';
+import { findQueryMatch, getRequiredTokens, normalizeSearchText, parseSearchQuery, tokenizeForIndex } from '@/lib/search/queryMatch';
 import { parseAdvancedQuery, type ParsedQuery } from '@/lib/search/queryParser';
+import {
+    countSources,
+    documentRelevance,
+    formatRecordDate,
+    getRecordTime,
+    normalizeSourceFilters,
+    selectResults,
+    type SearchMatch,
+    type SearchResult,
+    type SearchSort,
+    type SourceCounts,
+} from '@/lib/search/results';
 import type { ArchiveRecord } from '@/types/archive';
 
 export const MAX_QUERY_LENGTH = 120;
+const MAX_MATCHES_PER_RESULT = 20;
 
-export const ALLOWED_FILTERS = new Set([
-    'video',
-    'sermon',
-    'quran-study',
-    'video-program',
-    'audio',
-    'messenger-audio',
-    'perspective',
-    'appendix',
-    'other',
-    'quran',
-]);
-
-export type SearchMatch = {
-    id: string;
-    content: string;
-    start_time: number;
+// One ranked set per query across every source. Source filters, sorting and paging are
+// applied to it afterwards, so changing any of them is a cache hit rather than a second
+// scan, and the per-source counts come from the same pass. Excerpts are only cut for the
+// records on a requested page, then kept with the cached entry.
+type SegmentHit = {
+    index: number;
+    text: string;
     page?: number;
-    score?: number;
-    kind?: string;
-    distance?: number;
-    label?: string;
+    start: number;
+    score: number;
 };
 
-export type SearchMedia = {
-    id: string;
-    title: string;
-    type: string;
-    author?: string;
-    pdfLink?: string;
-    page?: number;
-    thumbnailOverride?: string;
-    displayTitle?: string;
-    displayDate?: string;
-    primaryNumber?: number;
-    alternateNumbers?: string[];
-    alternateNumberLabel?: string;
-    isOcr?: boolean;
+type RankedEntry = Omit<SearchResult, 'matches'> & { record: ArchiveRecord; hits: SegmentHit[] };
+type RankedSearch = { entries: RankedEntry[]; counts: SourceCounts; matchQuery: string; proximityWindow: number };
+
+export type SearchOptions = {
+    filters?: string[];
+    sort?: SearchSort;
+    offset?: number;
+    limit?: number;
+    proximityWindow?: number;
 };
 
-export type SearchResult = {
-    media: SearchMedia;
-    matches: SearchMatch[];
-    bestScore?: number;
-    matchCount?: number;
+export type SearchPage = {
+    results: SearchResult[];
+    total: number;
+    totalMatches: number;
+    counts: SourceCounts;
 };
 
-const searchCache = new LRUCache<string, SearchResult[]>({
+const excerptCache = new WeakMap<RankedEntry, SearchMatch[]>();
+
+const searchCache = new LRUCache<string, RankedSearch>({
     max: 200,
     ttl: 1000 * 60 * 5, // 5 minutes
 });
@@ -74,6 +72,9 @@ function getSearchIndex() {
             : (JSON.parse(fs.readFileSync(filePath, 'utf8')) as ArchiveRecord[]);
         cachedMasterIndexMtime = fileMtime;
         cachedFlatIndex = null;
+        // Both hold positions or titles from the previous index.
+        expansionCache.clear();
+        cachedSuggestEntries = null;
         searchCache.clear();
     }
     return cachedMasterIndex;
@@ -222,10 +223,6 @@ export function warmSearchIndex(): number {
     return records.length;
 }
 
-export function normalizeFilters(filters: string[]): string[] {
-    return [...new Set(filters.filter((filter) => ALLOWED_FILTERS.has(filter)))];
-}
-
 export const MIN_SUGGEST_LENGTH = 2;
 export const MAX_SUGGESTIONS = 8;
 
@@ -325,43 +322,64 @@ function withinEditDistance(a: string, b: string, max: number): boolean {
     return previous[b.length] <= max;
 }
 
-// Returns the full ranked result set for a query, memoized per
-// (query, filters, proximityWindow). Callers slice it for pagination, so paging
-// through a large result set costs one scan rather than one scan per page.
-export function runSearch(query: string, filters: string[], proximityWindow: number): SearchResult[] {
+// Returns one page of the ranked, narrowed and ordered results, with totals for the
+// whole set. Paging through a large result set costs one scan rather than one per page.
+export function runSearch(query: string, options: SearchOptions = {}): SearchPage {
+    const { filters = [], sort = 'relevance', offset = 0, limit = 10, proximityWindow = 18 } = options;
     const cleanQuery = query.trim().slice(0, MAX_QUERY_LENGTH);
-    if (!cleanQuery) return [];
-
     const parsed = parseAdvancedQuery(cleanQuery);
     // Operators with nothing left to match (e.g. a bare "type:video") have no results.
-    if (!parsed.text) return [];
+    if (!parsed.text) return { results: [], total: 0, totalMatches: 0, counts: countSources([]) };
 
     const cleanWindow = clamp(proximityWindow, 2, 40);
-    // An explicit type: operator overrides the checkbox selection; otherwise the
-    // checkboxes stand, so the two remain aliases of the same mechanism.
-    const requestedTypes = normalizeFilters(parsed.types);
-    const cleanFilters = requestedTypes.length > 0 ? requestedTypes : normalizeFilters(filters);
-
-    // cleanQuery encodes every operator, so it alone distinguishes cache entries.
-    const cacheKey = `${cleanQuery}::${[...cleanFilters].sort().join(',')}::${cleanWindow}`;
+    // cleanQuery encodes every operator, so with the window it distinguishes cache entries.
+    const cacheKey = `${cleanQuery}::${cleanWindow}`;
     // Check the source index before looking up a cached query so a changed index
     // invalidates both the query result cache and the derived posting lists.
     getSearchIndex();
-    const cached = searchCache.get(cacheKey);
-    if (cached) return cached;
+    let ranked = searchCache.get(cacheKey);
+    if (!ranked) {
+        const entries = searchMasterIndex(parsed, cleanWindow).sort((a, b) => b.relevance - a.relevance);
+        ranked = { entries, counts: countSources(entries), matchQuery: parsed.text, proximityWindow: cleanWindow };
+        searchCache.set(cacheKey, ranked);
+    }
 
-    const results = searchMasterIndex(parsed, cleanFilters, cleanWindow)
-        .map(rankResult)
-        .sort((a, b) => (b.bestScore ?? 0) - (a.bestScore ?? 0));
+    // An explicit type: operator overrides the source selection; otherwise the selection
+    // stands, so the two remain aliases of the same mechanism.
+    const requestedSources = normalizeSourceFilters(parsed.types);
+    const sources = requestedSources.length > 0 ? requestedSources : normalizeSourceFilters(filters);
+    const selected = selectResults(ranked.entries, sources, sort);
 
-    searchCache.set(cacheKey, results);
-    return results;
+    return {
+        results: selected.slice(offset, offset + limit).map((entry) => toSearchResult(entry, ranked)),
+        total: selected.length,
+        totalMatches: selected.reduce((sum, entry) => sum + entry.matchCount, 0),
+        // A type: operator is part of the query itself, so the counts honor it too.
+        counts: requestedSources.length > 0 ? countSources(selected) : ranked.counts,
+    };
 }
 
-function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWindow: number): SearchResult[] {
+function toSearchResult(entry: RankedEntry, ranked: RankedSearch): SearchResult {
+    let matches = excerptCache.get(entry);
+    if (!matches) {
+        matches = entry.hits.map((hit) => toSearchMatch(entry.record, hit, ranked.matchQuery, ranked.proximityWindow));
+        excerptCache.set(entry, matches);
+    }
+    return { media: entry.media, matches, matchCount: entry.matchCount, relevance: entry.relevance, time: entry.time };
+}
+
+function searchMasterIndex(parsed: ParsedQuery, proximityWindow: number): RankedEntry[] {
     const records = getSearchIndex();
     const scopedByDate = parsed.before !== undefined || parsed.after !== undefined;
 
+    // A query of only stopwords or single letters has no term or phrase for findQueryMatch
+    // to match, so the full-scan fallback below could only ever return nothing.
+    if (!parsed.text.startsWith('literal:')) {
+        const { phrases, terms } = parseSearchQuery(parsed.text);
+        if (phrases.length === 0 && terms.length === 0) return [];
+    }
+
+    const titleTokens = getRequiredTokens(parsed.text);
     const candidates = candidateSegments(parsed.text);
     if (candidates !== null && candidates.length === 0) return [];
 
@@ -383,10 +401,9 @@ function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWind
         }
     }
 
-    const results: SearchResult[] = [];
+    const results: RankedEntry[] = [];
     for (const recordIndex of Array.from(byRecord.keys()).sort((a, b) => a - b)) {
         const item = records[recordIndex];
-        if (!isMasterItemAllowed(item, filters)) continue;
 
         if (scopedByDate) {
             const year = getRecordYear(item);
@@ -397,7 +414,9 @@ function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWind
             if (parsed.after !== undefined && year <= parsed.after) continue;
         }
 
-        const matches: SearchMatch[] = [];
+        // Scored without snippets first: a broad term can match thousands of passages,
+        // but only the strongest few per record are ever shown.
+        const hits: SegmentHit[] = [];
         for (const index of byRecord.get(recordIndex)!) {
             const segment = item.segments[index];
             if (!segment) continue;
@@ -406,78 +425,69 @@ function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWind
             const text = item.type === 'other' ? cleanBookOcrForSearch(sourceText, segment.label) : sourceText;
             if (hasExcludedTerm(text, parsed.exclusions)) continue;
 
-            const result = findQueryMatch(text, parsed.text, { proximityWindow });
+            const result = findQueryMatch(text, parsed.text, { proximityWindow, snippet: false });
             if (!result.matched) continue;
-
-            // Page/verse-based documents (books, appendices, the Qur'an) all set
-            // start: 0 on every segment since there's no timestamp, so start can't
-            // disambiguate them — page (or verse number) must be checked first, or
-            // every match on the same document collapses to the same id.
-            matches.push({
-                id: `${item.id}-${segment.page ?? segment.start ?? index}`,
-                content: result.snippet || text,
-                start_time: segment.start ?? 0,
-                page: segment.page,
-                score: result.score,
-                kind: result.kind,
-                distance: result.distance,
-                label: segment.label,
-            });
+            hits.push({ index, text, page: segment.page, start: segment.start ?? 0, score: result.score });
         }
 
-        if (matches.length === 0) continue;
+        if (hits.length === 0) continue;
 
-        const orderedMatches = item.type === 'other' || item.type === 'appendix'
-            ? collapseDocumentMatches(matches)
-            : sortMatches(matches);
+        const orderedHits = item.type === 'other' || item.type === 'appendix'
+            ? collapseDocumentHits(hits)
+            : sortHits(hits);
+        const title = item.displayTitle || item.title || item.id;
 
         results.push({
             media: {
                 id: item.id,
-                title: item.displayTitle || item.title || item.id,
+                title,
                 type: item.type,
                 author: item.author || 'Dr. Rashad Khalifa',
                 pdfLink: item.pdfLink,
-                page: matches[0]?.page,
+                // The first matching page in reading order, which is where the title link opens.
+                page: hits[0].page,
                 thumbnailOverride: item.thumbnailOverride,
-                displayTitle: item.displayTitle || item.title || item.id,
-                displayDate: item.date || item.fullDate || '',
+                displayTitle: title,
+                displayDate: formatRecordDate(item.date || item.fullDate) || (typeof item.year === 'number' ? String(item.year) : ''),
                 primaryNumber: item.primaryNumber,
                 alternateNumbers: item.alternateNumbers,
                 alternateNumberLabel: item.alternateNumberLabel,
                 isOcr: item.type === 'other' && /\bocr\b/i.test(item.transcriptionMethod || ''),
             },
-            matches: orderedMatches.slice(0, 20),
+            matchCount: orderedHits.length,
+            relevance: documentRelevance(orderedHits[0].score, orderedHits.length, titleMentions(title, titleTokens)),
+            time: getRecordTime([item.fullDate, item.date], getRecordYear(item)),
+            record: item,
+            hits: orderedHits.slice(0, MAX_MATCHES_PER_RESULT),
         });
     }
 
     return results;
 }
 
-const EXCLUDED_QURAN_EDITION_IDS = new Set([
-    'english-meanings-of-the-quran',
-]);
+function toSearchMatch(item: ArchiveRecord, hit: SegmentHit, query: string, proximityWindow: number): SearchMatch {
+    const segment = item.segments[hit.index];
+    const result = findQueryMatch(hit.text, query, { proximityWindow });
+    // Page/verse-based documents (books, appendices, the Qur'an) all set start: 0 on
+    // every segment since there's no timestamp, so start can't disambiguate them. Page
+    // (or verse number) must be checked first, or every match on the same document
+    // collapses to the same id.
+    return {
+        id: `${item.id}-${segment.page ?? segment.start ?? hit.index}`,
+        content: result.snippet || hit.text,
+        start_time: hit.start,
+        page: hit.page,
+        score: hit.score,
+        kind: result.kind,
+        distance: result.distance,
+        label: segment.label,
+    };
+}
 
-function isMasterItemAllowed(item: ArchiveRecord, filters: string[]) {
-    // Exclude alternate Qur'an translation edition books only when explicitly filtering by 'quran' category
-    if (filters.includes('quran') && EXCLUDED_QURAN_EDITION_IDS.has(item.id)) {
-        return false;
-    }
-
-    if (filters.length === 0) return true;
-
-    return filters.some((filter) => {
-        if (filter === 'video' || filter === 'sermon' || filter === 'video-program') {
-            return item.type === 'video-program' || item.type === 'sermon' || item.type === 'video';
-        }
-        if (filter === 'quran-study') return item.type === 'quran-study';
-        if (filter === 'audio' || filter === 'messenger-audio') {
-            return item.type === 'messenger-audio' || item.type === 'audio';
-        }
-        if (filter === 'perspective') return item.type === 'perspective';
-        if (filter === 'appendix') return item.type === 'appendix';
-        return filter === item.type;
-    });
+function titleMentions(title: string, tokens: string[]): boolean {
+    if (tokens.length === 0) return false;
+    const normalizedTitle = normalizeSearchText(title);
+    return tokens.every((token) => normalizedTitle.includes(token));
 }
 
 function getRecordYear(item: ArchiveRecord): number | null {
@@ -497,26 +507,26 @@ function hasExcludedTerm(text: string, exclusions: string[]): boolean {
     });
 }
 
-function sortMatches(matches: SearchMatch[]) {
-    return matches.sort((a, b) => (b.score ?? 0) - (a.score ?? 0)
+function sortHits(hits: SegmentHit[]): SegmentHit[] {
+    return [...hits].sort((a, b) => b.score - a.score
         || (a.page ?? Number.MAX_SAFE_INTEGER) - (b.page ?? Number.MAX_SAFE_INTEGER)
-        || a.start_time - b.start_time);
+        || a.start - b.start);
 }
 
 // OCR pages can be split into multiple search chunks. The reader opens at PDF-page
 // granularity, so returning several near-identical excerpts from that same page adds
 // noise without adding a distinct citation. Keep the strongest excerpt per page.
-function collapseDocumentMatches(matches: SearchMatch[]) {
-    const byPage = new Map<number, SearchMatch>();
-    const withoutPage: SearchMatch[] = [];
-    for (const match of sortMatches(matches)) {
-        if (typeof match.page !== 'number') {
-            withoutPage.push(match);
+function collapseDocumentHits(hits: SegmentHit[]): SegmentHit[] {
+    const byPage = new Map<number, SegmentHit>();
+    const withoutPage: SegmentHit[] = [];
+    for (const hit of sortHits(hits)) {
+        if (typeof hit.page !== 'number') {
+            withoutPage.push(hit);
             continue;
         }
-        if (!byPage.has(match.page)) byPage.set(match.page, match);
+        if (!byPage.has(hit.page)) byPage.set(hit.page, hit);
     }
-    return sortMatches([...byPage.values(), ...withoutPage]);
+    return sortHits([...byPage.values(), ...withoutPage]);
 }
 
 // Repeated X/asterisk/equal-sign runs in scanned books are decorative OCR
@@ -535,16 +545,6 @@ function cleanBookOcrForSearch(text: string, label?: string) {
         .replace(/(?:x{5,}|\*{5,}|_{5,}|={5,})/gi, ' ')
         .replace(/[ \t]{2,}/g, ' ')
         .trim();
-}
-
-function rankResult(result: SearchResult): SearchResult {
-    const matches = sortMatches(result.matches);
-    return {
-        ...result,
-        matches,
-        bestScore: matches[0]?.score ?? 0,
-        matchCount: matches.length,
-    };
 }
 
 function clamp(value: number, min: number, max: number) {

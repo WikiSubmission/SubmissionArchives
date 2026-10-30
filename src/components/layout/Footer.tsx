@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { DISCORD_URL, LEGAL_LINKS, YOUTUBE_URL } from '@/config/social';
+import { COLLECTIONS, getCollectionHref } from '@/lib/recordings';
 import { BackToTop } from './BackToTop';
 
 const columns = [
-    { title: 'Archive', links: [{ name: 'Video recordings', href: '/videos' }, { name: 'Audio recordings', href: '/audios' }, { name: 'Books & newsletters', href: '/written' }, { name: 'Editorials', href: '/editorials' }] },
-    { title: 'Scripture', links: [{ name: 'The Quran', href: '/scripture/quran' }, { name: 'Old Testament', href: '/scripture/old-testament' }, { name: 'New Testament', href: '/scripture/new-testament' }, { name: 'Appendices', href: '/scripture/quran/appendices' }] },
+    { title: 'Recordings', links: COLLECTIONS.map((collection) => ({ name: collection.label, href: getCollectionHref(collection.key) })) },
+    { title: 'Library', links: [{ name: 'Books & newsletters', href: '/written' }, { name: 'Appendices', href: '/written#appendices' }, { name: 'Search the archive', href: '/search' }] },
 ];
 export default function Footer() {
     return (
@@ -22,7 +23,6 @@ export default function Footer() {
                     <div className="col-span-2 md:col-span-1">
                         <Link href="/" className="font-serif text-xl tracking-tight text-ed-fg">Submission Archives</Link>
                         <p className="mt-3 max-w-[38ch] text-[13px] leading-[1.75] text-ed-fg-muted">Preserving the recordings and written works of Dr. Rashad Khalifa for independent study.</p>
-                        <Link href="/app" className="footer-text-link mt-3 inline-block">Explore SA Studio <span aria-hidden>↗</span></Link>
                     </div>
                 </div>
                 <div className="mt-9 flex flex-col gap-5 border-t border-ed-rule pt-5 text-[11px] text-ed-fg-muted sm:flex-row sm:items-center sm:justify-between">

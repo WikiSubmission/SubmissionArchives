@@ -21,7 +21,7 @@ test.describe('visual regression', () => {
     const routes = [
         { path: '/', name: 'home' },
         { path: '/search?q=miracle', name: 'search-results' },
-        { path: '/quran/1', name: 'quran-chapter' },
+        { path: '/media', name: 'recordings' },
         { path: '/library/salat-booklet', name: 'pdf-reader' },
         { path: '/media/video-program/what-is-life-all-about', name: 'media-reader' },
         { path: '/collections', name: 'collections' },

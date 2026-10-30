@@ -10,7 +10,6 @@ const files = [
   path.join(generatedDir, 'BOOKS_LIST.json'),
   path.join(generatedDir, 'CATALOG_VALIDATION.json'),
   path.join(generatedDir, 'MASTER_INDEX.json'),
-  path.join(generatedDir, 'QURAN_CHAPTERS.json'),
 ];
 
 function digest(filePath) {

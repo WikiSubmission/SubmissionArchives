@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { highlightSearchText } from '../../src/lib/search/highlight';
 import { findQueryMatch, getHighlightTerms, parseSearchQuery } from '../../src/lib/search/queryMatch';
 
 test('parses quoted phrases, meaningful terms, and bounded proximity', () => {
@@ -43,4 +44,37 @@ test('requires every meaningful term and respects proximity windows', () => {
 
 test('normalizes highlight terms without stopwords or duplicates', () => {
     assert.deepEqual(getHighlightTerms('The covenant covenant of God'), ['covenant', 'god']);
+});
+
+test('highlights meaningful terms only', () => {
+    assert.equal(
+        highlightSearchText('Your god is one god', 'god is one'),
+        'Your <mark class="qs-highlight">god</mark> is <mark class="qs-highlight">one</mark> <mark class="qs-highlight">god</mark>',
+    );
+    assert.equal(highlightSearchText('Those who disbelieve', 'god is one'), 'Those who disbelieve');
+});
+
+test('scores the same without building a snippet', () => {
+    const cases: Array<[string, string, { proximityWindow?: number }?]> = [
+        ['All worship is directed to God alone.', 'God alone'],
+        ['God sent a messenger whose work stood alone.', 'God alone'],
+        ['The citation says God’s message was preserved.', '"Gods message"'],
+        ['The mathematical code confirms the Quran miracle.', 'mathematical miracle', { proximityWindow: 8 }],
+        [`mathematical ${'filler '.repeat(60)}miracle`, 'mathematical miracle', { proximityWindow: 8 }],
+        ['The mathematical code is explained here.', 'mathematical miracle'],
+        ['Crème brûlée and the Qur’an', 'creme quran'],
+        ['قُلْ هُوَ اللَّهُ أَحَدٌ', 'الله'],
+        ['שְׁמַע יִשְׂרָאֵל', 'ישראל'],
+        ['A "quoted phrase" next to messenger', '"quoted phrase" messenger'],
+    ];
+    for (const [text, query, options] of cases) {
+        const full = findQueryMatch(text, query, options);
+        const lean = findQueryMatch(text, query, { ...options, snippet: false });
+        assert.deepEqual(
+            [lean.matched, lean.score, lean.kind, lean.distance],
+            [full.matched, full.score, full.kind, full.distance],
+            `${query} in ${text.slice(0, 40)}`,
+        );
+        assert.equal(lean.snippet, '');
+    }
 });

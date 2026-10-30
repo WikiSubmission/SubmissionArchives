@@ -16,30 +16,17 @@ function readJson<T>(filePath: string): T {
 
 const records = readJson<ArchiveRecord[]>(path.join(generatedDir, 'MASTER_INDEX.json'));
 const books = readJson<ArchiveBookSummary[]>(path.join(generatedDir, 'BOOKS_LIST.json'));
-const quranChapters = readJson<Array<{
-    chapterNumber: number;
-    verses: Array<{
-        verseNumber: number;
-        english: string;
-    }>;
-}>>(path.join(generatedDir, 'QURAN_CHAPTERS.json'));
 
 test('the generated archive satisfies the canonical runtime contract', () => {
     const report = validateArchiveRecords(records, { publicDir });
 
     assert.equal(report.valid, true, report.errors.join('\n'));
     // Current canonical catalog includes 40 appendix records; validate each record above.
-    assert.equal(report.recordCount, 356);
+    assert.equal(report.recordCount, 242);
     const categoryCounts = report.categoryCounts as Record<string, number>;
-    assert.equal(categoryCounts.Quran, 114);
     assert.equal(categoryCounts.Appendices, 40);
     assert.equal(categoryCounts.Books, 11);
     assert.equal(categoryCounts['Submitter Perspectives'], 64);
-});
-
-test('Quran chapters index contains all 114 chapters', () => {
-    assert.equal(quranChapters.length, 114);
-    assert.equal(quranChapters.every((c) => c.verses.length > 0), true);
 });
 
 test('every newsletter is searchable', () => {
@@ -91,15 +78,6 @@ test('canonical transcription sources take precedence for every searchable book'
     assert.equal(searchableBooks.length, 11);
     assert.equal(searchableBooks.every((book) => book.transcriptionSource?.startsWith('data/sources/books/')), true);
     assert.match(books.find((book) => book.id === 'quran-hadith-islam')?.transcriptionSource ?? '', /data\/sources\/books/);
-});
-
-test('Quran search contains complete 1992 verse text with no historical verse labels', () => {
-    const quranRecords = records.filter((record) => record.type === 'quran');
-    const labels = quranRecords.flatMap((record) => record.segments.map((segment) => segment.label));
-
-    assert.equal(labels.filter((label) => label === 'verse-1992').length, 6234);
-    assert.equal(labels.filter((label) => label === 'verse-1989').length, 0);
-    assert.equal(labels.filter((label) => label === 'verse-1981').length, 0);
 });
 
 test('legacy book slugs resolve to their current filenames', () => {

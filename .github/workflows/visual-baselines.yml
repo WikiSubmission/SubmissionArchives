@@ -14,7 +14,6 @@ jobs:
           node-version: 22.x
           cache: npm
       - run: npm ci
-      - run: npm ci --prefix studio
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test tests/e2e/visual.spec.ts --update-snapshots

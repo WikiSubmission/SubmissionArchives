@@ -74,6 +74,23 @@ type OcrPage = { page: number; text: string };
 type OcrMatch = { page: number; before: string; matchedText: string; after: string; matchCount: number };
 
 const preferenceKey = (key: string, documentId: string) => `${key}:${documentId}`;
+
+// Storage can be blocked (privacy settings, sandboxed frames); preferences then just don't persist.
+function readPreference(key: string): string | null {
+    try {
+        return localStorage.getItem(key);
+    } catch {
+        return null;
+    }
+}
+
+function writePreference(key: string, value: string) {
+    try {
+        localStorage.setItem(key, value);
+    } catch {
+        // Not persisted; the in-memory preference still applies.
+    }
+}
 const ZOOM_MIN = 0.4;
 const ZOOM_MAX = 3.0;
 const ZOOM_STEP = 0.15;
@@ -181,19 +198,19 @@ export default function PDFReaderClient({
     // Persisted preferences
     const [zoom, setZoom] = useState(() => {
         if (typeof window === 'undefined') return 1;
-        const saved = parseFloat(localStorage.getItem(preferenceKey('reader-zoom', documentId)) || '1');
+        const saved = parseFloat(readPreference(preferenceKey('reader-zoom', documentId)) || '1');
         return Number.isFinite(saved) ? Math.min(Math.max(saved, ZOOM_MIN), ZOOM_MAX) : 1;
     });
 
     const [layoutMode, setLayoutMode] = useState<LayoutMode>(() => {
         if (typeof window === 'undefined') return 'single';
-        const saved = localStorage.getItem(preferenceKey('reader-layout', documentId)) as LayoutMode;
+        const saved = readPreference(preferenceKey('reader-layout', documentId)) as LayoutMode;
         return saved === 'spread' || saved === 'continuous' ? saved : 'single';
     });
 
     const [readingTheme, setReadingTheme] = useState<ReadingTheme>(() => {
         if (typeof window === 'undefined') return 'default';
-        const saved = localStorage.getItem(preferenceKey('reader-theme', documentId)) as ReadingTheme;
+        const saved = readPreference(preferenceKey('reader-theme', documentId)) as ReadingTheme;
         return saved === 'sepia' || saved === 'dark' ? saved : 'default';
     });
 
@@ -244,6 +261,9 @@ export default function PDFReaderClient({
 
     const query = searchQuery.trim().replace(/\s+/g, ' ').toLowerCase();
     const highlightTerms = useMemo(() => getHighlightTerms(query), [query]);
+    // react-pdf rebuilds a page's text layer whenever customTextRenderer changes identity,
+    // so the renderer is only passed while there is something to highlight.
+    const hasHighlights = highlightTerms.length > 0;
     const ocrMatches = useMemo<OcrMatch[]>(() => {
         if (!ocrPages || !query) return [];
         return ocrPages.flatMap((page) => {
@@ -266,15 +286,15 @@ export default function PDFReaderClient({
 
     // Save preferences
     useEffect(() => {
-        localStorage.setItem(preferenceKey('reader-zoom', documentId), String(zoom));
+        writePreference(preferenceKey('reader-zoom', documentId), String(zoom));
     }, [documentId, zoom]);
 
     useEffect(() => {
-        localStorage.setItem(preferenceKey('reader-layout', documentId), layoutMode);
+        writePreference(preferenceKey('reader-layout', documentId), layoutMode);
     }, [documentId, layoutMode]);
 
     useEffect(() => {
-        localStorage.setItem(preferenceKey('reader-theme', documentId), readingTheme);
+        writePreference(preferenceKey('reader-theme', documentId), readingTheme);
     }, [documentId, readingTheme]);
 
     useEffect(() => {
@@ -403,9 +423,16 @@ export default function PDFReaderClient({
         return () => observer.disconnect();
     }, []);
 
+    const pageNumberRef = useRef(pageNumber);
+    useEffect(() => {
+        pageNumberRef.current = pageNumber;
+    }, [pageNumber]);
+
+    // Reads the page through a ref so entering Continuous keeps your place, without
+    // re-scrolling every time scrolling itself updates the page number.
     useEffect(() => {
         if (layoutMode === 'continuous' && numPages) {
-            continuousVirtualizer.scrollToIndex(Math.min(initialPage, numPages) - 1, {
+            continuousVirtualizer.scrollToIndex(Math.min(pageNumberRef.current, numPages) - 1, {
                 align: 'start',
                 behavior: 'auto',
             });
@@ -489,6 +516,7 @@ export default function PDFReaderClient({
                 if (e.key === 'Escape') (e.target as HTMLElement).blur();
                 return;
             }
+            if (e.ctrlKey || e.metaKey || e.altKey) return;
 
             switch (e.key) {
                 case 'ArrowLeft':
@@ -793,10 +821,10 @@ export default function PDFReaderClient({
                     </button>
 
                     <h1
-                        className="flex items-center gap-2 text-sm font-semibold text-[#F5F0EB]"
+                        className="flex items-center gap-2 text-sm font-semibold text-ed-fg"
                         style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                     >
-                        <span aria-hidden="true" className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">PDF</span>
+                        <span aria-hidden="true" className="text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-accent">PDF</span>
                         <span className="truncate max-w-[180px] sm:max-w-[260px] md:max-w-[340px] lg:max-w-md">{title}</span>
                     </h1>
                 </div>
@@ -833,8 +861,8 @@ export default function PDFReaderClient({
 
             {/* Resume reading prompt */}
             {resumePage !== null ? (
-                <div className="flex items-center justify-between gap-3 border-b border-[#2A2928] bg-[#C8794A]/[0.05] px-4 py-2.5 text-[12px] sm:px-7">
-                    <span className="text-[#F5F0EB]">You were last reading page {resumePage}.</span>
+                <div className="flex items-center justify-between gap-3 border-b border-ed-rule bg-ed-accent/[0.05] px-4 py-2.5 text-[12px] sm:px-7">
+                    <span className="text-ed-fg">You were last reading page {resumePage}.</span>
                     <div className="flex items-center gap-2">
                         <button
                             type="button"
@@ -842,14 +870,14 @@ export default function PDFReaderClient({
                                 goToPage(resumePage);
                                 setResumePage(null);
                             }}
-                            className="rounded-[4px] border border-[#C8794A]/40 bg-[#C8794A]/15 px-3 py-1 font-semibold text-[#C8794A]"
+                            className="rounded-[4px] border border-ed-accent/40 bg-ed-accent/15 px-3 py-1 font-semibold text-ed-accent"
                         >
                             Resume
                         </button>
                         <button
                             type="button"
                             onClick={() => setResumePage(null)}
-                            className="p-1 text-[#9E9690] hover:text-[#F5F0EB]"
+                            className="p-1 text-ed-fg-muted hover:text-ed-fg"
                             aria-label="Dismiss resume prompt"
                         >
                             <span>Close</span>
@@ -860,7 +888,7 @@ export default function PDFReaderClient({
 
             {/* In-Document Search Panel */}
             {searchOpen && (
-                <div className="border-b border-[#2A2928] bg-[#161514]/60 px-3 py-2 backdrop-blur-xl">
+                <div className="border-b border-ed-rule bg-ed-surface/60 px-3 py-2 backdrop-blur-xl">
                     <div className="mx-auto flex max-w-xl items-center gap-2">
 
                         <input
@@ -873,17 +901,17 @@ export default function PDFReaderClient({
                                 setCurrentMatch(0);
                             }}
                             placeholder="Search keywords in document"
-                            className="flex-1 bg-transparent text-sm text-[#F5F0EB] placeholder:text-[#9E9690] focus:outline-none"
+                            className="flex-1 bg-transparent text-sm text-ed-fg placeholder:text-ed-fg-muted focus:outline-none"
                             aria-label="Search text in document"
                         />
 
                         {matchCount > 0 && (
-                            <div className="flex items-center gap-2 text-[11px] text-[#9E9690] bg-[#1C1B1A] px-2 py-1 rounded-[4px]">
+                            <div className="flex items-center gap-2 text-[11px] text-ed-fg-muted bg-ed-surface-strong px-2 py-1 rounded-[4px]">
                                 <span>{currentMatch + 1}/{matchCount}</span>
                                 <button
                                     type="button"
                                     onClick={() => jumpToMatch('prev')}
-                                    className="p-0.5 hover:text-[#F5F0EB]"
+                                    className="p-0.5 hover:text-ed-fg"
                                     title="Previous match"
                                 >
                                     <span>Previous</span>
@@ -891,7 +919,7 @@ export default function PDFReaderClient({
                                 <button
                                     type="button"
                                     onClick={() => jumpToMatch('next')}
-                                    className="p-0.5 hover:text-[#F5F0EB]"
+                                    className="p-0.5 hover:text-ed-fg"
                                     title="Next match"
                                 >
                                     <span>Next</span>
@@ -907,25 +935,25 @@ export default function PDFReaderClient({
                                     setMatchCount(0);
                                     setCurrentMatch(0);
                                 }}
-                                className="p-1 text-[#9E9690] hover:text-[#F5F0EB]"
+                                className="p-1 text-ed-fg-muted hover:text-ed-fg"
                                 aria-label="Clear search"
                             >
                                 <span>Close</span>
                             </button>
                         )}
-                        <span className="text-xs text-[#9E9690] hidden sm:inline font-sans">
+                        <span className="text-xs text-ed-fg-muted hidden sm:inline font-sans">
                             / to focus
                         </span>
                     </div>
                     {curatedToc?.length && query ? (
-                        <div className="mx-auto mt-2 max-h-40 max-w-3xl overflow-y-auto rounded-md border border-[#2A2928] bg-[#11100F] p-2" aria-live="polite">
-                            <div className="px-1 pb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#9E9690]">
+                        <div className="mx-auto mt-2 max-h-40 max-w-3xl overflow-y-auto rounded-md border border-ed-rule bg-ed-bg p-2" aria-live="polite">
+                            <div className="px-1 pb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
                                 OCR page matches
                             </div>
                             {ocrLoading ? (
-                                <p className="px-1 py-2 text-xs text-[#9E9690]">Searching the book text…</p>
+                                <p className="px-1 py-2 text-xs text-ed-fg-muted">Searching the book text…</p>
                             ) : ocrError ? (
-                                <p className="px-1 py-2 text-xs text-[#9E9690]">OCR search is temporarily unavailable.</p>
+                                <p className="px-1 py-2 text-xs text-ed-fg-muted">OCR search is temporarily unavailable.</p>
                             ) : ocrMatches.length ? (
                                 <div className="space-y-1">
                                     {ocrMatches.slice(0, 12).map((match) => {
@@ -934,23 +962,23 @@ export default function PDFReaderClient({
                                                 key={match.page}
                                                 type="button"
                                                 onClick={() => goToPage(match.page)}
-                                                className="flex w-full items-start gap-3 rounded px-2 py-1.5 text-left transition-colors hover:bg-[#1C1B1A]"
+                                                className="flex w-full items-start gap-3 rounded px-2 py-1.5 text-left transition-colors hover:bg-ed-surface-strong"
                                             >
-                                                <span className="shrink-0 pt-0.5 text-[11px] font-semibold text-[#C8794A]">
+                                                <span className="shrink-0 pt-0.5 text-[11px] font-semibold text-ed-accent">
                                                     p. {match.page} · {match.matchCount}
                                                 </span>
-                                                <span className="line-clamp-2 text-xs leading-relaxed text-[#D5CEC7]">
-                                                    {match.before}<mark className="rounded-sm bg-[#C8794A]/30 text-[#F5F0EB]">{match.matchedText}</mark>{match.after}
+                                                <span className="line-clamp-2 text-xs leading-relaxed text-ed-fg-secondary">
+                                                    {match.before}<mark className="rounded-sm bg-ed-accent/30 text-ed-fg">{match.matchedText}</mark>{match.after}
                                                 </span>
                                             </button>
                                         );
                                     })}
                                 </div>
                             ) : ocrPages ? (
-                                <p className="px-1 py-2 text-xs text-[#9E9690]">No OCR matches found.</p>
+                                <p className="px-1 py-2 text-xs text-ed-fg-muted">No OCR matches found.</p>
                             ) : null}
                             {ocrMatches.length > 12 ? (
-                                <p className="px-2 pt-1 text-[10px] text-[#9E9690]">Showing 12 of {ocrMatches.length} matching pages.</p>
+                                <p className="px-2 pt-1 text-[10px] text-ed-fg-muted">Showing 12 of {ocrMatches.length} matching pages.</p>
                             ) : null}
                         </div>
                     ) : null}
@@ -1090,10 +1118,11 @@ export default function PDFReaderClient({
                                     pageNumber={pageNumber}
                                     width={pageWidth * zoom}
                                     rotate={rotation}
-                                    customTextRenderer={(item) => highlightRenderer(pageNumber, item)}
+                                    customTextRenderer={hasHighlights ? (item) => highlightRenderer(pageNumber, item) : undefined}
                                     onLoadSuccess={handlePageLoadSuccess}
                                     onGetTextSuccess={(textContent) => handleGetTextSuccess(pageNumber, textContent)}
                                     onRenderSuccess={handlePageRenderSuccess}
+                                    onRenderTextLayerSuccess={updateMatchState}
                                     className="soft-shell overflow-hidden rounded-[6px]"
                                 />
                             </div>
@@ -1107,10 +1136,11 @@ export default function PDFReaderClient({
                                             pageNumber={pg}
                                             width={pageWidth * zoom}
                                             rotate={rotation}
-                                            customTextRenderer={(item) => highlightRenderer(pg, item)}
+                                            customTextRenderer={hasHighlights ? (item) => highlightRenderer(pg, item) : undefined}
                                             onLoadSuccess={handlePageLoadSuccess}
                                             onGetTextSuccess={(textContent) => handleGetTextSuccess(pg, textContent)}
                                             onRenderSuccess={handlePageRenderSuccess}
+                                            onRenderTextLayerSuccess={updateMatchState}
                                             className={`overflow-hidden ${spreadPages.length > 1 && idx === 0
                                                 ? 'pdf-spread-left rounded-l-lg'
                                                 : spreadPages.length > 1 && idx === 1
@@ -1151,10 +1181,11 @@ export default function PDFReaderClient({
                                                 pageNumber={page}
                                                 width={pageWidth * zoom}
                                                 rotate={rotation}
-                                                customTextRenderer={(item) => highlightRenderer(page, item)}
+                                                customTextRenderer={hasHighlights ? (item) => highlightRenderer(page, item) : undefined}
                                                 onLoadSuccess={page === 1 ? handlePageLoadSuccess : undefined}
                                                 onGetTextSuccess={(textContent) => handleGetTextSuccess(page, textContent)}
                                                 onRenderSuccess={handlePageRenderSuccess}
+                                                onRenderTextLayerSuccess={updateMatchState}
                                                 className="soft-shell overflow-hidden rounded-[6px]"
                                             />
                                             <span className="mt-2 text-[11px] text-ed-fg-muted">

@@ -7,14 +7,11 @@ import NewsletterViewer, { type IssueType } from './NewsletterViewer';
 import PDFReaderClient from './PDFReaderWrapper';
 import type { BookTocEntry } from '@/lib/bookPreviews';
 
-type EditionAsset = { pdfUrl: string; startPage?: number };
-
 // The server page resolves every possible asset URL at build time (fully static
-// via generateStaticParams). The page/query/edition deep-link params are
-// client-only concerns, so this wrapper reads them with useSearchParams (which
-// requires the Suspense boundary below) and simply *selects* among the
-// pre-resolved assets, rather than the server awaiting searchParams (which would
-// force dynamic rendering).
+// via generateStaticParams). The page/query deep-link params are client-only
+// concerns, so this wrapper reads them with useSearchParams (which requires the
+// Suspense boundary below) rather than the server awaiting searchParams (which
+// would force dynamic rendering).
 export type ReaderData = { bibliography?: Bibliography } & (
     | {
           kind: 'newsletter-viewer';
@@ -26,8 +23,7 @@ export type ReaderData = { bibliography?: Bibliography } & (
           nextId?: string | null;
           backHref?: string;
       }
-    | { kind: 'pdf'; pdfUrl: string; title: string; documentId: string; prevId?: string | null; nextId?: string | null; outline?: BookTocEntry[]; backHref: string }
-    | { kind: 'appendix'; editions: Record<string, EditionAsset>; defaultEdition: string; title: string; documentId: string; backHref: string });
+    | { kind: 'pdf'; pdfUrl: string; title: string; documentId: string; prevId?: string | null; nextId?: string | null; outline?: BookTocEntry[]; backHref: string });
 
 const MAX_PAGE = 10000;
 
@@ -58,26 +54,6 @@ function ReaderWithParams(props: ReaderData) {
     const pageParam = searchParams.get('page');
     const requestedPage = pageParam ? parseInt(pageParam, 10) : NaN;
     const pageFromUrl = Number.isFinite(requestedPage) && requestedPage > 0 ? Math.min(requestedPage, MAX_PAGE) : undefined;
-
-    if (props.kind === 'appendix') {
-        const editionParam = searchParams.get('edition');
-        const edition = editionParam && props.editions[editionParam] ? editionParam : props.defaultEdition;
-        const asset = props.editions[edition] ?? props.editions[props.defaultEdition];
-        // An explicit ?page wins; otherwise fall back to the edition's start page.
-        const initialPage = pageFromUrl ?? asset.startPage ?? 1;
-        return (
-            <PDFReaderClient
-                key={`${props.documentId}:${edition}`}
-                pdfUrl={asset.pdfUrl}
-                title={props.title}
-                documentId={props.documentId}
-                bibliography={{ ...props.bibliography, title: props.title, url: `${props.bibliography?.url ?? `/library/${props.documentId}`}?edition=${edition}`, year: Number(edition), edition }}
-                initialPage={initialPage}
-                initialQuery={query}
-                backHref={props.backHref}
-            />
-        );
-    }
 
     return (
         <PDFReaderClient

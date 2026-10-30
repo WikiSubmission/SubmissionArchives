@@ -34,7 +34,7 @@ export default async function PDFReaderPage({ params }: Props) {
     const { book, backHref } = payload;
     const bookToc = book.type === 'other' ? getBookPreviews()[id]?.toc : undefined;
 
-    if (book.type === 'newsletter' && payload.pdfLink) {
+    if ((book.type === 'newsletter' || book.type === 'appendix') && payload.pdfLink) {
         return (
             <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
                 <LibraryReaderWrapper
@@ -64,15 +64,6 @@ export default async function PDFReaderPage({ params }: Props) {
                 nextId={payload.nextId}
                 backHref={backHref}
             />
-        );
-    }
-
-    if (book.type === 'appendix' && payload.editions && payload.defaultEdition) {
-        return (
-            <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
-                <LibraryReaderWrapper kind="appendix" documentId={id} editions={payload.editions} defaultEdition={payload.defaultEdition} title={book.title}
-                    bibliography={getBookBibliography(book)} backHref={backHref} />
-            </main>
         );
     }
 

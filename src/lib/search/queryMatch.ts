@@ -71,16 +71,20 @@ export function parseSearchQuery(query: string): SearchQueryParts {
     };
 }
 
+// `snippet: false` decides the match and its score without mapping offsets back to the
+// source text, which is most of the cost on broad queries. Matched, score, kind and
+// distance are the same either way; snippet, start and end are left empty.
 export function findQueryMatch(
     content: string,
     query: string,
-    options: { proximityWindow?: number; snippetRadius?: number } = {},
+    options: { proximityWindow?: number; snippetRadius?: number; snippet?: boolean } = {},
 ): QueryMatch {
     const snippetRadius = options.snippetRadius ?? 80;
+    const withSnippet = options.snippet !== false;
     if (query.startsWith('literal:')) {
         const literal = query.slice(8).replace(/^"|"$/g, '');
         const start = literal ? content.indexOf(literal) : -1;
-        return start < 0 ? emptyMatch() : { matched: true, snippet: createSnippet(content, start, start + literal.length, snippetRadius), score: 120, kind: 'phrase', matchedTerms: [literal], start, end: start + literal.length };
+        return start < 0 ? emptyMatch() : { matched: true, snippet: withSnippet ? createSnippet(content, start, start + literal.length, snippetRadius) : '', score: 120, kind: 'phrase', matchedTerms: [literal], start, end: start + literal.length };
     }
     const parsed = parseSearchQuery(query);
     const proximityWindow = parsed.proximityWindow ?? options.proximityWindow ?? 18;
@@ -95,6 +99,9 @@ export function findQueryMatch(
 
     const exactPhrase = normalizeSearchText(query);
     if (exactPhrase && normalized.includes(exactPhrase)) {
+        if (!withSnippet) {
+            return { matched: true, snippet: '', score: 120, kind: 'phrase', distance: 0, matchedTerms: parsed.highlightTerms };
+        }
         const normalizedStart = normalized.indexOf(exactPhrase);
         const start = getSourceMap().offsets[normalizedStart] ?? 0;
         const end = getSourceMap().ends[normalizedStart + exactPhrase.length - 1] ?? start;
@@ -118,16 +125,18 @@ export function findQueryMatch(
         }
 
         if (!bestPhrase || phrase.length > bestPhrase.phrase.length) {
-            const rawStart = getSourceMap().offsets[phraseStart] ?? 0;
-            const rawEnd = getSourceMap().ends[phraseStart + phrase.length - 1] ?? rawStart;
+            const rawStart = withSnippet ? getSourceMap().offsets[phraseStart] ?? 0 : 0;
+            const rawEnd = withSnippet ? getSourceMap().ends[phraseStart + phrase.length - 1] ?? rawStart : 0;
             bestPhrase = { start: rawStart, end: rawEnd, phrase };
         }
     }
 
+    const snippetFor = (start: number, end: number) => withSnippet ? createSnippet(text, start, end, snippetRadius) : '';
+
     if (bestPhrase && parsed.terms.length === 0) {
         return {
             matched: true,
-            snippet: createSnippet(text, bestPhrase.start, bestPhrase.end, snippetRadius),
+            snippet: snippetFor(bestPhrase.start, bestPhrase.end),
             score: 115,
             kind: 'phrase',
             distance: 0,
@@ -137,13 +146,15 @@ export function findQueryMatch(
         };
     }
 
-    const tokens = tokenizeSearchText(text);
+    // Without a snippet, token positions only need to be ordinal: proximity is measured
+    // in tokens, and character offsets are only used to cut the excerpt.
+    const tokens = withSnippet ? tokenizeSearchText(text) : tokenizeNormalized(normalized);
     if (parsed.terms.length === 1) {
         const single = tokens.find((token) => token.value === parsed.terms[0]);
         return single
             ? {
                   matched: true,
-                  snippet: createSnippet(text, single.start, single.end, snippetRadius),
+                  snippet: snippetFor(single.start, single.end),
                   score: bestPhrase ? 105 : 65,
                   kind: bestPhrase ? 'phrase' : 'single-term',
                   distance: 0,
@@ -165,7 +176,7 @@ export function findQueryMatch(
         const tightness = Math.max(0, proximityWindow - windowMatch.distance);
         return {
             matched: true,
-            snippet: createSnippet(text, windowMatch.start, windowMatch.end, snippetRadius),
+            snippet: snippetFor(windowMatch.start, windowMatch.end),
             score: 85 + tightness + (bestPhrase ? 25 : 0),
             kind: 'proximity',
             distance: windowMatch.distance,
@@ -180,7 +191,7 @@ export function findQueryMatch(
 
     return {
         matched: true,
-        snippet: createSnippet(text, fallbackWindow.start, fallbackWindow.end, snippetRadius),
+        snippet: snippetFor(fallbackWindow.start, fallbackWindow.end),
         score: 45 + Math.min(20, parsed.terms.length * 4) + (bestPhrase ? 20 : 0),
         kind: bestPhrase ? 'phrase' : 'all-terms',
         distance: fallbackWindow.distance,
@@ -265,6 +276,12 @@ function tokenizeSearchText(text: string): SearchToken[] {
     return Array.from(map.normalized.matchAll(/[\p{L}\p{N}]+/gu), match => ({
         value: match[0], start: map.offsets[match.index!],
         end: map.ends[match.index! + match[0].length - 1],
+    }));
+}
+
+function tokenizeNormalized(normalized: string): SearchToken[] {
+    return Array.from(normalized.matchAll(/[\p{L}\p{N}]+/gu), match => ({
+        value: match[0], start: match.index!, end: match.index! + match[0].length,
     }));
 }
 

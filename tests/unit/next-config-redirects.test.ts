@@ -13,6 +13,17 @@ test('redirects /other to /written permanently', async () => {
     );
 });
 
+test('sends the old video and audio archives to the merged recordings page', async () => {
+    const redirects = await nextConfig.redirects!();
+
+    for (const source of ['/videos', '/audios']) {
+        assert.deepEqual(
+            redirects.find((redirect) => redirect.source === source),
+            { source, destination: '/media', permanent: true },
+        );
+    }
+});
+
 test('preserves legacy public content URLs after the folder migration', async () => {
     const redirects = await nextConfig.redirects!();
 

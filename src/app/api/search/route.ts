@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { checkRateLimit, getClientIp, rateLimitResponse, sanitizeSearchQuery } from '@/lib/security';
 import { runSearch } from '@/lib/search/searchIndex';
+import { parseSort } from '@/lib/search/results';
 import { logger } from '@/lib/logger';
 
 // Keyed on client IP, which means everyone behind one NAT — an office, a university, a
@@ -27,18 +28,15 @@ export async function GET(request: NextRequest) {
     const filters = (params.get('filters') ?? '').split(',').filter(Boolean);
     const limit = clampInt(params.get('limit'), DEFAULT_LIMIT, 1, MAX_LIMIT);
     const offset = clampInt(params.get('offset'), 0, 0, Number.MAX_SAFE_INTEGER);
+    const sort = parseSort(params.get('sort'));
 
     try {
-        const ranked = runSearch(query, filters, DEFAULT_PROXIMITY_WINDOW);
+        // counts is per source across the whole query, before any source filter, so the
+        // UI can show where the matches are.
+        const page = runSearch(query, { filters, sort, offset, limit, proximityWindow: DEFAULT_PROXIMITY_WINDOW });
 
         return NextResponse.json(
-            {
-                results: ranked.slice(offset, offset + limit),
-                total: ranked.length,
-                totalMatches: ranked.reduce((sum, result) => sum + (result.matchCount ?? result.matches.length), 0),
-                limit,
-                offset,
-            },
+            { ...page, limit, offset },
             { headers: { 'Cache-Control': 'no-store' } },
         );
     } catch (error: unknown) {

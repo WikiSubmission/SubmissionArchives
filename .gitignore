@@ -4,8 +4,6 @@
 /build
 target/
 target_old/
-studio/src-tauri/target/
-studio/src-tauri/target_old/
 .DS_Store
 *.tsbuildinfo
 

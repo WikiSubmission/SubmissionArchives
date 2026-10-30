@@ -30,7 +30,7 @@ export default function CollectionsClient() {
             }} /></label>
         </div>
         {error && <p role="alert">{error}</p>}
-        {!store.collections.length && <p>Save a verse, transcript excerpt, PDF page or editorial to start a collection.</p>}
+        {!store.collections.length && <p>Save a verse, transcript excerpt or PDF page to start a collection.</p>}
         {store.collections.map((c, index) => <section key={c.id} className="py-6 border-t border-ed-rule">
             <label>Collection name <input aria-label={`Rename ${c.name}`} defaultValue={c.name} maxLength={100} onBlur={e => { if (e.target.value.trim()) update({ ...store, collections: store.collections.map(v => v.id === c.id ? { ...v, name: e.target.value.trim() } : v) }); }} /></label>
             <div className="research-controls"><button disabled={index === 0} onClick={() => { const list = [...store.collections]; [list[index-1], list[index]] = [list[index], list[index-1]]; update({ ...store, collections: list }); }}>Move collection up</button>

@@ -4,7 +4,7 @@ const DOCK = 'iframe[src*="youtube"]';
 
 test.describe('global media player', () => {
     test('a card play button docks the player and it survives navigation', async ({ page }) => {
-        await page.goto('/audios');
+        await page.goto('/media');
 
         const playButton = page.getByRole('button', { name: /^Play / }).first();
         const label = await playButton.getAttribute('aria-label');
@@ -28,13 +28,13 @@ test.describe('global media player', () => {
     });
 
     test('clicking a card play button does not navigate', async ({ page }) => {
-        await page.goto('/audios');
+        await page.goto('/media');
         await page.getByRole('button', { name: /^Play / }).first().click();
-        await expect(page).toHaveURL(/\/audios/);
+        await expect(page).toHaveURL(/\/media$/);
     });
 
     test('the dock stands down on the track own page', async ({ page }) => {
-        await page.goto('/audios');
+        await page.goto('/media');
         await page.getByRole('button', { name: /^Play / }).first().click();
         await expect(page.locator(DOCK)).toBeVisible();
 
@@ -46,7 +46,7 @@ test.describe('global media player', () => {
     });
 
     test('the dock can be dismissed', async ({ page }) => {
-        await page.goto('/audios');
+        await page.goto('/media');
         await page.getByRole('button', { name: /^Play / }).first().click();
         await expect(page.locator(DOCK)).toBeVisible();
 

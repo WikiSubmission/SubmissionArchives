@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useGlobalPlayer } from "@/components/player/GlobalMediaPlayer";
 import { getMediaHref } from "@/lib/utils";
+import { getCollection, getCollectionHref } from "@/lib/recordings";
 import { QURAN_STUDY_SLIDES } from "@/data/quran-study-thumbnail-data";
 import { type ChapterMarker } from "@/lib/transcriptParagraphs";
 import dynamic from "next/dynamic";
@@ -136,13 +137,9 @@ function getMediaTypeLabel(type: string): string {
   }
 }
 
-function getMediaCatalogLink(type: string): { href: string; label: string } {
-  switch (type) {
-    case "quran-study": return { href: "/audios", label: "Quran Study" };
-    case "messenger-audio": return { href: "/audios", label: "Messenger Audio" };
-    case "video-program": return { href: "/videos", label: "Videos" };
-    default: return { href: "/archive", label: "Archive" };
-  }
+function getMediaCatalogLink(media: MediaItem): { href: string; label: string } {
+  const collection = getCollection({ type: media.type, title: media.displayTitle || media.title });
+  return { href: getCollectionHref(collection.key), label: collection.label };
 }
 
 function getMediaShortId(media: MediaItem): string {
@@ -215,7 +212,7 @@ export default function GoldenPlayer({
   const mediaType = media.type;
   const isVideo = isVideoType(mediaType);
   const typeLabel = getMediaTypeLabel(mediaType);
-  const catalogLink = getMediaCatalogLink(mediaType);
+  const catalogLink = getMediaCatalogLink(media);
   const shortId = getMediaShortId(media);
 
   // QS-specific slide data (only for quran-study)
@@ -395,7 +392,11 @@ export default function GoldenPlayer({
   }, [absoluteTime]);
 
   /* ---------- Global Player Handoff ---------- */
-  const { playTrack } = useGlobalPlayer();
+  const { playTrack, track: dockTrack, close: closeDock } = useGlobalPlayer();
+  // Starting this player stops a dock left playing from another page, so two never overlap.
+  useEffect(() => {
+    if (isPlaying && dockTrack) closeDock();
+  }, [isPlaying, dockTrack, closeDock]);
   const handoffRef = useRef({
     isPlaying: false,
     time: 0,
@@ -486,6 +487,8 @@ export default function GoldenPlayer({
         }
         return;
       }
+      // Leave browser and OS shortcuts (Ctrl/Cmd+K, Ctrl/Cmd+S, Alt+Arrow) alone.
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
       if (e.code === "Space" || e.key === "k" || e.key === "K") {
         e.preventDefault();
         setIsPlaying((p) => !p);
@@ -842,7 +845,7 @@ export default function GoldenPlayer({
                   <span>Copy Link</span>
                 </button>
 
-                <button type="button" onClick={downloadTranscript} className="qs-btn qs-btn-primary">
+                <button type="button" onClick={downloadTranscript} disabled={segments.length === 0} className="qs-btn qs-btn-primary">
                   <Download className="w-3.5 h-3.5" />
                   <span>Download Transcript</span>
                 </button>
@@ -976,20 +979,6 @@ export default function GoldenPlayer({
               <div className="qs-section-header">
                 <div className="flex items-center gap-3">
                   <h2 className="qs-section-title">Transcript</h2>
-                  <div className="flex items-center gap-1 rounded border border-[var(--qs-border-subtle)] bg-[var(--qs-bg-surface)] p-0.5" role="group" aria-label="Viewing mode">
-                    <button
-                      type="button"
-                      className="px-2.5 py-1 text-xs font-semibold rounded bg-[var(--qs-accent)] text-[var(--qs-bg-primary)] transition-colors"
-                    >
-                      Transcript
-                    </button>
-                    <button
-                      type="button"
-                      className="px-2.5 py-1 text-xs font-semibold rounded text-[var(--qs-text-secondary)] hover:text-[var(--qs-text-primary)] transition-colors"
-                    >
-                      Theater
-                    </button>
-                  </div>
                 </div>
                 <button type="button" onClick={expandAll} className="qs-section-action">
                   Expand All
@@ -1140,7 +1129,9 @@ export default function GoldenPlayer({
 
                 {filteredSegments.length === 0 && (
                   <div className="text-center py-16 text-[var(--qs-text-muted)] text-sm">
-                    No transcript entries matched &ldquo;{debouncedSearch}&rdquo;
+                    {segments.length === 0
+                      ? 'No transcript is available for this recording yet.'
+                      : <>No transcript entries matched &ldquo;{debouncedSearch}&rdquo;</>}
                   </div>
                 )}
               </div>

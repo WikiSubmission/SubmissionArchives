@@ -11,7 +11,6 @@ export const ARCHIVE_RECORD_TYPES = new Set([
   'perspective',
   'appendix',
   'other',
-  'quran',
 ]);
 
 const REQUIRED_COLLECTIONS = {
@@ -20,7 +19,6 @@ const REQUIRED_COLLECTIONS = {
   'Messenger Audios': 1,
   'Submitter Perspectives': 1,
   Appendices: 1,
-  Quran: 114,
   Books: 1,
 };
 
@@ -134,7 +132,7 @@ export function validateArchiveRecords(records, { publicDir }) {
     }
   }
 
-  for (const category of ['Videos', 'Quran Studies', 'Messenger Audios', 'Submitter Perspectives', 'Appendices', 'Quran', 'Books']) {
+  for (const category of ['Videos', 'Quran Studies', 'Messenger Audios', 'Submitter Perspectives', 'Appendices', 'Books']) {
     const searchable = records.some((record) => record.category === category && record.segments?.length > 0);
     if (!searchable) errors.push(`Collection ${category} has no searchable records.`);
   }

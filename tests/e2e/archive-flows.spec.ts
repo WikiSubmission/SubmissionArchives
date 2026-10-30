@@ -14,10 +14,12 @@ test('health endpoint reports the validated catalog as ready', async ({ request 
     });
 });
 
-test('written archive prioritizes books and exposes every newsletter issue', async ({ page }) => {
+test('written archive prioritizes books and lists every appendix and newsletter issue', async ({ page }) => {
     await page.goto('/written');
 
     const books = page.getByRole('region', { name: 'Books & Publications' });
+    // evaluateAll does not wait, so let the grid render before reading it.
+    await expect(books.locator('a[href^="/library/"]').first()).toBeVisible();
     const bookLinks = await books.locator('a[href^="/library/"]').evaluateAll((links) =>
         [...new Set(links.map((link) => link.getAttribute('href')))],
     );
@@ -33,6 +35,13 @@ test('written archive prioritizes books and exposes every newsletter issue', asy
         '/library/computer-speaks',
     ]);
 
+    const appendices = page.getByRole('region', { name: 'Appendices' });
+    const appendixLinks = await appendices.locator('a[href^="/library/"]').evaluateAll((links) =>
+        links.map((link) => link.getAttribute('href')),
+    );
+    expect(appendixLinks).toHaveLength(40);
+    expect(appendixLinks.slice(0, 3)).toEqual(['/library/proclamation', '/library/introduction', '/library/appendix-1']);
+
     const newsletters = page.getByRole('region', { name: 'Submitters Perspectives' });
     await expect(newsletters.getByRole('link', { name: /Search the newsletters/ })).toHaveAttribute(
         'href',
@@ -47,7 +56,7 @@ test('home route exposes primary archive pathways without mobile overflow', asyn
 
     const main = page.getByRole('main');
     await expect(page.getByRole('heading', { level: 1, name: 'SUBMISSION ARCHIVES' })).toBeVisible();
-    await expect(main.getByRole('link', { name: 'Browse all 300+ preserved video recordings' })).toHaveAttribute('href', '/videos');
+    await expect(main.getByRole('link', { name: /^Browse all \d+ recordings$/ })).toHaveAttribute('href', '/media');
     await expect(main.getByRole('link', { name: 'Search the archive', exact: true }).first()).toHaveAttribute(
         'href',
         '/search',
@@ -59,6 +68,15 @@ test('home route exposes primary archive pathways without mobile overflow', asyn
         document.documentElement.scrollWidth - document.documentElement.clientWidth,
     );
     expect(horizontalOverflow).toBeLessThanOrEqual(0);
+});
+
+test('home search form opens the search page with the query', async ({ page }) => {
+    await page.goto('/');
+
+    const form = page.getByRole('main').getByRole('search');
+    await form.getByRole('searchbox', { name: 'Search the archive' }).fill('contact prayers');
+    await form.getByRole('button', { name: 'Search' }).click();
+    await expect(page).toHaveURL(/\/search\?q=contact\+prayers$/);
 });
 
 test('book-only search returns a page-specific reader link', async ({ page }) => {
@@ -84,6 +102,15 @@ test('legacy book slug renders the current PDF', async ({ page }) => {
     await expect(page.locator('canvas')).toHaveCount(2);
 });
 
+test('appendix reader renders the 1992 PDF and returns to the appendix list', async ({ page }) => {
+    await page.goto('/library/appendix-1');
+
+    await expect(page.getByRole('heading', { level: 1, name: '1. One of the Great Miracles [74:35]' })).toBeVisible();
+    await expect(page.getByText("Couldn't load this document.")).toHaveCount(0);
+    await expect(page.locator('canvas').first()).toBeVisible();
+    await expect(page.locator('a[href="/written#appendices"]').first()).toBeAttached();
+});
+
 test('newsletter reader renders its archived PDF', async ({ page }) => {
     await page.goto('/library/SP1985feb');
 
@@ -91,13 +118,24 @@ test('newsletter reader renders its archived PDF', async ({ page }) => {
     await expect(page.locator('canvas')).toHaveCount(2);
 });
 
-test('Quran chapter exposes verse search, editions, RTL text, and copy controls', async ({ page }) => {
-    await page.goto('/quran/1');
+test('recordings page groups video and audio into collections and filters by title', async ({ page }) => {
+    await page.goto('/media');
 
-    await expect(page.getByRole('heading', { level: 1, name: '1. The Key' })).toBeVisible();
-    await expect(page.getByLabel('Search within this sura')).toBeVisible();
-    await expect(page.locator('[dir="rtl"]')).toHaveCount(8);
-    await expect(page.getByRole('button', { name: 'Copy verse' })).toHaveCount(7);
+    await expect(page.getByRole('heading', { level: 1, name: 'Recordings' })).toBeVisible();
+    const collections = page.getByRole('navigation', { name: 'Collections' });
+    await expect(collections.getByRole('link')).toHaveCount(6);
+    await collections.getByRole('link', { name: /Quran Studies/ }).click();
+    await expect(page).toHaveURL(/\/media#quran-studies$/);
+
+    const showAll = page.getByRole('button', { name: /^Show all \d+$/ }).first();
+    await showAll.click();
+    await expect(page.getByRole('button', { name: 'Show fewer' }).first()).toHaveAttribute('aria-expanded', 'true');
+
+    await page.getByLabel('Filter recordings').fill('jinns');
+    await expect(page.getByRole('heading', { level: 2, name: 'Quran Studies' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 2, name: 'Programs' })).toHaveCount(0);
+    await expect(page.getByRole('link', { name: 'Search their transcripts instead' })).toHaveAttribute('href', '/search?q=jinns');
+    await expect(page.getByRole('button', { name: /^Play Quran Study 01/ })).toHaveCount(1);
 });
 
 test('media player loads YouTube and keeps transcript controls keyboard reachable', async ({ page }) => {
@@ -106,18 +144,17 @@ test('media player loads YouTube and keeps transcript controls keyboard reachabl
     await expect(page.getByRole('heading', { level: 1, name: 'What is Life All About?' })).toBeVisible();
     await expect(page.locator('iframe[title="YouTube video player"]')).toBeVisible();
 
-    const transcriptMode = page.getByRole('button', { name: 'Transcript', exact: true });
-    await transcriptMode.focus();
-    await expect(transcriptMode).toBeFocused();
+    const expandAll = page.getByRole('button', { name: 'Expand All', exact: true });
+    await expandAll.focus();
+    await expect(expandAll).toBeFocused();
     await page.keyboard.press('Tab');
-    await expect(page.getByRole('button', { name: 'Theater', exact: true })).toBeFocused();
-    await expect(page.getByLabel('Search transcript')).toBeVisible();
+    await expect(page.getByLabel('Search transcript')).toBeFocused();
 });
 
 test('keyboard navigation moves through result cards and into passages', async ({ page }) => {
     await page.goto('/search?filters=other');
 
-    const input = page.getByRole('combobox');
+    const input = page.getByRole('combobox', { name: 'Search transcripts, perspectives, appendices' });
     await input.fill('prayer');
     await page.getByRole('button', { name: 'Search', exact: true }).click();
 

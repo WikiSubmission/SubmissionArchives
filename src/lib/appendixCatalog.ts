@@ -8,42 +8,15 @@ export type AppendixItem = {
     filename: string;
     pdfLink: string;
     thumbnailOverride?: string;
-    editions: Partial<Record<AppendixEdition, AppendixEditionAsset>>;
 };
 
-export type AppendixEdition = '1981' | '1989' | '1992';
-
-export type AppendixEditionAsset = {
-    pdfLink: string;
-    thumbnail?: string;
-    startPage?: number;
-};
-
-type AppendixEditionConfig = {
-    sharedPdf?: string;
-    splitPdfs?: boolean;
-    startPages?: Record<string, number>;
-};
-
-type AppendixEditionManifest = {
-    primaryEdition: AppendixEdition;
-    editions: Record<AppendixEdition, AppendixEditionConfig>;
-};
-
-const APPENDICES_DIR = path.join(process.cwd(), 'public', 'content', 'quran', 'organized_appendices');
-const PRIMARY_EDITION_DIR = path.join(APPENDICES_DIR, '1992');
+// The appendices of the 1992 edition of Quran: The Final Testament.
+const APPENDICES_DIR = path.join(process.cwd(), 'public', 'content', 'quran', 'organized_appendices', '1992');
+const APPENDICES_PUBLIC_PATH = '/content/quran/organized_appendices/1992';
 const CSV_PATH = path.join(process.cwd(), 'data', 'catalog', 'quran-appendices.csv');
-const EDITION_MANIFEST_PATH = path.join(process.cwd(), 'data', 'catalog', 'appendix-editions.json');
 
 let rowsCache: Array<Record<string, string>> | null = null;
 let catalogCache: AppendixItem[] | null = null;
-let editionManifestCache: AppendixEditionManifest | null = null;
-
-function getEditionManifest() {
-    if (editionManifestCache) return editionManifestCache;
-    editionManifestCache = JSON.parse(fs.readFileSync(EDITION_MANIFEST_PATH, 'utf8')) as AppendixEditionManifest;
-    return editionManifestCache;
-}
 
 function getRows() {
     if (rowsCache) return rowsCache;
@@ -62,7 +35,7 @@ function titleFromFilename(filename: string) {
 
 export function getAppendixCatalog() {
     if (catalogCache) return catalogCache;
-    if (!fs.existsSync(PRIMARY_EDITION_DIR)) return [];
+    if (!fs.existsSync(APPENDICES_DIR)) return [];
 
     const titleById = new Map<string, string>();
     for (const row of getRows()) {
@@ -72,26 +45,16 @@ export function getAppendixCatalog() {
     }
 
     catalogCache = fs
-        .readdirSync(PRIMARY_EDITION_DIR)
+        .readdirSync(APPENDICES_DIR)
         .filter((name) => name.toLowerCase().endsWith('.pdf'))
         .map((filename) => {
             const id = filenameToId(filename);
-            const editions: AppendixItem['editions'] = {};
-
-            for (const edition of ['1981', '1989', '1992'] as const) {
-                const asset = getEditionAsset(id, filename, edition);
-                if (asset) editions[edition] = asset;
-            }
-
-            const primaryAsset = editions['1992']!;
-            
             return {
                 id,
                 title: titleById.get(id) ?? titleFromFilename(filename),
                 filename,
-                pdfLink: primaryAsset.pdfLink,
-                thumbnailOverride: primaryAsset.thumbnail,
-                editions,
+                pdfLink: `${APPENDICES_PUBLIC_PATH}/${filename}`,
+                thumbnailOverride: getThumbnailLink(filename),
             };
         })
         .sort((a, b) => sortValue(a.id) - sortValue(b.id));
@@ -99,44 +62,10 @@ export function getAppendixCatalog() {
     return catalogCache;
 }
 
-function getEditionAsset(id: string, primaryFilename: string, edition: AppendixEdition): AppendixEditionAsset | undefined {
-    const editionDir = path.join(APPENDICES_DIR, edition);
-    const publicBase = `/content/quran/organized_appendices/${edition}`;
-    const editionConfig = getEditionManifest().editions[edition];
-
-    if (editionConfig.sharedPdf) {
-        const startPage = editionConfig.startPages?.[id];
-        const filename = editionConfig.sharedPdf;
-        if (startPage === undefined || !fs.existsSync(path.join(editionDir, filename))) return undefined;
-
-        return {
-            pdfLink: `${publicBase}/${filename}`,
-            thumbnail: getThumbnailLink(path.join(editionDir, 'thumbnails'), `${publicBase}/thumbnails`, `${id}.pdf`),
-            startPage,
-        };
-    }
-
-    const filename = edition === '1992' ? primaryFilename : `${id}.pdf`;
-    if (!fs.existsSync(path.join(editionDir, filename))) return undefined;
-
-    return {
-        pdfLink: `${publicBase}/${filename}`,
-        thumbnail: getThumbnailLink(path.join(editionDir, 'thumbnails'), `${publicBase}/thumbnails`, filename),
-    };
-}
-
-function getThumbnailLink(thumbnailDir: string, publicBase: string, pdfFilename: string) {
+function getThumbnailLink(pdfFilename: string) {
     const baseName = pdfFilename.replace(/\.pdf$/i, '');
-    const jpgName = `${baseName}.jpg`;
-    const pngName = `${baseName}.png`;
-    
-    if (fs.existsSync(path.join(thumbnailDir, jpgName))) {
-        return `${publicBase}/${jpgName}`;
-    }
-    if (fs.existsSync(path.join(thumbnailDir, pngName))) {
-        return `${publicBase}/${pngName}`;
-    }
-    return undefined;
+    const match = [`${baseName}.jpg`, `${baseName}.png`].find((name) => fs.existsSync(path.join(APPENDICES_DIR, 'thumbnails', name)));
+    return match ? `${APPENDICES_PUBLIC_PATH}/thumbnails/${match}` : undefined;
 }
 
 export function getAppendixItem(id: string) {

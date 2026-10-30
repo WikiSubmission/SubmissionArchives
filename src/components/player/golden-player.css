@@ -497,6 +497,11 @@
   color: var(--qs-bg-primary);
 }
 
+.qs-golden-player .qs-btn:disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
 @media (max-width: 640px) {
   .qs-golden-player .qs-action-group {
     width: 100%;

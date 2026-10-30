@@ -475,64 +475,6 @@ a {
   box-shadow: 0 0 8px var(--ed-fg);
 }
 
-/* ==========================================================================
-   Scroll Reveal — Subtle 200–300ms entrance with no bounce
-   ========================================================================== */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(12px);
-  transition:
-    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
-}
-
-@media (min-width: 768px) {
-  .reveal {
-    transform: translateY(20px);
-    transition-duration: var(--dur-slow);
-  }
-}
-
-.reveal.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Keyframe animations and scripture helpers */
-@keyframes archive-eq-pulse {
-  0%, 100% { transform: scaleY(0.55); }
-  50% { transform: scaleY(1); }
-}
-.archive-eq-bar--live {
-  animation: archive-eq-pulse 900ms ease-in-out infinite;
-  transform-origin: bottom;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-fade-in-up {
-  animation: fadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes slideInRight {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-}
-.animate-slide-in-right {
-  animation: slideInRight 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 .scrollbar-thin::-webkit-scrollbar {
   width: 5px;
 }
@@ -542,27 +484,6 @@ a {
 .scrollbar-thin::-webkit-scrollbar-thumb {
   background: var(--ed-rule);
   border-radius: 10px;
-}
-
-.quran-mark {
-  background: var(--ed-rule-strong);
-  color: var(--ed-fg);
-  padding: 0 2px;
-  border-radius: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-  .archive-eq-bar--live,
-  .animate-fade-in-up,
-  .animate-slide-in-right {
-    animation: none !important;
-    opacity: 1;
-  }
 }
 
 /* ==========================================================================
@@ -686,33 +607,6 @@ a {
     var(--ed-shadow-md);
 }
 
-/* Cooldock Widget style — macOS smart widget look */
-.cooldock-widget {
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: color-mix(in oklch, var(--ed-surface) 65%, transparent);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
-  backdrop-filter: blur(24px) saturate(1.4);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    0 12px 32px -8px rgba(0, 0, 0, 0.4);
-  transition:
-    transform var(--dur-med) var(--ease-spring-out),
-    box-shadow var(--dur-med) var(--ease-spring-out),
-    border-color var(--dur-fast) var(--ease-spring-out),
-    background-color var(--dur-fast) var(--ease-spring-out);
-}
-
-@media (hover: hover) {
-  .cooldock-widget:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255, 255, 255, 0.22);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      0 20px 48px -10px rgba(0, 0, 0, 0.55);
-  }
-}
-
 /* Enterprise Card with high refinement and dock.cool feel */
 .lift-card {
   border-radius: 20px;
@@ -830,17 +724,6 @@ a {
   contain-intrinsic-size: auto 320px;
 }
 
-@keyframes archive-media-reveal {
-  from {
-    opacity: 0.55;
-    transform: scale(1.018);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @keyframes float-slow {
   0%,
   100% {
@@ -871,12 +754,6 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-
-  /* Never leave revealed content stranded invisible */
-  .reveal {
-    opacity: 1 !important;
-    transform: none !important;
   }
 }
 
@@ -948,87 +825,6 @@ mark.pdf-search-highlight {
   }
 }
 
-
-/* ------------------------------ Qur'an reader ------------------------------ */
-
-/* Frosted-glass sticky header — tinted translucent in BOTH themes */
-.quran-glass {
-    background-color: color-mix(in oklab, var(--ed-bg) 76%, transparent);
-    -webkit-backdrop-filter: blur(14px) saturate(1.5);
-    backdrop-filter: blur(14px) saturate(1.5);
-}
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-    .quran-glass {
-        background-color: var(--ed-bg);
-    }
-}
-
-/* Verse scroll-reveal */
-@keyframes quran-rise {
-    from {
-        opacity: 0;
-        transform: translateY(18px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.quran-reveal {
-    opacity: 0;
-}
-.quran-reveal.is-visible {
-    animation: quran-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* Edition cross-fade (replays because the keyed wrapper remounts) */
-@keyframes quran-edition-in {
-    from {
-        opacity: 0;
-        transform: translateY(6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.quran-edition-swap {
-    animation: quran-edition-in 0.35s ease-out;
-}
-
-/* Sliding segmented-control thumb */
-.quran-thumb {
-    transition:
-        transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
-        width 0.34s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.2s ease;
-    will-change: transform;
-}
-
-/* Search highlight — theme-aware accent wash that wraps cleanly across lines */
-.quran-mark {
-    background-color: color-mix(in oklab, var(--ed-accent) 26%, transparent);
-    color: inherit;
-    border-radius: 0.25em;
-    padding-inline: 0.12em;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-}
-
-/* Respect reduced-motion preferences */
-@media (prefers-reduced-motion: reduce) {
-    .quran-reveal,
-    .quran-reveal.is-visible {
-        opacity: 1;
-        animation: none;
-    }
-    .quran-edition-swap {
-        animation: none;
-    }
-    .quran-thumb {
-        transition: none;
-    }
-}
 
 /* ------------------------------ Media player ------------------------------ */
 /* Enter animations replace framer-motion; the global reduced-motion block
@@ -1830,31 +1626,6 @@ mark.pdf-search-highlight {
   color: #9E9690 !important;
 }
 
-/* ==========================================================================
-   Archive Editorial Thumbnail Light Mode Inversion
-   Transforms dark obsidian blueprint & schematic cover artwork into
-   warm, high-contrast archival parchment plates in light mode.
-   ========================================================================== */
-
-:root:not(.dark) .editorial-thumbnail-image,
-:root:not([data-theme="dark"]) .editorial-thumbnail-image,
-[data-theme="light"] .editorial-thumbnail-image,
-html:not(.dark) .editorial-thumbnail-image,
-:root:not(.dark) .editorial-figure-frame img[src$=".svg"],
-:root:not([data-theme="dark"]) .editorial-figure-frame img[src$=".svg"],
-[data-theme="light"] .editorial-figure-frame img[src$=".svg"],
-html:not(.dark) .editorial-figure-frame img[src$=".svg"] {
-  filter: invert(0.92) hue-rotate(180deg) contrast(1.05) brightness(0.98);
-  transition: filter 250ms ease;
-}
-
-.dark .editorial-thumbnail-image,
-[data-theme="dark"] .editorial-thumbnail-image,
-.dark .editorial-figure-frame img[src$=".svg"],
-[data-theme="dark"] .editorial-figure-frame img[src$=".svg"] {
-  filter: none;
-  transition: filter 250ms ease;
-}
 /* Semantic aliases preserve established editorial and archive surfaces. */
 :root {
   --bg: var(--ed-bg); --surface: var(--ed-surface); --text: var(--ed-fg);

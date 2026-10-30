@@ -14,19 +14,15 @@ const MASTER_OUTPUT = path.join(GENERATED_DIR, 'MASTER_INDEX.json');
 const ASSET_MANIFEST_OUTPUT = path.join(GENERATED_DIR, 'ASSET_MANIFEST.csv');
 const BOOKS_LIST_OUTPUT = path.join(GENERATED_DIR, 'BOOKS_LIST.json');
 const VALIDATION_OUTPUT = path.join(GENERATED_DIR, 'CATALOG_VALIDATION.json');
-const APPENDIX_DIR = path.join(ROOT, 'public', 'content', 'quran', 'organized_appendices');
-const APPENDIX_PDF_DIR = path.join(APPENDIX_DIR, '1992');
+const APPENDIX_PDF_DIR = path.join(ROOT, 'public', 'content', 'quran', 'organized_appendices', '1992');
 const APPENDIX_THUMB_DIR = path.join(APPENDIX_PDF_DIR, 'thumbnails');
 const APPENDIX_CSV = path.join(CATALOG_DIR, 'quran-appendices.csv');
-const APPENDIX_EDITION_MANIFEST = readJson(path.join(CATALOG_DIR, 'appendix-editions.json'));
 const NEWSLETTER_DIR = path.join(ROOT, 'public', 'content', 'written', 'newsletters');
 const NEWSLETTER_CATALOG = path.join(CATALOG_DIR, 'newsletters.json');
 const SP_WEB_SEGMENTS = path.join(ROOT, 'data', 'sources', 'sp-web-segments.json');
 const NEWSLETTER_THUMB_DIR = path.join(NEWSLETTER_DIR, 'thumbnails');
 const NEWSLETTER_PDF_DIR = path.join(NEWSLETTER_DIR, 'pdfs');
 const SOURCE_DATA_DIR = path.join(ROOT, 'data', 'sources');
-const QURAN_DIR = path.join(SOURCE_DATA_DIR, 'quran');
-const QURAN_CHAPTERS_OUTPUT = path.join(GENERATED_DIR, 'QURAN_CHAPTERS.json');
 const BOOKS_DIR = path.join(ROOT, 'public', 'content', 'written', 'books');
 const BOOKS_TRANSCRIPTION_DIR = path.join(SOURCE_DATA_DIR, 'books');
 const BOOKS_THUMB_DIR = path.join(BOOKS_DIR, 'thumbnails');
@@ -326,29 +322,6 @@ function titleFromAppendixFilename(filename) {
   return appendixNumber ? `Appendix ${appendixNumber}` : filename.replace(/\.pdf$/i, '');
 }
 
-function getAppendixEditions(id, primaryFilename) {
-  return Object.fromEntries(
-    Object.entries(APPENDIX_EDITION_MANIFEST.editions).flatMap(([edition, config]) => {
-      const editionDir = path.join(APPENDIX_DIR, edition);
-      const publicBase = `/content/quran/organized_appendices/${edition}`;
-      const startPage = config.startPages?.[id];
-      const filename = config.sharedPdf || primaryFilename;
-      if (config.sharedPdf && startPage === undefined) return [];
-      if (!fs.existsSync(path.join(editionDir, filename))) return [];
-
-      return [[edition, {
-        pdfLink: `${publicBase}/${filename}`,
-        thumbnailOverride: getThumbnailLink(
-          path.join(editionDir, 'thumbnails'),
-          `${publicBase}/thumbnails`,
-          config.sharedPdf ? `${id}.pdf` : filename,
-        ),
-        startPage,
-      }]];
-    }),
-  );
-}
-
 function appendixSortValue(id) {
   if (id === 'proclamation') return -2;
   if (id === 'introduction') return -1;
@@ -527,7 +500,6 @@ async function buildAppendixIndex() {
   return filenames
     .map((filename) => {
       const id = filename.replace(/\.pdf$/i, '').replace(/^appendix[_-]0*(\d+)$/, 'appendix-$1');
-      const editions = getAppendixEditions(id, filename);
       return {
         id,
         title: titleById.get(id) ?? titleFromAppendixFilename(filename),
@@ -541,7 +513,6 @@ async function buildAppendixIndex() {
           '/content/quran/organized_appendices/1992/thumbnails',
           filename,
         ),
-        editions,
         transcriptStatus: segmentsById.has(id) ? 'available' : 'missing',
         segments: segmentsById.get(id) ?? [],
       };
@@ -920,109 +891,6 @@ function buildBooksIndex() {
     });
 }
 
-// Reads the raw Quran CSVs (verses, chapters, footnotes, subtitles — word-by-word
-// is intentionally not used here) and joins them by verse_id into one record per
-// chapter. Footnotes and subtitles are folded into each verse's searchable text
-// so a search hit inside commentary still surfaces the verse it belongs to.
-function buildQuranIndex() {
-  const primaryDir = path.join(QURAN_DIR, '1992');
-  const chapterRows = readCsvRows(path.join(primaryDir, 'ws_quran_chapters_rows.csv'));
-  const textRows = readCsvRows(path.join(primaryDir, 'ws_quran_text_rows.csv'));
-  const footnoteRows = readCsvRows(path.join(primaryDir, 'ws_quran_footnotes_rows.csv'));
-  const subtitleRows = readCsvRows(path.join(primaryDir, 'ws_quran_subtitles_rows.csv'));
-
-  if (chapterRows.length === 0 || textRows.length === 0) {
-    return { quranMasterItems: [], quranChapters: [] };
-  }
-
-  const footnoteByVerseId = new Map();
-  for (const row of footnoteRows) {
-    if (!row.verse_id || !row.english) continue;
-    footnoteByVerseId.set(row.verse_id, row.english.replace(/^±\d+:\d+(-\d+)?\s*/, '').trim());
-  }
-
-  const subtitleByVerseId = new Map();
-  for (const row of subtitleRows) {
-    if (!row.verse_id || !row.english) continue;
-    subtitleByVerseId.set(row.verse_id, row.english.replace(/\*+$/, '').trim());
-  }
-
-  const versesByChapter = new Map();
-  for (const row of textRows) {
-    const chapterNumber = Number(row.chapter_number);
-    const verseNumber = Number(row.verse_number);
-    if (!chapterNumber || !verseNumber) continue;
-
-    const verse = {
-      verseNumber,
-      verseId: row.verse_id,
-      arabic: row.arabic,
-      arabicClean: row.arabic_clean,
-      transliterated: row.transliterated,
-      english: (row.english || '').replace(/±/g, '').trim(),
-      subtitle: subtitleByVerseId.get(row.verse_id) || undefined,
-      footnote: footnoteByVerseId.get(row.verse_id) || undefined,
-    };
-
-    const list = versesByChapter.get(chapterNumber) ?? [];
-    list.push(verse);
-    versesByChapter.set(chapterNumber, list);
-  }
-  for (const list of versesByChapter.values()) {
-    list.sort((a, b) => a.verseNumber - b.verseNumber);
-  }
-
-  const quranChapters = [];
-  const quranMasterItems = [];
-
-  for (const row of chapterRows) {
-    const chapterNumber = Number(row.chapter_number);
-    if (!chapterNumber) continue;
-
-    const verses = versesByChapter.get(chapterNumber) ?? [];
-    const displayTitle = `${chapterNumber}. ${row.title_english}`;
-
-    quranChapters.push({
-      chapterNumber,
-      verseCount: Number(row.chapter_verses) || verses.length,
-      revelationOrder: Number(row.revelation_order) || undefined,
-      titleEnglish: row.title_english,
-      titleArabic: row.title_arabic,
-      titleTransliterated: row.title_transliterated,
-      verses,
-    });
-
-    // One segment per content kind (rather than one combined blob per verse) so a
-    // search hit can be labeled as coming from the verse text, its heading, or its
-    // footnote — otherwise a footnote match reads as an unexplained Quran result.
-    const segments = [];
-    for (const verse of verses) {
-      if (verse.subtitle) {
-        segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.subtitle, page: verse.verseNumber, label: 'heading-1992' });
-      }
-      if (verse.english) {
-        segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.english, page: verse.verseNumber, label: 'verse-1992' });
-      }
-      if (verse.footnote) {
-        segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.footnote, page: verse.verseNumber, label: 'footnote-1992' });
-      }
-    }
-
-    quranMasterItems.push({
-      id: `quran/${chapterNumber}`,
-      title: displayTitle,
-      displayTitle,
-      type: 'quran',
-      author: 'Dr. Rashad Khalifa',
-      thumbnailOverride: '/images/placeholders/rashad-khalifa.png',
-      segments,
-      transcriptStatus: segments.length > 0 ? 'available' : 'missing',
-    });
-  }
-
-  return { quranMasterItems, quranChapters };
-}
-
 
 // Many audio and video titles state their date explicitly — "…(Kathryn Jinns, 05/26/1989)".
 // Reading that is derivation, not guessing, so those records get a year they previously
@@ -1081,7 +949,6 @@ function masterRecord(item, category) {
     transcriptionMethod: item.transcriptionMethod,
     transcriptionQuality: item.transcriptionQuality,
     editionYear: item.editionYear,
-    editions: item.editions,
     transcriptStatus: item.transcriptStatus ?? ((item.segments?.length ?? 0) > 0 ? 'available' : 'missing'),
     segmentCount: item.segments?.length ?? 0,
     segments: compactSegments(item.segments ?? []),
@@ -1115,12 +982,7 @@ async function buildAssetManifest(masterIndex) {
       }
     } else if (item.category === 'Quran Studies' || item.category === 'Messenger Audios') {
       // Audio media plays from YouTube; no local media asset to track.
-    } else if (item.category === 'Appendices' && item.editions) {
-      for (const [edition, asset] of Object.entries(item.editions)) {
-        addAsset(assets, item, item.category, `pdf-${edition}`, asset.pdfLink);
-        addAsset(assets, item, item.category, `thumbnail-${edition}`, asset.thumbnailOverride);
-      }
-    } else if (item.category === 'Submitter Perspectives' || item.category === 'Books') {
+    } else if (item.category === 'Appendices' || item.category === 'Submitter Perspectives' || item.category === 'Books') {
       addAsset(assets, item, item.category, 'pdf', item.pdfLink);
     }
 
@@ -1181,7 +1043,7 @@ function fingerprintSources() {
 }
 
 function outputsPresent() {
-  return [MASTER_OUTPUT, BOOKS_LIST_OUTPUT, VALIDATION_OUTPUT, QURAN_CHAPTERS_OUTPUT, ASSET_MANIFEST_OUTPUT]
+  return [MASTER_OUTPUT, BOOKS_LIST_OUTPUT, VALIDATION_OUTPUT, ASSET_MANIFEST_OUTPUT]
     .every((file) => fs.existsSync(file));
 }
 
@@ -1206,7 +1068,6 @@ async function main() {
   const fullAudioIndex = buildAudioIndex({ includeEmpty: true }, playlistIndex);
   const appendixIndex = await buildAppendixIndex();
   const newsletterIndex = buildNewsletterIndex();
-  const { quranMasterItems, quranChapters } = buildQuranIndex();
   const booksIndex = buildBooksIndex();
   const masterIndex = [
     ...fullVideoIndex.map((item) => masterRecord(item, 'Videos')),
@@ -1218,7 +1079,6 @@ async function main() {
       .map((item) => masterRecord(item, 'Messenger Audios')),
     ...newsletterIndex.map((item) => masterRecord(item, 'Submitter Perspectives')),
     ...appendixIndex.map((item) => masterRecord(item, 'Appendices')),
-    ...quranMasterItems.map((item) => masterRecord(item, 'Quran')),
     ...booksIndex.map((item) => masterRecord(item, 'Books')),
   ];
 
@@ -1243,7 +1103,6 @@ async function main() {
       : value;
   }
 
-  fs.writeFileSync(QURAN_CHAPTERS_OUTPUT, `${JSON.stringify(quranChapters, normalizeLineEndings, 2)}\n`);
   fs.writeFileSync(MASTER_OUTPUT, `${JSON.stringify(masterIndex, normalizeLineEndings, 2)}\n`);
   fs.writeFileSync(BOOKS_LIST_OUTPUT, `${JSON.stringify(booksList, normalizeLineEndings, 2)}\n`);
   fs.writeFileSync(VALIDATION_OUTPUT, `${JSON.stringify(validationReport, normalizeLineEndings, 2)}\n`);
@@ -1262,7 +1121,6 @@ async function main() {
   console.log(`Wrote ${masterIndex.length} master records to ${path.relative(ROOT, MASTER_OUTPUT)}`);
   console.log(`Wrote ${booksList.length} book records to ${path.relative(ROOT, BOOKS_LIST_OUTPUT)}`);
   console.log(`Wrote ${assetManifest.length} asset rows to ${path.relative(ROOT, ASSET_MANIFEST_OUTPUT)}`);
-  console.log(`Wrote ${quranChapters.length} Quran chapters to ${path.relative(ROOT, QURAN_CHAPTERS_OUTPUT)}`);
   fs.writeFileSync(INDEX_MANIFEST, `${JSON.stringify({ fingerprint, generatedAt: null }, null, 2)}
 `);
 

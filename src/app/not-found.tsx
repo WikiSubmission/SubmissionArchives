@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { Compass, Home, Search, BookOpen } from 'lucide-react';
+import { Compass, Home, Search, Video } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Record Not Found — Submission Archives',
@@ -62,11 +62,11 @@ export default function NotFound() {
                             <span>Search Records</span>
                         </Link>
                         <Link
-                            href="/quran"
+                            href="/media"
                             className="inline-flex items-center gap-2 rounded border border-ed-rule bg-ed-surface px-4 py-2.5 text-xs font-semibold text-ed-fg-secondary transition-all hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg active:scale-[0.98]"
                         >
-                            <BookOpen className="w-3.5 h-3.5" />
-                            <span>Browse Quran</span>
+                            <Video className="w-3.5 h-3.5" />
+                            <span>Browse Recordings</span>
                         </Link>
                     </div>
 

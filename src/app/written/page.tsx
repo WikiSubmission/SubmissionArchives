@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
-import booksData from '../../../public/data/generated_indices/BOOKS_LIST.json';
+import { getBooks } from '@/lib/books';
 import { getNewsletterIssues } from '@/lib/newsletterCatalog';
+import { getAppendixCatalog } from '@/lib/appendixCatalog';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import SubmittersPerspectiveGrid from '@/components/written/SubmittersPerspectiveGrid';
 import BooksGrid from '@/components/written/BooksGrid';
+import AppendixList from '@/components/written/AppendixList';
 import { getBookPreviews, type BookSummaryItem } from '@/lib/bookPreviews';
 
 export const revalidate = 86400;
@@ -17,29 +19,10 @@ export const metadata: Metadata = {
         'Preserved books, study publications, newsletters, appendices, and historical scans from Masjid Tucson (1974–1990).',
 };
 
-const preferredBookOrder = [
-    'quran-visual-presentation',
-    'quran-hadith-islam',
-    'miracle-of-quran-alphabets',
-    'islam-volume-1-number-1-april-1974',
-    'islam-volume-1-number-2-july-1974',
-    'islam-volume-1-number-3-4-january-1975',
-    'perpetual-miracle',
-    'computer-speaks',
-] as const;
-
-const preferredBookRank = new Map<string, number>(preferredBookOrder.map((id, index) => [id, index]));
-
 export default function WrittenArchivePage() {
-    const books = booksData
-        .filter((book) => book.category === 'Books')
-        .sort((left, right) => {
-            const leftRank = preferredBookRank.get(left.id) ?? Number.MAX_SAFE_INTEGER;
-            const rightRank = preferredBookRank.get(right.id) ?? Number.MAX_SAFE_INTEGER;
-            return leftRank - rightRank || left.title.localeCompare(right.title);
-        });
-
+    const books = getBooks();
     const newsletterIssues = getNewsletterIssues();
+    const appendices = getAppendixCatalog();
     const bookPreviews = getBookPreviews();
 
     // Only the fields the modal renders cross to the client; the full records carry
@@ -85,8 +68,8 @@ export default function WrittenArchivePage() {
                                 className="text-[16.5px] leading-[1.6] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
-                                A reading room for the historical books, translations, research studies, and preserved
-                                newsletters. Transcribed and indexed for systematic study and verse verification.
+                                A reading room for the historical books, translations, appendices, research studies, and
+                                preserved newsletters. Transcribed and indexed for systematic study and verse verification.
                             </p>
                         </div>
                         <div className="flex flex-wrap items-center gap-4">
@@ -116,19 +99,11 @@ export default function WrittenArchivePage() {
                                     </span>
                                 </div>
                             </div>
-
-                            <Link
-                                href="/editorials"
-                                className="inline-flex items-center gap-1.5 rounded-[6px] border border-ed-accent/30 bg-ed-accent px-4 py-2.5 text-[13px] font-semibold text-white shadow-sm transition-all hover:bg-ed-accent-strong hover:shadow-md"
-                            >
-                                See SA Editorials
-                                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                            </Link>
                         </div>
                     </header>
 
                     {/* Section 1: Books & Publications */}
-                    <section aria-label="Books & Publications" aria-labelledby="featured-books" className="mb-16">
+                    <section id="books" aria-labelledby="featured-books" className="mb-16 scroll-mt-24">
                         <div className="mb-7 flex items-center gap-4 border-b border-ed-rule pb-3">
                             <h2
                                 id="featured-books"
@@ -146,8 +121,40 @@ export default function WrittenArchivePage() {
                         <BooksGrid books={bookSummaries} previews={bookPreviews} />
                     </section>
 
-                    {/* Section 2: Submitters Perspectives Newsletters */}
-                    <section aria-label="Submitters Perspectives" className="mb-16">
+                    {/* Section 2: Appendices */}
+                    <section id="appendices" aria-labelledby="appendices-title" className="mb-16 scroll-mt-24">
+                        <div className="mb-5 flex flex-wrap items-center justify-between gap-4 border-b border-ed-rule pb-3">
+                            <div className="flex items-center gap-4 flex-1">
+                                <h2
+                                    id="appendices-title"
+                                    className="whitespace-nowrap text-[22px] font-semibold tracking-[-0.01em] text-ed-fg"
+                                    style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                                >
+                                    Appendices
+                                </h2>
+                                <div className="h-px flex-1 bg-ed-rule" />
+                                <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-ed-fg-muted">
+                                    {appendices.length} documents
+                                </span>
+                            </div>
+
+                            <Link
+                                href="/search?filters=appendix"
+                                className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-ed-accent transition-colors hover:opacity-90"
+                            >
+                                Search the appendices
+                                <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+                            </Link>
+                        </div>
+                        <p className="mb-4 max-w-[65ch] text-[13px] leading-relaxed text-ed-fg-secondary">
+                            The proclamation, introduction and appendices of Quran: The Final Testament, from the 1992 edition.
+                        </p>
+
+                        <AppendixList appendices={appendices} />
+                    </section>
+
+                    {/* Section 3: Submitters Perspectives Newsletters */}
+                    <section id="newsletters" aria-labelledby="submitters-perspectives" className="mb-16 scroll-mt-24">
                         <div className="mb-7 flex flex-wrap items-center justify-between gap-4 border-b border-ed-rule pb-3">
                             <div className="flex items-center gap-4 flex-1">
                                 <h2

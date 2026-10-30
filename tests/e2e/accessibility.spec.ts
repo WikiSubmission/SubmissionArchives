@@ -6,7 +6,7 @@ const routes = [
     '/search',
     '/collections',
     '/explore',
-    '/quran/1',
+    '/media',
     '/media/video-program/what-is-life-all-about',
     '/library/salat-booklet',
 ];
@@ -18,7 +18,7 @@ for (const route of routes) {
         // axe computes contrast from resolved colours, so it has to run after the page
         // has visually settled. Scanning too early reports near-white text as failing
         // because the dark surface behind it has not painted yet — which showed up as
-        // an order-dependent flake on /quran/1 rather than a real defect.
+        // an order-dependent flake on a reader page rather than a real defect.
         // Not networkidle: media pages hold connections open, so it never settles.
         await page.evaluate(() => document.fonts.ready);
         await page.evaluate(

@@ -12,9 +12,7 @@ const REVALIDATED_PATHS = [
     '/',
     '/search',
     '/written',
-    '/videos',
-    '/audios',
-    '/scripture/quran',
+    '/media',
 ];
 
 export async function POST(request: Request) {

@@ -3,10 +3,11 @@
 import { Play } from 'lucide-react';
 import { useGlobalPlayer, type PlayerTrack } from './GlobalMediaPlayer';
 
-// Cards are wrapped in a Link, so this has to swallow the click or starting playback
-// would also navigate away from the page you wanted to keep browsing.
+// Sits inside a row whose link covers it, so it keeps the click to itself or starting
+// playback would also open the recording page you wanted to keep browsing from.
 export default function PlayButton({ track }: { track: PlayerTrack }) {
-    const { playTrack } = useGlobalPlayer();
+    const { track: current, isPlaying, playTrack } = useGlobalPlayer();
+    const playing = isPlaying && current?.id === track.id;
 
     return (
         <button
@@ -17,22 +18,13 @@ export default function PlayButton({ track }: { track: PlayerTrack }) {
                 playTrack(track);
             }}
             aria-label={`Play ${track.title}`}
-            className="absolute left-2.5 top-2.5 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/70 text-white opacity-0 shadow-lg backdrop-blur-sm transition-all duration-200 hover:scale-105 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--qs-accent)] group-hover:opacity-100 motion-reduce:transition-none"
-            style={{
-                ['--tw-ring-color' as string]: 'var(--qs-accent)',
-            }}
-            onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--qs-accent)';
-                (e.currentTarget as HTMLElement).style.color = 'var(--qs-bg-primary)';
-                (e.currentTarget as HTMLElement).style.borderColor = 'var(--qs-accent)';
-            }}
-            onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-                (e.currentTarget as HTMLElement).style.color = '#ffffff';
-                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.2)';
-            }}
+            className={`relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${
+                playing
+                    ? 'border-ed-accent bg-ed-accent text-white dark:text-[#0F0E0D]'
+                    : 'border-ed-rule-strong text-ed-fg hover:border-ed-accent hover:text-ed-accent'
+            }`}
         >
-            <Play className="h-4 w-4 translate-x-[1px]" />
+            <Play className="ml-0.5 h-3.5 w-3.5 fill-current" aria-hidden="true" />
         </button>
     );
 }

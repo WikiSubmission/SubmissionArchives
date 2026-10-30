@@ -2,14 +2,16 @@ import { expect, test } from '@playwright/test';
 
 const RESULT_CARD = '#search-results [data-media-id]';
 
-// The result list is windowed, so the number of nodes in the DOM is whatever fits
-// the viewport plus overscan — never the number loaded. Assertions therefore go
-// through the stats line and the Load More button rather than counting nodes.
-const STATS = /(\d+) sources? · (\d+) passages?/;
-const REMAINING = /Load More Results \((\d+) remaining\)/;
+// Counts are locale-formatted ("1,204"), so the digits may carry separators.
+const STATS = /([\d,]+) sources? · ([\d,]+) passages?/;
+const REMAINING = /Load More Results \(([\d,]+) remaining\)/;
+
+function toNumber(digits: string | undefined): number {
+    return Number(digits?.replace(/,/g, ''));
+}
 
 async function remainingCount(text: string | null): Promise<number> {
-    return Number(text?.match(REMAINING)?.[1]);
+    return toNumber(text?.match(REMAINING)?.[1]);
 }
 
 test.describe('search client', () => {
@@ -20,13 +22,11 @@ test.describe('search client', () => {
         await expect(page.getByText(STATS)).toBeVisible({ timeout: 45_000 });
         await expect(page.locator(RESULT_CARD).first()).toBeVisible();
 
-        const total = Number((await page.getByText(STATS).textContent())?.match(STATS)?.[1]);
+        const total = toNumber((await page.getByText(STATS).textContent())?.match(STATS)?.[1]);
         expect(total).toBeGreaterThan(10);
 
-        // Windowed, so fewer nodes than loaded — but the first page is what drives it.
-        const rendered = await page.locator(RESULT_CARD).count();
-        expect(rendered).toBeGreaterThan(0);
-        expect(rendered).toBeLessThanOrEqual(10);
+        // One page of results is rendered.
+        await expect(page.locator(RESULT_CARD)).toHaveCount(10);
     });
 
     test('load more appends the next page rather than replacing it', async ({ page }) => {
@@ -46,25 +46,9 @@ test.describe('search client', () => {
             .poll(async () => remainingCount(await loadMore.textContent()))
             .toBe(before - 10);
 
-        // A rank from the second page becomes reachable as the window advances.
-        // Scrolling the window rather than an element handle, because a virtual row
-        // can be recycled out of the DOM while a handle to it is still being resolved.
-        await expect
-            .poll(async () => {
-                await page.evaluate(() => window.scrollBy(0, window.innerHeight));
-                return page.locator('#search-results [data-result-rank="12"]').count();
-            }, { timeout: 15_000 })
-            .toBeGreaterThan(0);
-
-        // Appended, not replaced: back at the top, rank 0 is the same document.
-        // Checked after scrolling back because the window unmounts rank 0 on the way down.
-        await page.evaluate(() => window.scrollTo(0, 0));
-        await expect
-            .poll(async () => page
-                .locator('#search-results [data-result-rank="0"]')
-                .getAttribute('data-media-id')
-                .catch(() => null))
-            .toBe(rankZeroId);
+        // Appended, not replaced: the second page follows the first, and rank 0 is unchanged.
+        await expect(page.locator(RESULT_CARD)).toHaveCount(20);
+        await expect(page.locator('#search-results [data-result-rank="0"]')).toHaveAttribute('data-media-id', rankZeroId ?? '');
     });
 
     test('typing a multi-character query adds no history entries', async ({ page }) => {
